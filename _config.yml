@@ -1,0 +1,31 @@
+include: ["_pages"]
+
+title:   'SCENAREXinc'
+author:
+  name:  'SCENAREXinc'
+description:
+  en: 'We partner with talented people to build blockchain publishing solutions'
+  fr: 'Nous travaillons en partenariat avec des gens talentueux pour créer des solutions d’édition blockchain'
+
+path:
+url:  'https://www.scenarex.ca'
+
+google_analytics: UA-87468806-1
+
+index: ["/","/en/","/fr/"]
+
+markdown: kramdown
+
+sass:
+  sass_dir: _sass
+  style:    compressed
+
+permalink: /:title.html
+
+exclude:
+- README.md
+- LICENSE.md
+
+
+safe: true
+lsi: false

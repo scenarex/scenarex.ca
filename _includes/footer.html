@@ -1,0 +1,45 @@
+{% assign i18n = site.data.i18n.[page.lang] %}
+<footer class="upper-border">
+  <div class="row">
+    <div class="3u 6u(small)">
+      <h3>SCENAREXinc</h3>
+    </div>
+    <div class="3u 6u$(small)">
+      <h3>{{ i18n.contents }}</h3>
+      <nav>
+        <ul>
+          {% for menu in site.data.navigation.[page.lang] %}
+          <li><a href="{{ menu[1].url }}">{{ menu[1].name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div class="3u 6u(small)">
+      <h3>Social</h3>
+      <nav>
+        <ul>
+          <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/scenarex/">Facebook</a></li>
+          <li><i class="fab fa-twitter"></i> <a href="https://twitter.com/Scenarex">Twitter</a></li>
+          <li><i class="fab fa-github"></i> <a href="https://github.com/Scenarex">Github</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="3u 6u$(small)">
+      <nav>
+        <h3>{{ i18n.made }} <i class="fas fa-heart" style="color: #E15554;"></i> {{ i18n.using }}</h3>
+        <ul>
+          <li><a href="https://jekyllrb.com/">Jekyll</a></li>
+          <li><a href="https://github.com/ajlkn/skel">Skel.io</a></li>
+          <li><a href="http://www.modularscale.com/">Modular Scale</a></li>
+          <li><a href="https://github.com/RedHatBrand/Overpass">Overpass</a></li>
+          <li><a href="https://fontawesome.com/license">Font Awesome</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="12u$ copyright">
+      <i class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i> <i class="fab fa-creative-commons-sa"></i>
+      <small>{{ i18n.copyright }}</small>
+    </div>
+  </div>
+</footer>
+<script src="/assets/main.js"></script>

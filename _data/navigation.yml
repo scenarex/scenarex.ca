@@ -1,0 +1,27 @@
+en:
+  about:
+    name: "About"
+    url: "/en/about"
+  bookchain:
+    name: "Bookchain"
+    url: "/en/bookchain"
+  news:
+    name: "News"
+    url: "/en/news"
+  contact:
+    name: "Contact"
+    url: "/en/contact"
+
+fr:
+  about:
+    name: "À propos"
+    url: "/fr/a-propos"
+  bookchain:
+    name: "Bookchain"
+    url: "/fr/bookchain"
+  news:
+    name: "Nouvelles"
+    url: "/fr/nouvelles"
+  contact:
+    name: "Nous joindre"
+    url: "/fr/nous-joindre"

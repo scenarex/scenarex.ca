@@ -1,0 +1,35 @@
+---
+layout: default
+title: News
+permalink: /en/news
+ref: news
+lang: en
+---
+
+<h2 class="biggest">News</h2>
+{% assign posts=site.posts | where:"lang", page.lang %}
+{% for post in posts %}
+{% unless post.categories contains "external" %}
+<div class="news">
+  {{ post.date | date: "%Y-%m-%d" }}
+    »
+  <span class='post-title'>
+    <a href="{{ site.path }}{{ post.url }}">{{ post.title }}</a>
+  </span>
+</div>
+{% endunless %}
+{% endfor %}
+
+<h2 class="big">Press</h2>
+
+{% assign press=site.posts | where:"lang", page.lang %}
+{% for post in press %}
+{% if post.categories contains "external" %}
+<div>
+  <span class='post-title'>
+    <h3>{{ post.source }}</h3>
+    <a href="{{ post.external_url }}">{{ post.title }} <i class="fas fa-external-link-alt"></i></a>
+  </span>
+</div>
+{% endif %}
+{% endfor %}

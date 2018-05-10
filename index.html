@@ -1,0 +1,15 @@
+---
+layout: default
+title: SCENAREXinc - A blockchain company
+ref: index
+lang: en
+---
+
+
+{% if page.url == "/" or page.url == "/en/" %}
+{% include en/index.html %}
+{% elsif page.url == "/fr/" %}
+{% include fr/index.html %}
+{% else %}
+{% include en/index.html %}
+{% endif %}

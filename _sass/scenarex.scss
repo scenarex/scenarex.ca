@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+$font-family:       "overpass-mono", Helvetica, Arial, sans-serif;
+
+$code-font-family:  Menlo, Monaco, "Courier New", monospace;
+
+$ratio:             1.2;
+$base:              1.188rem;
+
+$ms0:               1;
+$ms1:               $ratio;        /* 1.2   */
+$ms2:               $ratio * $ms1; /* 1.44  */
+$ms3:               $ratio * $ms2; /* 1.728 */
+$ms4:               $ratio * $ms3; /* 2.074 */
+$ms5:               $ratio * $ms4; /* 2.488 */
+$ms6:               $ratio * $ms5; /* 2.986 */
+$ms7:               $ratio * $ms6; /* 3.583 */
+$ms8:               $ratio * $ms7;
+
+$smaller:                 $base / $ms1;
+$normal:                  $base * $ms0;
+$bigger:                  $base * $ms1;
+$title3:                  $base * $ms2;
+$title2:                  $base * $ms6;
+$title1:                  $base * $ms8;
+
+
+
+$masthead-color:         #233D4D;
+$masthead-small-color:   #EEC100;
+
+$post-title-color:       #303030;
+$post-date-color:        #9a9a9a;
+
+
+$body-color:            #515151;
+$body-background-color: #fff;
+
+$link-color:            #268bd2;
+
+$headings-color:        #313131;    // h1,h2,h3,h4,h5,h6
+
+$strong-color:          #303030;    // strong
+
+$pre-background-color:  #f9f9f9;    // pre
+
+$blockquote-color:        #7a7a7a;  // blockquote
+$blockquote-border-color: #e5e5e5;
+
+$table-border-color:         #e5e5e5;
+$table-odd-background-color: #f9f9f9;
+
+@import "scenarex/base";
