@@ -7,8 +7,6 @@ ref: 20180309
 lang: fr
 ---
 
-# Scénarex reçoit l’aide financière du Ministère Économie, Science et Innovation du Québec
-
 Scénarex reçoit l’aide financière du Ministère Économie, Science et Innovation du gouvernement du Québec!
 Grâce au programme premier brevet, nous recevrons une aide financière sous la forme d’une contribution non remboursable des dépenses de notre brevet, effectivement réalisées, jusqu’à un maximum de 25 000 $.
 

@@ -7,8 +7,6 @@ ref: 20180122
 lang: fr
 ---
 
-## Scénarex s’illustre une fois de plus
-
 Nous avons aujourd’hui le plaisir de vous annoncer une autre bonne nouvelle pour Scénarex ! En effet, le Fonds des médias du Canada accorde un important financement de 232 000 $ à Scenarex, dans le cadre du deuxième cycle d’aide à la production du Programme d’innovation du Volet expérimental 2017-2018.
 
 Grâce à ce financement, nous pourrons compléter le développement de notre solution Bookchain® et ainsi la rendre accessible à tous les auteurs et éditeurs canadiens qui pourront alors diffuser de manière sécuritaire leurs œuvres littéraires numériques partout dans le monde.

@@ -7,8 +7,6 @@ ref: 20180402
 lang: fr
 ---
 
-## Nomination au poste de Directrice Stratégique – Bienvenue dans notre équipe, Christine Joly!
-
 C’est avec un immense plaisir et beaucoup de fierté que je vous annonce officiellement la nomination de Christine Joly en tant que Directrice Stratégique chez Scenarex.
 
 Christine travaillait déjà en étroite collaboration avec notre organisation depuis plus d’un an, mais saute maintenant dans l’aventure à temps plein.

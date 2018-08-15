@@ -7,8 +7,6 @@ ref: 20180402
 lang: en
 ---
 
-## Appointment to the position of Strategic Director – Welcome to our team, Christine Joly!
-
 It is with great pleasure and pride that I officially announce the appointment of Christine Joly as Strategic Director at Scenarex.
 
 Christine has been working closely with our organization for over a year now, but is now jumping full time in our adventure.

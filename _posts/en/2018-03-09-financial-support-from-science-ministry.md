@@ -7,8 +7,6 @@ ref: 20180309
 lang: en
 ---
 
-# Scenarex gets financial support from the Ministry of “Économie, Science et Innovation”
-
 Scenarex gets financial support from the Ministry of “Économie, Science et Innovation” of the Quebec government!
 
 Through the program “Premier Brevet”, we will receive financial assistance in the form of a non-refundable contribution to our actual patent expenditures up to a maximum of $25,000.

@@ -7,8 +7,6 @@ ref: 20180122
 lang: en
 ---
 
-## Scenarex is in the spotlight once more
-
 Today we have the pleasure to announce more good news for Scenarex. The Fonds des médias du Canada (Canada media fund) is investing a significant amount of $ 232,000 into Scenarex to support the second round of production for the Bookchain® solution as part of the 2017-2018 Experimental Stream Innovation Program.
 
 Thanks to this funding, we will be able to complete the development of our Bookchain® solution and make it accessible to all Canadian authors and publishers who will then be able to securely broadcast their digital literary works around the world.

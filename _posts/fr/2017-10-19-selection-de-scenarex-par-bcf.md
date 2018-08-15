@@ -7,7 +7,6 @@ ref: 20171019
 lang: fr
 ---
 
-## UNE AUTRE NOMINATION IMPORTANTE POUR SCÉNAREX
 Permettez-moi de vous annoncer, avec une immense fierté, que Scénarex a été sélectionné par le comité de sélection de la firme d’avocat BCF pour faire partie du programme [BCF Imagine](https://www.facebook.com/BCFimagine/?fref=mentions) !
 
 BCF, créée il y a plus de 20 ans, a comme objectif premier de faire avancer l’entrepreneuriat au Québec. Bâti par des entrepreneurs, ce cabinet d’importance représente des entrepreneurs et des innovateurs et les aide à évoluer dans toutes les phases de leur développement d’affaires. Faire grandir les startups, c’est dans l’ADN de BCF !
