@@ -3,7 +3,7 @@ en:
     name: "About"
     url: "/en/about"
   bookchain:
-    name: "Bookchain"
+    name: "Bookchain®"
     url: "/en/bookchain"
   news:
     name: "News"
@@ -17,7 +17,7 @@ fr:
     name: "À propos"
     url: "/fr/a-propos"
   bookchain:
-    name: "Bookchain"
+    name: "Bookchain®"
     url: "/fr/bookchain"
   news:
     name: "Nouvelles"
