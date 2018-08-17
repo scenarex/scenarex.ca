@@ -6,7 +6,7 @@
    <nav>
      <ul>
        {% for menu in site.data.navigation.[page.lang] %}
-       <li><a {% if page.url == menu[1].url %}class="active"{% endif %} href="{{ menu[1].url }}">{{ menu[1].name }}</a>{% if menu[1].name == "Bookchain" and site.index contains page.url %}<br><a href="{{ menu[1].url }}" class="more menu" ><i class="fas fa-arrow-up fa-2x"></i><br>{{ i18n.discover }}</a>{% endif %}</li>
+       <li><a {% if page.url == menu[1].url %}class="active"{% endif %} href="{{ menu[1].url }}">{{ menu[1].name }}</a>{% if menu[1].name == "Bookchain®" and site.index contains page.url %}<br><a href="{{ menu[1].url }}" class="more menu" ><i class="fas fa-arrow-up fa-2x"></i><br>{{ i18n.discover }}</a>{% endif %}</li>
        {% endfor %}
        <li>
        {% include language-switcher.html %}
