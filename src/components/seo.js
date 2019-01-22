@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             {`  window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments)}
               gtag('js', new Date());
-              gtag('config', 'UA-87468806-1');
+              gtag('config', '${process.env.google_analytics}');
             `}
             </script>
             {data.site.siteMetadata.ref === "index" ? <link rel="alternate" hreflang="en" href="/en/" /> : null}
