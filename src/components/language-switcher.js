@@ -6,9 +6,7 @@ class LanguageSwitcher extends Component {
     super(props)
     const { i18n } = this.props
     this.title = this.props.siteTitle
-    console.log(this.title);
     this.splitTitle = this.props.siteTitle.split("/")
-    console.log(this.splitTitle);
     this.state = { language: i18n.language }
 
     this.handleChangeLanguage = this.handleChangeLanguage.bind(this)

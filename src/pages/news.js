@@ -11,6 +11,14 @@ class NewsPage extends Component {
     const { i18n } = this.props;
     this.state={language: i18n.language}
   }
+  parse(date) {
+    var year = date.slice(0,4);
+    var month = date.slice(4,6);
+    var day = date.slice(6,8);
+    var D = new Date(year,month-1,day);
+    return D.toLocaleDateString(this.props.i18n.language, {day:"numeric", month: "numeric", year: "numeric"});
+}
+
 
   render (data) {
     const { t } = this.props
@@ -23,7 +31,7 @@ class NewsPage extends Component {
           <div key={post.node.id}>
             {post.node.frontmatter.categories !== "external" && post.node.frontmatter.lang === this.props.i18n.language &&
               <div className="news">
-                { post.node.frontmatter.ref}
+                { this.parse(post.node.frontmatter.ref.toString())}
                   »
                 <span className='post-title'>
                   <Link to={post.node.frontmatter.path}>{ post.node.frontmatter.title }</Link>
