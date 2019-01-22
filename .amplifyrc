@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "scenarexca-20190122103519-authRole",
+            "UnauthRoleArn": "arn:aws:iam::944101843351:role/scenarexca-20190122103519-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::944101843351:role/scenarexca-20190122103519-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "scenarexca-20190122103519-deployment",
+            "UnauthRoleName": "scenarexca-20190122103519-unauthRole",
+            "StackName": "scenarexca-20190122103519",
+            "StackId": "arn:aws:cloudformation:us-east-1:944101843351:stack/scenarexca-20190122103519/530ae170-1e5b-11e9-9e15-0abba895ce2c"
+        }
+    }
+}
