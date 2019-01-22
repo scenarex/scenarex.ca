@@ -2,21 +2,23 @@
 
 ## Pre-requisites
 
-This site is managed using [Github](https://developer.github.com/webhooks/) hooks and [Jekyll](https://jekyllrb.com/).
+This site is managed using [Github](https://developer.github.com/webhooks/) hooks and [Gaysby](https://www.gatsbyjs.org/).
 
 ## Local development
 
-To run the site locally at http://localhost:4000:
+To run the site locally at http://localhost:8000:
 ```bash
-$ jekyll serve
+$ gatsby develop
 ```
 
 To prepare the site for deployment:
 ```bash
-$ JEKYLL_ENV=production jekyll build
+$ amplify publish
 ```
 
-The `_site` folder will then contain the built site with production URLs and properties.
+The `public` folder will then contain the built site with production URLs and properties.
+
+The site will now be available at http://scenarexca-20190122104214-hostingbucket.s3-website-us-east-1.amazonaws.com
 
 ## Licence
 
