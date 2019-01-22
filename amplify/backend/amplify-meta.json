@@ -1,0 +1,32 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "scenarexca-20190122103519-authRole",
+			"UnauthRoleArn": "arn:aws:iam::944101843351:role/scenarexca-20190122103519-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::944101843351:role/scenarexca-20190122103519-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "scenarexca-20190122103519-deployment",
+			"UnauthRoleName": "scenarexca-20190122103519-unauthRole",
+			"StackName": "scenarexca-20190122103519",
+			"StackId": "arn:aws:cloudformation:us-east-1:944101843351:stack/scenarexca-20190122103519/530ae170-1e5b-11e9-9e15-0abba895ce2c"
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/scenarexca-20190122103519-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2019-01-22T15:45:35.211Z",
+			"output": {
+				"S3BucketSecureURL": "https://scenarexca-20190122104214-hostingbucket.s3.amazonaws.com",
+				"WebsiteURL": "http://scenarexca-20190122104214-hostingbucket.s3-website-us-east-1.amazonaws.com",
+				"Region": "us-east-1",
+				"HostingBucketName": "scenarexca-20190122104214-hostingbucket"
+			},
+			"lastPushDirHash": "Pf84sPatkXKcfa+fvJzMk1Z1iMY="
+		}
+	}
+}
