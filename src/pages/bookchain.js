@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { translate } from "react-i18next"
+import "../sass/main.scss"
 
 class BookchainPage extends Component {
   render (){

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { translate } from "react-i18next"
-
+import "../sass/main.scss"
 class Template extends Component {
   constructor(props) {
     super(props);

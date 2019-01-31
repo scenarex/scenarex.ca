@@ -2,8 +2,46 @@ import React, {Component} from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { translate } from "react-i18next"
+import "../sass/main.scss"
 
 class ContactPage extends Component {
+
+  async componentDidMount() {
+    var form = document.getElementById("slack");
+    if (form.attachEvent) {
+      form.attachEvent("submit", this.processForm);
+    } else {
+      form.addEventListener("submit", this.processForm);
+    }
+  }
+
+   processForm(e) {
+     console.log("here2")
+    var xmlhttp = new XMLHttpRequest();
+    var url = "https://hooks.slack.com/services/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";
+    let payload ={
+      "attachments": [{
+      "pretext": document.getElementById("email").value + " says:",
+      "text": document.getElementById("message").value
+      }]
+    }
+    var data = JSON.stringify(payload);
+
+    if (e.preventDefault) e.preventDefault();
+
+    xmlhttp.open("POST", url, true);
+    xmlhttp.onload = function() {
+        document.getElementById("post").innerText = "Thanks!";
+        document.getElementById("post").className = "success";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+    }
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send(data);
+
+    return false;
+  }
+
   render (){
   const { t } = this.props
     return (

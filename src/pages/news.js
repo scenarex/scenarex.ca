@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { graphql, Link } from 'gatsby'
 import { translate } from "react-i18next"
+import "../sass/main.scss"
 
 class NewsPage extends Component {
   constructor(props) {

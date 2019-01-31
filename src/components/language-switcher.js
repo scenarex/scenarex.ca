@@ -7,8 +7,10 @@ class LanguageSwitcher extends Component {
     const { i18n } = this.props
     this.title = this.props.siteTitle
     this.splitTitle = this.props.siteTitle.split("/")
-    this.state = { language: i18n.language }
-
+    if (i18n.language === "en-CA") {
+      i18n.changeLanguage("en")
+    }
+    this.state = { language: i18n.language ? i18n.language : "en"}
     this.handleChangeLanguage = this.handleChangeLanguage.bind(this)
   }
 

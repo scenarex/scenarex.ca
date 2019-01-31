@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { translate } from "react-i18next"
+import "../sass/main.scss"
 
 class AboutPage extends Component {
   render (){
