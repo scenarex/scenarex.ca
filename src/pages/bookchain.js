@@ -17,7 +17,7 @@ class BookchainPage extends Component {
                 <div className="timeline">
                   <div className="entry">
                     <div className="time">
-                      <h5>{t("Oct 2018")}</h5>
+                      <h5>{t("Feb 2019")}</h5>
                     </div>
                     <div className="body">
                       <h3>{t("General Availability")}</h3>
@@ -28,7 +28,7 @@ class BookchainPage extends Component {
                   </div>
                   <div className="entry">
                     <div className="time">
-                      <h5>{t("Aug 2018")}</h5>
+                      <h5>{t("Oct 2018")}</h5>
                     </div>
                     <div className="body">
                       <h3>{t("Version 020")} <span className="label">{t("STABLE")}</span></h3>
@@ -117,6 +117,10 @@ class BookchainPage extends Component {
                 <h2><i className="fas fa-share"></i> {t("DISTRIBUTION")}</h2>
                 <p className="smaller">{t("distribution description")}</p>
               </div>
+            </div>
+            <div className="row upper-border mtd">
+                <h2 className="biggest"> {t("BOOKCHAIN SOLUTIONS")}</h2>
+                <p className="smaller">{t("Bookchain solutions description")}</p>
             </div>
           </Layout>
         )
