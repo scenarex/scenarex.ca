@@ -71,6 +71,15 @@ class AboutPage extends Component {
               <br/>
               <a href="mailto:mackenzie@scenarex.ca">mackenzie@scenarex.ca</a></p>
             </div>
+            <div className="3u 12u(small)">
+              <Link to="/humberto">
+                <img className="grey" src="/assets/images/humberto-500x500.jpg" alt=""/>
+              </Link>
+              <h3>Humberto Quintana</h3>
+              <p>{t("Blockchain Developer")}
+              <br/>
+              <a href="mailto:humberto@scenarex.ca">humberto@scenarex.ca</a></p>
+            </div>
           </div>
         </div>
       </Layout>

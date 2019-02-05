@@ -27,7 +27,6 @@ class NewsPage extends Component {
       <Layout location={this.props.location}>
         <SEO title={this.props.lng === "fr" ? "Nouvelles - SCENAREXinc" : "News - SCENAREXinc"} keywords={[`gatsby`, `application`, `react`]} />
         <h2 className="biggest">{t("News")}</h2>
-
         {this.data.allMarkdownRemark.edges.map(post => (
           <div key={post.node.id}>
             {post.node.frontmatter.categories !== "external" && post.node.frontmatter.lang === this.props.i18n.language &&
@@ -40,7 +39,7 @@ class NewsPage extends Component {
               </div>
             }
           </div>
-          ))}
+        ))}
 
           <h2 className="biggest">{t("Press")}</h2>
           {this.data.allMarkdownRemark.edges.map(post => (
@@ -62,7 +61,12 @@ class NewsPage extends Component {
 
   export const pageQuery = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark (
+      sort: {
+        fields: [frontmatter___ref]
+        order: DESC
+      }
+    ) {
       edges {
         node {
           id

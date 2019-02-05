@@ -4,5 +4,6 @@ title: "UQAM ESG: unveiling of the winners of the “My Business” contest (Fre
 categories: "external"
 path: "https://www.nouvelles.esg.uqam.ca/2017/2807-centre-dentrepreneuriat-esg-uqam-devoilement-laureats-concours-mon-entreprise"
 external_url: "https://www.nouvelles.esg.uqam.ca/2017/2807-centre-dentrepreneuriat-esg-uqam-devoilement-laureats-concours-mon-entreprise"
+ref: 20170410
 lang: en
 ---

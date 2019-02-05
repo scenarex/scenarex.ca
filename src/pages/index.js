@@ -24,13 +24,13 @@ class IndexPage extends Component{
               </Link>
             </div>
             <div className="25u 12u$(small) flex">
-              <Link to="http://www.bcf.ca/en">
-                <img className="grey" src="/assets/images/bcf.png" style={{maxHeight: "70px"}} alt=""/>
+              <Link to="https://www.copibec.ca">
+                <img className="grey" src="/assets/images/copibec.png" style={{maxHeight: "70px"}} alt=""/>
               </Link>
             </div>
             <div className="25u 12u$(small) flex">
-              <Link to="http://www.bradytypesetting.com/">
-                <img className="grey" src="/assets/images/brt.png" style={{maxHeight: "70px"}} alt=""/>
+              <Link to="http://www.bcf.ca/en">
+                <img className="grey" src="/assets/images/bcf.png" style={{maxHeight: "70px"}} alt=""/>
               </Link>
             </div>
             <div className="25u 12u$(small) flex">
