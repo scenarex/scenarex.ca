@@ -6,6 +6,17 @@ import { translate } from "react-i18next"
 import "../sass/main.scss"
 
 class LBF2019 extends Component {
+
+  async componentDidMount() {
+    if(window) {
+      window.addEventListener("message", function(event){
+        if (event.origin === "https://team-scenarex.youcanbook.me"){
+          document.getElementById("ycbmiframeteam-scenarex").style.height = event.data + "px";
+        }
+        });
+    }
+  }
+
   render (){
   const { t } = this.props
     return (
@@ -21,9 +32,13 @@ class LBF2019 extends Component {
         <div className="upper-border">
           <h2 className="big mtd" id="agenda">{t("Agenda")}</h2>
           <div className="row">
-            <iframe src="https://team-scenarex.youcanbook.me/?noframe=true&skipHeaderFooter=true" id="ycbmiframeteam-scenarex" style="width:100%;height:1000px;border:0px;background-color:transparent;" frameborder="0" allowtransparency="true"></iframe>
-            <script window.addEventListener && window.addEventListener("message", function(event){if (event.origin === "https://team-scenarex.youcanbook.me"){document.getElementById("ycbmiframeteam-scenarex").style.height = event.data + "px";}}, false);></script>
-            <a href="https://team-scenarex.youcanbook.me/" data-ycbm-modal="true"><img src="https://youcanbook.me/resources/pics/ycbm-button.png" alt=""/></a>
+            <iframe
+              src="https://team-scenarex.youcanbook.me/?noframe=true&skipHeaderFooter=true"
+              id="ycbmiframeteam-scenarex"
+              style={{width: "100%", height: "1000px", border: "0px", backgroundColor: "transparent"}}
+              frameborder="0" allowtransparency="true">
+            </iframe>
+          <a href="https://team-scenarex.youcanbook.me/" data-ycbm-modal="true"><img src="https://youcanbook.me/resources/pics/ycbm-button.png" alt=""/></a>
           </div>
         </div>
       </Layout>
