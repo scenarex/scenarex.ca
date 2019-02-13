@@ -12,6 +12,7 @@ class BookchainPage extends Component {
           <SEO title="Bookchain® - SCENAREXinc" keywords={[`gatsby`, `application`, `react`]} />
             <div className="row">
               <div className="6u 12u(small)">
+                <img src="/assets/images/Logo-Bookchain-Large-Transparent.png" alt=""/>
                 <h2 className="biggest">{t("Bookchain")}</h2>
                 <p>{t("Ebooks reimagined")}</p>
                 <div className="timeline">
