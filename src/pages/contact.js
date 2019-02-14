@@ -65,15 +65,15 @@ class ContactPage extends Component {
         <div className="row">
           <div className="4u 12u(small)">
             <h3><i className="fas fa-envelope"></i> {t("Email")}</h3>
-            <a href="mailto:info@scenarex.ca">info@scenarex.ca</a>
+            <a href="mailto:info@scenarex.ca" className="green">info@scenarex.ca</a>
           </div>
           <div className="4u 12u(small)">
             <h3><i className="fas fa-mobile-alt"></i> {t("Phone")}</h3>
-            <a href="tel:+14385581885">CA 1 438-558-1885</a>
+            <a href="tel:+14385581885" className="green">CA 1 438-558-1885</a>
           </div>
           <div className="4u 12u(small)">
             <h3><i className="fab fa-slack"></i> Slack</h3>
-            {t("Post to our ")}<a href="https://scenarex.slack.com/">{t("public")}</a> {t("channel")}
+            {t("Post to our ")}<a href="https://scenarex.slack.com/" className="green">{t("public")}</a> {t("channel")}
             <form id="slack">
               <input type="email" id="email" placeholder="Email"/>
               <input type="text" id="message" placeholder="Message"/>

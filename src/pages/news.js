@@ -32,7 +32,7 @@ class NewsPage extends Component {
             {post.node.frontmatter.categories !== "external" && post.node.frontmatter.lang === this.props.i18n.language &&
               <div className="news">
                 { this.parse(post.node.frontmatter.ref.toString())}
-                  »
+                  &nbsp;»&nbsp;
                 <span className='post-title'>
                   <Link to={post.node.frontmatter.path}>{ post.node.frontmatter.title }</Link>
                 </span>

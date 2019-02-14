@@ -52,11 +52,15 @@ body {
 }
 
 a {
-  color:           $link-color;
+  color:           $body-color;
   text-decoration: none;
 
   strong {
     color: inherit;
+  }
+
+  &.green {
+    color: $scenarex-green;
   }
 
   .underline {
@@ -122,6 +126,7 @@ h2 {
     font-weight: 800;
     letter-spacing: -1.25px;
     margin: $title2 0;
+    color: #007F8D;
   }
 
   &.biggest {
@@ -129,6 +134,7 @@ h2 {
     font-weight: 800;
     letter-spacing: -1.25px;
     margin: $title2 0;
+    color: #007F8D;
 
     @include breakpoint(small) {
       font-size: $title2;
@@ -429,6 +435,14 @@ footer {
     font-size: $smaller;
     margin: 2.25em 0 2.25em 0;
   }
+
+  a {
+    color: $body-color;
+
+    &:hover {
+      color: $scenarex-green;
+    }
+  }
 }
 
 
@@ -465,7 +479,11 @@ footer {
 }
 
 .post-title a {
-  color: $link-color;
+  color: $body-color;
+
+  &:hover {
+    color: $scenarex-green;
+  }
 }
 
 .post-date {

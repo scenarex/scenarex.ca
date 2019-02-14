@@ -110,8 +110,10 @@ class BookchainPage extends Component {
               </div>
             </div>
             <div className="row upper-border mtd">
-                <h2 className="biggest"> {t("BOOKCHAIN SOLUTIONS")}</h2>
+              <div className="12u">
+                <h2>{t("BOOKCHAIN SOLUTIONS")}</h2>
                 <p className="smaller">{t("Bookchain solutions description")}</p>
+              </div>
             </div>
           </Layout>
         )

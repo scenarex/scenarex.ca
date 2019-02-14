@@ -54,7 +54,7 @@ class Footer extends Component{
                 <div className="response" id="mce-success-response" style={{display:"none"}}></div>
               </div>
               <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true"><input type="text" name="b_55adcdb3618aefdb354ae8f92_b554781cb8" tabIndex="-1" defaultValue=""/></div>
-              <div className="clear 3u 12u(small)"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"><i className="fas fa-info-circle"></i>{t("Subscribe")}</button></div>
+              <div className="clear 3u 12u(small)"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"><i className="fas fa-info-circle"></i>&nbsp;{t("Subscribe")}</button></div>
             </form>
           </div>
           <div className="12u$ copyright">
