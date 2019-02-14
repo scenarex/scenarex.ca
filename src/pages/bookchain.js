@@ -12,8 +12,8 @@ class BookchainPage extends Component {
           <SEO title="Bookchain® - SCENAREXinc" keywords={[`gatsby`, `application`, `react`]} />
             <div className="row">
               <div className="6u 12u(small)">
-                <img src="/assets/images/Logo-Bookchain-Large-Transparent.png" alt=""/>
-                <h2 className="biggest">{t("Bookchain")}</h2>
+                <center><img src="/assets/images/Logo-Bookchain-Large-Transparent.png" alt="Bookchain logo" height="180" width="129"/></center>
+                <p className="bigger">{t("Bookchain_lowercase")}</p>
                 <p>{t("Ebooks reimagined")}</p>
                 <div className="timeline">
                   <div className="entry">
@@ -77,19 +77,6 @@ class BookchainPage extends Component {
                 <div className="12u">
                   <p>{t("new")}</p><p>{t("innovative")}</p><p>{t("protecting")}
                   </p>
-                  <h2 className="mt">{t("With it we want to do 3 things")}</h2>
-                  <p>
-                    <i className="fas fa-child fa-3x fa-pull-left"></i>
-                    {t("empower")}
-                  </p>
-                  <p>
-                    <i className="fas fa-chart-pie fa-3x fa-pull-left"></i>
-                    {t("allow publishers")}
-                  </p>
-                  <p>
-                    <i className="far fa-money-bill-alt fa-3x fa-pull-left"></i>
-                    {t("bring to market")}
-                  </p>
                   <h2 className="mt">{t("Who can use Bookchain")}</h2>
                   <p>
                     {t("designed for diffeent needs")}
@@ -97,6 +84,9 @@ class BookchainPage extends Component {
                   <h2 className="mt">{t("How does it work")}</h2>
                   <p>
                     {t("account creation")}
+                  </p>
+                  <p>
+                    {t("account creation 2")}
                   </p>
                 </div>
               </div>

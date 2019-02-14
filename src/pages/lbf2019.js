@@ -24,14 +24,39 @@ class LBF2019 extends Component {
         <SEO title={this.props.lng === "fr" ? "LBF 2019 - SCENAREX" : "LBF 2019 - SCENAREX"} keywords={[`gatsby`, `application`, `react`]} />
         <div className="row">
           <h2 className="biggest">{t("LBF2019-Long")}</h2>
+          <p className="smaller_close"><a href="https://www.londonbookfair.co.uk/en/Sessions/71968/Blockchain-for-Publishing-Basics-Applications-and-Opportunities">{t("LBF2019-Long no year")}</a>
+          {t("LBF2019 description")}</p>
+          <h3>{t("LBF2019 dates")}</h3>
+          <p className="smaller_close">{t("LBF2019 team")}</p>
         </div>
         <div className="row">
+         <h3>
           <a href="#agenda" className="more">{t("Book a meeting with us")}<br/><i className="fas fa-arrow-down fa-2x"></i></a>
+         </h3>
         </div>
+
+        <div className="upper-border">
+          <h3 className="big mtd">{t("Seminar")}</h3>
+          <div className="row">
+            <p className="smaller_close">{t("Attend our seminar par 1")}</p>
+            <p className="smaller_close">{t("Attend our seminar par 2")}</p>
+            <p className="smaller_close">{t("Seminar details")}</p>
+            <p className="smaller_close">{t("Seminar details title")}</p>
+            <p className="smaller_close">{t("Seminar details dates")}</p>
+            <p className="smaller_close">{t("Seminar details location")}</p>
+            <p>
+            <a href="https://www.londonbookfair.co.uk/en/Sessions/71968/Blockchain-for-Publishing-Basics-Applications-and-Opportunities" className="more">{t("Seminar details link")}<br/></a>
+            </p>
+          </div>
+        </div>
+
 
         <div className="upper-border">
           <h2 className="big mtd" id="agenda">{t("Agenda")}</h2>
           <div className="row">
+            <p className="smaller_close">{t("Agenda par 1")}</p>
+            <p className="smaller_close">{t("Agenda par 2")}</p>
+            <p className="smaller_close">{t("Agenda connect")}<a href="mailto:christine@scenarex.ca"><i className="fas fa-envelope"></i> christine@scenarex.ca</a></p>
             <iframe
               src="https://team-scenarex.youcanbook.me/?noframe=true&skipHeaderFooter=true"
               id="ycbmiframeteam-scenarex"

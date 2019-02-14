@@ -134,6 +134,10 @@ h2 {
       font-size: $title2;
       margin-top: 0;
     }
+
+  &.centered {
+    text-align: center;
+  }
   }
 
   &.mt {
@@ -160,6 +164,15 @@ p {
   &.smaller {
     font-size: $smaller;
     margin-top: 4em;
+  }
+  &.smaller_close {
+    font-size: $smaller;
+    margin-top: 1em;
+  }
+  &.bigger {
+    font-size: $title1;
+    margin-top: 0em;
+    text-align: center;
   }
 }
 
@@ -481,6 +494,10 @@ footer {
       top: 1.25em;
     }
   }
+}
+
+.center_text {
+  text-align: center;
 }
 
 .timeline {
