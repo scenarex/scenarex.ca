@@ -10,7 +10,7 @@ i18n
   .init({
     backend: {
     fallbackLng: "en",
-    loadPath: '/assets/locales/{{lng}}/translations.json',
+    loadPath: '/locales/{{lng}}/translations.json',
             allowMultiLoading: true,
     },
     fallbackLng: {

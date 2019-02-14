@@ -26,7 +26,7 @@ class AboutPage extends Component {
           <div className="row 32%">
             <div className="3u -1u 12u(small)">
               <Link to="/simon-pierre">
-                <img className="grey" src="/assets/images/sp-500x500.jpg" alt=""/>
+                <img className="grey" src="/sp-500x500.jpg" alt=""/>
               </Link>
               <h3>Simon-Pierre Marion</h3>
               <p>{t("Founder  Chief Executive Officer")}
@@ -35,7 +35,7 @@ class AboutPage extends Component {
             </div>
             <div className="3u 12u(small)">
               <Link to="/christine">
-                <img className="grey" src="/assets/images/chris-500x500.jpg" alt=""/>
+                <img className="grey" src="/chris-500x500.jpg" alt=""/>
               </Link>
               <h3>Christine Joly</h3>
               <p>{t("Chief Commercial Officer")}
@@ -44,7 +44,7 @@ class AboutPage extends Component {
             </div>
             <div className="3u 12u(small)">
               <Link to="/agathe">
-                <img className="grey" src="/assets/images/agathe-500x500.jpg" alt="" />
+                <img className="grey" src="/agathe-500x500.jpg" alt="" />
               </Link>
               <h3>Me. Agathe Cavanagh</h3>
               <p>{t("Legal Director")}
@@ -55,7 +55,7 @@ class AboutPage extends Component {
           <div className="row 32%">
             <div className="3u -1u 12u(small)">
               <Link to="/steve">
-                <img className="grey" src="/assets/images/steve-500x500.jpg" alt=""/>
+                <img className="grey" src="/steve-500x500.jpg" alt=""/>
               </Link>
               <h3>Steve Breault</h3>
               <p>{t("Chief Technology Officer")}
@@ -64,7 +64,7 @@ class AboutPage extends Component {
             </div>
             <div className="3u 12u(small)">
               <Link to="/mackenzie">
-                <img className="grey" src="/assets/images/mackenzie-500x500.jpg" alt=""/>
+                <img className="grey" src="/mackenzie-500x500.jpg" alt=""/>
               </Link>
               <h3>Mackenzie Sheridan</h3>
               <p>{t("Frontend Developer")}
@@ -73,7 +73,7 @@ class AboutPage extends Component {
             </div>
             <div className="3u 12u(small)">
               <Link to="/humberto">
-                <img className="grey" src="/assets/images/humberto-500x500.jpg" alt=""/>
+                <img className="grey" src="/humberto-500x500.jpg" alt=""/>
               </Link>
               <h3>Humberto Quintana</h3>
               <p>{t("Blockchain Developer")}

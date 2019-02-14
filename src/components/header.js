@@ -14,7 +14,7 @@ class Header extends Component {
     return (
       <header className="masthead">
          <h1 className="masthead-title">
-           <Link to="/"><img src="/assets/images/scenarex.png" alt=""/></Link>
+           <Link to="/"><img src="/scenarex.png" alt=""/></Link>
          </h1>
          <nav>
            <ul>

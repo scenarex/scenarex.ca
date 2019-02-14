@@ -20,27 +20,27 @@ class IndexPage extends Component{
           <div className="row flex 50%">
             <div className="25u 12u$(small) flex">
               <Link to="https://www.cmf-fmc.ca/">
-                <img className="grey" src="/assets/images/cmf.png" style={{maxHeight: "60px"}} alt=""/>
+                <img className="grey" src="/cmf.png" style={{maxHeight: "60px"}} alt=""/>
               </Link>
             </div>
             <div className="25u 12u$(small) flex">
               <Link to="https://www.copibec.ca">
-                <img className="grey" src="/assets/images/copibec.png" style={{maxHeight: "70px"}} alt=""/>
+                <img className="grey" src="/copibec.png" style={{maxHeight: "70px"}} alt=""/>
               </Link>
             </div>
             <div className="25u 12u$(small) flex">
               <Link to="http://www.bcf.ca/en">
-                <img className="grey" src="/assets/images/bcf.png" style={{maxHeight: "70px"}} alt=""/>
+                <img className="grey" src="/bcf.png" style={{maxHeight: "70px"}} alt=""/>
               </Link>
             </div>
             <div className="25u 12u$(small) flex">
               <Link to="https://www.nrc-cnrc.gc.ca/">
-                <img className="grey" src="/assets/images/cnrc.png" style={{maxHeight: "70px"}} alt=""/>
+                <img className="grey" src="/cnrc.png" style={{maxHeight: "70px"}} alt=""/>
               </Link>
             </div>
             <div className="25u 12u$(small) flex">
               <Link to="https://www.w3.org/">
-                <img className="grey" src="/assets/images/w3c.png" style={{maxHeight: "70px"}} alt=""/>
+                <img className="grey" src="/w3c.png" style={{maxHeight: "70px"}} alt=""/>
               </Link>
             </div>
           </div>

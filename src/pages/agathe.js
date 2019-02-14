@@ -12,7 +12,7 @@ class AgathePage extends Component {
         <SEO title="Agathe - SCENAREXinc" keywords={[`gatsby`, `application`, `react`]} />
         <div className="row">
           <div className="6u 12u(small)">
-            <img src="/assets/images/agathe-500x500.jpg" alt=""/>
+            <img src="/agathe-500x500.jpg" alt=""/>
             <a href="mailto:agathe@scenarex.ca"><i className="fas fa-envelope"></i> agathe@scenarex.ca</a>
           </div>
           <div className="6u 12u(small)">

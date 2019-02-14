@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { translate } from "react-i18next"
@@ -61,7 +60,8 @@ class LBF2019 extends Component {
               src="https://team-scenarex.youcanbook.me/?noframe=true&skipHeaderFooter=true"
               id="ycbmiframeteam-scenarex"
               style={{width: "100%", height: "1000px", border: "0px", backgroundColor: "transparent"}}
-              frameborder="0" allowtransparency="true">
+              frameborder="0" allowtransparency="true"
+              title="LBFCalendar">
             </iframe>
           <a href="https://team-scenarex.youcanbook.me/" data-ycbm-modal="true"><img src="https://youcanbook.me/resources/pics/ycbm-button.png" alt=""/></a>
           </div>

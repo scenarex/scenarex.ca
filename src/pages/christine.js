@@ -12,7 +12,7 @@ class ChristinePage extends Component {
         <SEO title="Christine" keywords={[`gatsby`, `application`, `react`]} />
         <div className="row">
           <div className="6u 12u(small)">
-            <img src="/assets/images/chris-500x500.jpg" alt=""/>
+            <img src="/chris-500x500.jpg" alt=""/>
             <a href="mailto:christine@scenarex.ca"><i className="fas fa-envelope"></i> christine@scenarex.ca</a>
           </div>
           <div className="6u 12u(small)">
