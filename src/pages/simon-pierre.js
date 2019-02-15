@@ -13,8 +13,8 @@ class SPPage extends Component {
 
         <div className="row">
           <div className="6u 12u(small)">
-            <img src="/sp-500x500.jpg" alt=""/>
-            <a href="mailto:spmarion@scenarex.ca"><i className="fas fa-envelope"></i> spmarion@scenarex.ca</a>
+            <img src="/Scenarex-SimonPierreMarion-CEO.png" alt=""/>
+            <a href="mailto:simon-pierre@scenarex.ca"><i className="fas fa-envelope"></i> simon-pierre@scenarex.ca</a>
           </div>
           <div className="6u 12u(small)">
             <h2 className="big">Simon-Pierre Marion</h2>

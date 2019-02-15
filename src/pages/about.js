@@ -26,45 +26,45 @@ class AboutPage extends Component {
           <div className="row 32%">
             <div className="4u -1u 12u(small)">
               <Link to="/simon-pierre">
-                <img className="grey" src="/sp-500x500.jpg" alt=""/>
+                <img className="grey" src="/Scenarex-SimonPierreMarion-CEO.png" alt="Simon-Pierre Marion"/>
               </Link>
               <h3>Simon-Pierre Marion</h3>
               <p>{t("Founder  Chief Executive Officer")}
               <br/>
-              <a href="mailto:simon-pierre@scenarex.ca" className="green">spmarion@scenarex.ca</a></p>
+              <a href="mailto:simon-pierre@scenarex.ca" className="green">simon-pierre@scenarex.ca</a></p>
             </div>
             <div className="4u 12u(small)">
               <Link to="/christine">
-                <img className="grey" src="/chris-500x500.jpg" alt=""/>
+                <img className="grey" src="/Scenarex-ChristineJoly-CCO.png" alt="Christine Joly"/>
               </Link>
               <h3>Christine Joly</h3>
               <p>{t("Chief Commercial Officer")}
               <br/>
               <a href="mailto:christine@scenarex.ca" className="green">christine@scenarex.ca</a></p>
             </div>
-            <div className="4u 12u(small)">
-              <Link to="/agathe">
-                <img className="grey" src="/agathe-500x500.jpg" alt="" />
-              </Link>
-              <h3>Me. Agathe Cavanagh</h3>
-              <p>{t("Legal Director")}
-              <br/>
-              <a href="mailto:agathe@scenarex.ca" className="green">agathe@scenarex.ca</a></p>
-            </div>
-          </div>
-          <div className="row 32%">
             <div className="4u -1u 12u(small)">
               <Link to="/steve">
-                <img className="grey" src="/steve-500x500.jpg" alt=""/>
+                <img className="grey" src="/Scenarex-SteveBreault-CT0.png" alt="Steve Breault"/>
               </Link>
               <h3>Steve Breault</h3>
               <p>{t("Chief Technology Officer")}
               <br/>
-              <a href="https://www.twitter.com/whyisthosething" className="green">@whyisthosething</a></p>
+              <a href="mailto:steve@scenarex.ca" className="green">steve@scenarex.ca</a></p>
+            </div>
+          </div>
+          <div className="row 32%">
+            <div className="4u 12u(small)">
+              <Link to="/humberto">
+                <img className="grey" src="/Scenarex-HumbertoQuintana-Blockchaindev.png" alt="Humberto Quintana"/>
+              </Link>
+              <h3>Humberto Quintana</h3>
+              <p>{t("Blockchain Developer")}
+              <br/>
+              <a href="mailto:humberto@scenarex.ca" className="green">humberto@scenarex.ca</a></p>
             </div>
             <div className="4u 12u(small)">
               <Link to="/mackenzie">
-                <img className="grey" src="/mackenzie-500x500.jpg" alt=""/>
+                <img className="grey" src="/Scenarex-MackenzieSheridan-Frontend.png" alt="Mackenzie Sheridan"/>
               </Link>
               <h3>Mackenzie Sheridan</h3>
               <p>{t("Frontend Developer")}
@@ -72,13 +72,13 @@ class AboutPage extends Component {
               <a href="mailto:mackenzie@scenarex.ca" className="green">mackenzie@scenarex.ca</a></p>
             </div>
             <div className="4u 12u(small)">
-              <Link to="/humberto">
-                <img className="grey" src="/humberto-500x500.jpg" alt=""/>
+              <Link to="/agathe">
+                <img className="grey" src="/Scenarex-AgatheCavanagh-Legal.png" alt="Agathe Cavanagh" />
               </Link>
-              <h3>Humberto Quintana</h3>
-              <p>{t("Blockchain Developer")}
+              <h3>Me. Agathe Cavanagh</h3>
+              <p>{t("Legal Director")}
               <br/>
-              <a href="mailto:humberto@scenarex.ca" className="green">humberto@scenarex.ca</a></p>
+              <a href="mailto:agathe@scenarex.ca" className="green">agathe@scenarex.ca</a></p>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ class MackPage extends Component  {
         <SEO title="Mackenzie - SCENAREXinc" keywords={[`gatsby`, `application`, `react`]} />
         <div className="row">
           <div className="6u 12u(small)">
-            <img src="/mackenzie-500x500.jpg" alt=""/>
+            <img src="/Scenarex-MackenzieSheridan-Frontend.png" alt=""/>
             <a href="mailto:mackenzie@scenarex.ca"><i className="fas fa-envelope"></i> mackenzie@scenarex.ca</a>
           </div>
           <div className="6u 12u(small)">

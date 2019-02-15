@@ -12,8 +12,8 @@ class StevePage extends Component {
         <SEO title="Steve - SCENAREXinc" keywords={[`gatsby`, `application`, `react`]} />
         <div className="row">
           <div className="6u 12u(small)">
-            <img src="/steve-500x500.jpg" alt=""/>
-            <a href="https://www.twitter.com/whyisthosething"><i className="fab fa-twitter"></i> @whyisthosething</a><br/>
+            <img src="/Scenarex-SteveBreault-CT0.png" alt=""/>
+            <a href="mailto:steve@scenarex.ca"><i className="fab fa-twitter"></i> steve@scenarex.ca</a><br/>
             <a href="https://github.com/stevebreault"><i className="fab fa-github"></i> stevebreault</a>
           </div>
           <div className="6u 12u(small)">

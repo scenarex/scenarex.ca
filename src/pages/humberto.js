@@ -12,7 +12,7 @@ class HumbertoPage extends Component {
         <SEO title="Humberto - SCENAREXinc" keywords={[`gatsby`, `application`, `react`]} />
         <div className="row">
           <div className="6u 12u(small)">
-            <img src="/humberto-500x500.jpg" alt=""/>
+            <img src="/Scenarex-HumbertoQuintana-Blockchaindev.png" alt=""/>
             <a href="mailto:humberto@scenarex.ca"><i className="fas fa-envelope"></i> humberto@scenarex.ca</a>
           </div>
           <div className="6u 12u(small)">
