@@ -26,4 +26,5 @@ class HumbertoPage extends Component {
   }
 }
 
+
 export default translate("translations")(HumbertoPage)
