@@ -18,6 +18,9 @@ i18n
     'fr': ['fr'],
     default: ['en'],
     },
+    detection: {
+      order: ["navigator"]
+    },
 
     // have a common namespace used around the full app
     ns: ["translations"],

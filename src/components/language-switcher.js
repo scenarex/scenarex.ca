@@ -7,21 +7,23 @@ class LanguageSwitcher extends Component {
     const { i18n } = this.props
     this.title = this.props.siteTitle
     this.splitTitle = this.props.siteTitle.split("/")
-    if (i18n.language === "en-CA") {
-      i18n.changeLanguage("en")
-    }
-    this.state = { language: i18n.language ? i18n.language : "en"}
+
+    i18n.changeLanguage(i18n.language.substring(0,2))
+
+    this.state = { language: i18n.language ? i18n.language.substring(0,2) : "en"}
     this.handleChangeLanguage = this.handleChangeLanguage.bind(this)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({ language: nextProps.i18n.language })
   }
 
   handleChangeLanguage(lng) {
     const { i18n } = this.props
     i18n.changeLanguage(lng)
-    this.setState({language: lng})
   }
 
   render() {
-
     return (
       <div className="LanguageSwitch">
         {this.splitTitle.length > 2 && (this.splitTitle[1] === "en" || this.splitTitle[1] === "fr") ?
