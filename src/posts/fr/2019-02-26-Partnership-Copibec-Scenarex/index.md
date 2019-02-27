@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GESTION DES DROITS D'AUTEUR : PARTENARIAT ENTRE COPIBEC et SCENAREX"
+title:  "GESTION DES DROITS D'AUTEUR : PARTENARIAT ENTRE COPIBEC ET SCENAREX"
 author: "Simon-Pierre Marion"
 path: "/fr/Copyright-partnership-copibec-scenarex"
 permalink: /fr/:title
@@ -8,6 +8,8 @@ ref: 20190226
 lang: fr
 categories: "news"
 ---
+
+<img src="/Communique_Scenarex_KC_1021x540.png" alt="Frédérique Couette et Simon-Pierre Marion">
 
 Montréal, 26 février 2019 – Copibec innove en se lançant dans la technologie de la chaîne de blocs (blockchain) grâce à un partenariat avec la jeune entreprise montréalaise Scenarex, chef de file en développement de solutions dans le domaine de l’édition numérique utilisant la chaîne de blocs. Ce partenariat vise à développer une plateforme de gestion automatisée des droits d’auteur pour les entreprises utilisant du matériel protégé par le droit d’auteur.
 
@@ -27,16 +29,16 @@ Copibec est une entreprise d’économie sociale sans but lucratif appartenant �
 À propos de Scenarex
 Scenarex est une jeune entreprise montréalaise fondée en 2015 déterminée à transformer et développer l'industrie de l'édition numérique avec des solutions innovantes utilisant le potentiel de la technologie blockchain. Appuyé financièrement par le Conseil national de recherches Canada (CNRC) et le Fonds des médias du Canada, Scenarex a créé Bookchain®, seule plateforme d’édition numérique au monde à utiliser la technologie des chaînes de blocs sans cryptomonnaies.
 
-Source
-Kevin Charron
-Coordonnateur - Communications
-k.charron@copibec.ca
-1 800 717-2022
-www.copibec.ca
-
-Christine Joly
-Chef de la commercialisation
-christine@scenarex.ca
-438-558-2885
-www.scenarex.ca
-www.bookchain.ca
+Source :
+<br>Kevin Charron
+<br>Coordonnateur - Communications
+<br><a href="mailto:k.charron@copibec.ca">k.charron@copibec.ca</a>
+<br>1 800 717-2022 ext. 249
+<br>[www.copibec.ca](https://www.copibec.ca)
+<br>
+<br>Christine Joly
+<br>Chef de la commercialisation
+<br><a href="mailto:christine@scenarex.ca">christine@scenarex.ca</a>
+<br>438-558-2885
+<br>[www.scenarex.ca](http://www.scenarex.ca)
+<br>[www.bookchain.ca](https://www.bookchain.ca)

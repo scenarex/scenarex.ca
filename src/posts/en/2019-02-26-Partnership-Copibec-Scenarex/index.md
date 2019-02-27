@@ -9,6 +9,8 @@ lang: en
 categories: "news"
 ---
 
+<img src="/Communique_Scenarex_KC_1021x540.png" alt="Frédérique Couette et Simon-Pierre Marion">
+
 Montreal, February 26, 2019 – Copibec is leading the way by embracing blockchain technology through a partnership with Montreal start-up Scenarex, the leading developer of digital publishing solutions built on blockchain technology. The goal of this partnership is to deliver an automated copyright management platform for businesses that use copyright-protected content.
 
 This new platform will meet a key need for Copibec’s clients who are committed to complying with copyright while ensuring that content can be shared smoothly within their organizations. Copyright owners, for their part, will be able to count on a more efficient approach to copyright management.
@@ -27,16 +29,16 @@ Copibec is a non-profit social enterprise that belongs to the author and publish
 About Scenarex
 Scenarex is a Montreal-based start-up founded in 2015. Using blockchain technology, its goal is to create flexible, user-friendly, non-restrictive solutions that will benefit the evolution and development of the publishing industry. With financial support from the National Research Council Canada (NRC) and the Canada Media Fund, Scenarex created Bookchain®, the world’s only digital publishing platform built on blockchain technology without any cryptocurrency.
 
-Source
-Kevin Charron
-Communications Coordinator
-k.charron@copibec.ca  
-1-800-717-2022 ext. 249
-www.copibec.ca
-
-Christine Joly
-Chief Commercial Officer
-christine@scenarex.ca  
-438-558-2885
-www.scenarex.ca
-www.bookchain.ca
+Source:
+<br>Kevin Charron
+<br>Communications Coordinator
+<br><a href="mailto:k.charron@copibec.ca">k.charron@copibec.ca</a>
+<br>1 800 717-2022 ext. 249
+<br>[www.copibec.ca](https://www.copibec.ca)
+<br>
+<br>Christine Joly
+<br>Chief Commercial Officer
+<br><a href="mailto:christine@scenarex.ca">christine@scenarex.ca</a>
+<br>438-558-2885
+<br>[www.scenarex.ca](http://www.scenarex.ca)
+<br>[www.bookchain.ca](https://www.bookchain.ca)
