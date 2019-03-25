@@ -19,7 +19,6 @@ class Header extends Component {
          <nav>
            <ul>
              <li><Link to="/about" className={this.title === "/about" ? "active" : ""}>{t("About")}</Link></li>
-             <li><Link to="/lbf2019" className={this.title === "/lbf2019" ? "active" : ""}>{t("LBF2019")}</Link></li>
              <li>
                 <Link to="/bookchain" className={this.title === "/bookchain" ? "active" : ""}>Bookchain®</Link>
                 { this.title === "/" ?
