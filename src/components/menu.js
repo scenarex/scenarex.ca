@@ -8,7 +8,6 @@ class Menu extends Component {
     return (
         <ul>
           <li><Link to="/about">{t("About")}</Link></li>
-          <li><Link to="/lbf2019">{t("LBF2019")}</Link></li>
           <li><Link to="/bookchain">Bookchain®</Link></li>
           <li><Link to="/news">{t("News")}</Link></li>
           <li><Link to="/contact">{t("Contact")}</Link></li>
