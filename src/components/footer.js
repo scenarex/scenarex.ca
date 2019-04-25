@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Menu from "./menu"
+import i18n from "i18next"
 import { translate } from "react-i18next"
 
 class Footer extends Component{
@@ -45,7 +46,7 @@ class Footer extends Component{
           </div>
           <div className="12u">
             <h3>{t("Sign up for our newsletter")}</h3>
-            <form action="https://scenarex.us14.list-manage.com/subscribe/post?u=55adcdb3618aefdb354ae8f92&amp;id=b554781cb8" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate row" target="_blank" noValidate>
+            <form action={"https://scenarex.us14.list-manage.com/subscribe/post?u=55adcdb3618aefdb354ae8f92&amp;id=b554781cb8&SIGNUP=SCENAREX-" + i18n.language} method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate row" target="_blank" noValidate>
               <div className="mc-field-group 6u 12u(small)">
                 <input type="email" defaultValue="" placeholder="Email" name="EMAIL" className="required email" id="mce-EMAIL"/>
               </div>
