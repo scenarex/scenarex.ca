@@ -12,7 +12,6 @@ import PeoplePagePreview from "./preview-templates/PeoplePagePreview";
 CMS.registerPreviewStyle("cms.css");
 CMS.registerPreviewStyle("../sass/main.scss");
 CMS.registerPreviewStyle("https://s3.amazonaws.com/fonts.bookchain.ca/fonts.css");
-CMS.registerPreviewStyle("https://kit.fontawesome.com/dbe50f6069.js");
 CMS.registerPreviewStyle("https://use.fontawesome.com/releases/v5.1.1/css/all.css");
 
 CMS.registerPreviewTemplate("about-en", AboutPagePreview)
