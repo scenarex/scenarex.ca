@@ -1,6 +1,5 @@
 ---
 templateKey: footer
-lang: fr
 contentTitle: Contents
 contentItems:
   - label: À propos
@@ -13,31 +12,32 @@ contentItems:
     linkURL: /fr/contact
 socialTitle: Social
 socialItems:
-  - label: Facebook
-    linkURL: https://www.facebook.com/scenarex/
-    icon: fab fa-facebook
-  - label: Twitter
-    linkURL: https://twitter.com/Scenarex
-    icon: fab fa-twitter
-  - label: Github
-    linkURL: https://github.com/Scenarex
-    icon: fab fa-github
+  - icon: fab 500px
+    label: Facebook
+    linkURL: 'https://www.facebook.com/scenarex/'
+  - icon: fab accessible-icon
+    label: Twitter
+    linkURL: 'https://twitter.com/Scenarex'
+  - icon: fab acquisitions-incorporated
+    label: Github
+    linkURL: 'https://github.com/Scenarex'
 madeTitle: Fait avec
 madeItems:
   - label: Gatsby
-    linkURL: https://www.gatsbyjs.org/
+    linkURL: 'https://www.gatsbyjs.org/'
   - label: Skel.io
-    linkURL: https://github.com/ajlkn/skel
+    linkURL: 'https://github.com/ajlkn/skel'
   - label: Modular Scale
-    linkURL: http://www.modularscale.com/
+    linkURL: 'http://www.modularscale.com/'
   - label: Gotham
-    linkURL: https://www.typography.com/fonts/gotham/overview/
+    linkURL: 'https://www.typography.com/fonts/gotham/overview/'
   - label: Font Awesome
-    linkURL: https://fontawesome.com/license
+    linkURL: 'https://fontawesome.com/license'
 translations:
-  using:  en utilisant
-  newsletter: Abonnez-vous à notre infolettre
-  email: Courriel
-  subscribe: S'abonnez
   copyright: Cette œuvre est mise à disposition selon les termes de la
+  email: Courriel
+  newsletter: Abonnez-vous à notre infolettre
+  subscribe: S'abonnez
+  using: en utilisant
 ---
+
