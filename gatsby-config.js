@@ -1,42 +1,89 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby Starter Blog`,
+    author: `Kyle Mathews`,
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    social: {
+      twitter: `kylemathews`,
+    },
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-catch-links`,
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/posts/en`,
-        name: "pagesEN"
+    resolve: `gatsby-plugin-favicon`,
+     options: {
+       logo: "./src/components/favicon.png",
+
+       // WebApp Manifest Configuration
+       appName: null, // Inferred with your package.json
+       appDescription: null,
+       developerName: null,
+       developerURL: null,
+       dir: 'auto',
+       lang: 'en',
+       background: '#fff',
+       theme_color: '#fff',
+       display: 'standalone',
+       orientation: 'any',
+       start_url: '/?homescreen=1',
+       version: '1.0',
+
+       icons: {
+         android: true,
+         appleIcon: true,
+         appleStartup: true,
+         coast: false,
+         favicons: true,
+         firefox: true,
+         opengraph: false,
+         twitter: false,
+         yandex: false,
+         windows: false
+        }
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/posts/fr`,
-        name: "pagesFR"
-      }
-    },
-    "gatsby-transformer-remark",
-    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ["src/sass/main.scss", "src/sass/skel.scss"],
       },
     },
-    `gatsby-plugin-react-helmet`
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        enableIdentityWidget: true,
+        publicPath: `admin`,
+        htmlTitle: `Content Manager`,
+        modulePath: `${__dirname}/src/cms/cms.js`,
+        }
+    },
+    {
+       resolve: "gatsby-source-filesystem",
+       options: {
+         path: `${__dirname}/src/pages`,
+         name: "pages",
+       },
+     },
+     {
+        resolve: "gatsby-source-filesystem",
+        options: {
+          path: `${__dirname}/src/pages/about`,
+          name: "blank-pages",
+        },
+      },
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyForNull: `en`,
+        langKeyDefault: `en`,
+        useLangKeyLayout: false,
+        prefixDefault: true,
+      },
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
   ],
 }
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})

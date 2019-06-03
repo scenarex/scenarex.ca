@@ -1,0 +1,72 @@
+{
+  "About": {
+    "en" : "/en/about", "fr" : "/fr/apropos"
+  },
+  "Agathe": {
+    "en" : "/en/agathe", "fr" : "/fr/agathe"
+  },
+  "Bookchain": {
+    "en" : "/en/bookchain", "fr": "/fr/bookchain"
+  },
+  "Christine": {
+    "en" : "/en/christine", "fr" : "/fr/christine"
+  },
+  "Contact": {
+    "en" : "/en/contact", "fr" : "/fr/contact"
+  },
+  "Humberto": {
+    "en" : "/en/humberto", "fr" : "/fr/humberto"
+  },
+  "Mackenzie": {
+    "en" : "/en/mackenzie", "fr" : "/fr/mackenzie"
+  },
+  "News": {
+    "en" : "/en/news", "fr" : "/fr/nouvelles"
+  },
+  "Simon": {
+    "en" : "/en/simon-pierre", "fr" : "/fr/simon-pierre"
+  },
+  "Steve": {
+    "en" : "/en/steve", "fr" : "/fr/steve"
+  },
+  "404": {
+    "en" : "404", "fr": "404"
+  },
+  "404.html": {
+    "en" : "404.html", "fr": "404.html"
+  },
+  "Index": {
+    "en" : "/en", "fr" : "/fr"
+  },
+  "2017-01-24" : {
+    "en" : "/en/Scenarex-makes-the-My-Entreprise-contest-finals", "fr" : "/fr/Scenarex-passe-en-finale-du-concours-Mon-Entreprise"
+  },
+  "2017-09-19" : {
+    "en" : "/en/Scenarex-at-the-show-Tendance-Entreprendre-of-CHOQ", "fr" : "/fr/Scenarex-a-emission-Tendance-Entreprendre-sur-les-ondes-de-CHOQ"
+  },
+  "2017-10-19" : {
+    "en" : "/en/Scenarex-is-selected-to-be-part-of-the-first-startup-group-of-BCF-Imagine", "fr" : "/fr/Selection-de-scenarex-a-la-premiere-cohorte-de-BCF-Imagine"
+  },
+  "2017-12-03" : {
+    "en" : "/en/Scenarex-was-immortalized-by-the-artist-Jasmin-Guerard-Alie-from-La-Centrale-des-artistes", "fr" : "/fr/Scenarex-a-ete-immortalise-par-artiste-Jasmin-Guerard-Alie-de-la-centrale-des-artistes"
+  },
+  "2018-01-22" : {
+    "en" : "/en/Major-investment-by-CMF-in-the-development-of-the-Bookchain-solution-of-Scenarex", "fr" : "/fr/Important-financement-du-FMC-pour-la-production-de-la-solution-Bookchain-de-Scenarex"
+  },
+  "2018-02-26" : {
+    "en" : "/en/Appointment-of-Steve-Breault-as-the-Director-of-Technology", "fr" : "/fr/Nomination-de-Steve-Breault-au-poste-de-Directeur-de-la-Technologie"
+  },
+  "2018-03-09" : {
+    "en" : "/en/Scenarex-gets-financial-support-from-the-Ministry-of-Économie-Science-et-Innovation", "fr" : "/fr/Scenarex-recoit-aide-financiere-du-Ministere-Economie-Science-et-Innovation-du-Quebec"
+  },
+  "2018-04-02" : {
+    "en" : "/en/Appointment-of-Christine-Joly-to-the-position-of-Strategic-Director", "fr" : "/fr/Nomination-de-Christine-Joly-au-poste-de-Directrice-Strategique"
+  },
+  "2018-08-15" : {
+    "en" : "/en/Canada-Media-Fund-Invests-in-Scenarex-Marketing-Phase", "fr" : "/fr/Fonds-des-medias-du-Canada-finance-la-phase-de-commercialisation-de-Scenarex"
+  },
+  "2019-02-26" : {
+    "en" : "/en/Copyright-partnership-copibec-scenarex", "fr" : "/fr/Gestion-des-droits-auteur-partenariat-entre-Copibec-et-Scenarex"
+  }
+
+}

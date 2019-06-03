@@ -1,58 +1,92 @@
-import React, {Component} from "react";
-import { graphql } from 'gatsby'
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { translate } from "react-i18next"
-import "../sass/main.scss"
-class Template extends Component {
-  constructor(props) {
-    super(props);
-    this.data = this.props.data;
-  }
-  parse(date) {
-    var year = date.slice(0,4);
-    var month = date.slice(4,6);
-    var day = date.slice(6,8);
-    var D = new Date(year,month-1,day);
-    console.log(D.toLocaleDateString({day:"numeric", month: "short", year: "numeric"}));
-    return D.toLocaleDateString(this.props.i18n.language,{day:"numeric", month: "long", year: "numeric"});
-  }
-  render () {
-    const { t } = this.props
-    const post = this.data.markdownRemark
-    return (
-      <Layout location={this.props.location}>
-        <SEO title="News" keywords={[`gatsby`, `application`, `react`]} />
-        {post &&
-        <article className='post'>
-          <div className="row">
-            <div className="3u 12u(small)">
-              <div className="post-date">{this.parse(post.frontmatter.ref.toString())}<br/>{t("by")} {post.frontmatter.author}</div>
-            </div>
-            <div className="9u 12u(small)">
-              <h1 className='post-title'>{post.frontmatter.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: post.html}} />
-            </div>
-          </div>
-        </article>
-        }
-      </Layout>
-    )
-  }
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import translations from "../libs/news-translations.json";
+import * as moment from 'moment';
+
+export const NewsPostTemplate = ({
+  author,
+  content,
+  date,
+  lang,
+  title
+  }) => {
+  return (
+    <article className='post'>
+      <div className="row">
+        <div className="3u 12u(small)">
+          <div className="post-date">{date.toLocaleDateString(lang, {year: 'numeric', month: 'long', day: 'numeric'})}<br/>{translations["by"][lang]} {author}</div>
+        </div>
+        <div className="9u 12u(small)">
+          <h1 className='post-title'>{title}</h1>
+          <p dangerouslySetInnerHTML={{ __html: (content ? content : "") }}/>
+        </div>
+      </div>
+    </article>
+  )
 }
 
-export const postQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+NewsPostTemplate.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.node,
+  contentComponent: PropTypes.func,
+}
+
+const NewsPost = ({ data }) => {
+  const { markdownRemark: page, headerData, footerData } = data;
+  const {
+    fields: {langKey},
+    frontmatter: {title, author, metadata: {date}},
+    html
+  } = page;
+  let dateObj = moment(date, "YYYYMMDD")
+  let formattedDate = dateObj.format("MMMM DD YYYY")
+  return (
+  <Layout path={date} title={title} headerData={headerData} footerData={footerData}>
+    <NewsPostTemplate
+      author={author}
+      content={html}
+      date={new Date(formattedDate)}
+      lang={langKey}
+      title={title}
+    />
+  </Layout>
+  )
+}
+
+NewsPost.propTypes = {
+  data: PropTypes.shape({
+    html: PropTypes.string,
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+}
+
+export default NewsPost
+
+export const pageQuery = graphql`
+  query BlogPostTemplate($langKey: String!, $id: String!) {
+    markdownRemark(
+      id : { eq: $id }
+      fields: { langKey: { eq: $langKey } }
+    ) {
+      fields {
+        slug
+        langKey
+      }
+      id
       html
       frontmatter {
-        path
+        metadata {
+          date
+          path
+        }
         title
-        ref
         author
       }
     }
+    ...LayoutFragment
   }
 `
-
-export default translate("translations")(Template)

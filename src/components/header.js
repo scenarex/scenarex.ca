@@ -1,51 +1,43 @@
-import PropTypes from 'prop-types'
-import React, {Component} from 'react'
-import { Link } from 'gatsby'
-import LanguageSwitch from "./language-switcher.js"
-import { translate } from "react-i18next"
+import React from "react";
+import { Link } from "gatsby";
+import LanguageSwitcher from "./Language";
 
-class Header extends Component {
-  constructor(props) {
-    super(props)
-    this.title = props.siteTitle
+export const HeaderTemplate = ({ data, langKey, path }) => (
+  <header className="masthead">
+     <h1 className="masthead-title">
+       <Link to={`/${langKey}`}><img src={data.logo} alt=""/></Link>
+     </h1>
+     <nav>
+       <ul>
+        {data.menuItems.map(menuItem =>(
+          menuItem.label === "Bookchain®" ?
+            <li key={menuItem.label}>
+              <Link to={menuItem.linkURL} className={path === menuItem.ref ? "active" : ""}>{menuItem.label}</Link>
+               { path === "Index" ?
+               <div>
+                 <br/><Link to={`/${langKey}/bookchain`} className="more menu" ><i className="fas fa-arrow-up fa-2x"></i><br/>{data.discover}</Link>
+               </div>
+               : null
+               }
+            </li>
+            :
+           <li key={menuItem.label}><Link to={menuItem.linkURL} className={path === menuItem.ref ? "active" : ""}>{menuItem.label}</Link></li>
+         ))}
+         <li>
+         <LanguageSwitcher lang={langKey} path={path}/>
+         </li>
+       </ul>
+     </nav>
+  </header>
+);
+
+const Header = props => {
+  if (!props.data) {
+    return null;
   }
-  render() {
-    const { t } = this.props
-    return (
-      <header className="masthead">
-         <h1 className="masthead-title">
-           <Link to="/"><img src="/scenarex.png" alt=""/></Link>
-         </h1>
-         <nav>
-           <ul>
-             <li><Link to="/about" className={this.title === "/about" ? "active" : ""}>{t("About")}</Link></li>
-             <li>
-                <Link to="/bookchain" className={this.title === "/bookchain" ? "active" : ""}>Bookchain®</Link>
-                { this.title === "/" ?
-                <div>
-                  <br/><Link to="/bookchain" className="more menu" ><i className="fas fa-arrow-up fa-2x"></i><br/>{t("Discover")}</Link>
-                </div>
-                : null
-                }
-             </li>
-             <li><Link to="/news" className={this.title === "/news" ? "active" : ""}>{t("News")}</Link></li>
-             <li><Link to="/contact" className={this.title === "/contact" ? "active" : ""}>{t("Contact")}</Link></li>
-             <li>
-             <LanguageSwitch siteTitle={this.title}/>
-             </li>
-           </ul>
-         </nav>
-      </header>
-    )
-  }
-}
+  const data = props.data.edges[0].node;
+  return <HeaderTemplate data={data.frontmatter} langKey={data.fields.langKey} path={props.path}/>;
+};
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default translate("translations")(Header)
+export { Header };

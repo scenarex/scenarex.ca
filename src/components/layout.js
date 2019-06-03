@@ -1,37 +1,87 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
-import Header from './header'
-import Footer from './footer'
-import i18n from "./i18n"
+import "../sass/main.scss"
+import React from "react";
+import { graphql } from "gatsby";
+import Helmet from 'react-helmet';
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
-const Layout = ({ children, location }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+class Layout extends React.Component {
+  render() {
+    const { headerData, children, footerData, path, title } = this.props
+    return (
+      <div className="container">
+        <Helmet defaultTitle={title} titleTemplate={`%s | SCENAREXinc`}>
+          <meta name="title" content={title} />
+          <title>{title}</title>
+          <script defer src="https://kit.fontawesome.com/dbe50f6069.js"></script>
+        </Helmet>
+        <Header data={headerData} path={path} />
+        <main>{children}</main>
+        <Footer data={footerData}/>
+      </div>
+    )
+  }
+}
 
+export default Layout
+
+export const query = graphql`
+  fragment LayoutFragment on Query{
+    headerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "header" } },fields: { langKey: { eq: $langKey } } } ) {
+      edges {
+        node {
+          id
+          fields {
+            langKey
+          }
+          frontmatter {
+            lang
+            logo
+            menuItems {
+              label
+              linkURL
+              ref
+            }
+            discover
           }
         }
       }
-    `}
-    render={data => (
-      <div className="container">
-        <Header siteTitle={location ? location.pathname : "SCENAREXinc"}/>
-        <div
-        >
-          {children}
-        <Footer />
-        </div>
-      </div>
-    )}
-  />
-)
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout;
+    }
+    footerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "footer" } },fields: { langKey: { eq: $langKey } } } ) {
+      edges {
+        node {
+          id
+          fields {
+            langKey
+          }
+          frontmatter {
+            lang
+            contentTitle
+            contentItems {
+              label
+              linkURL
+            }
+            socialTitle
+            socialItems {
+              label
+              linkURL
+              icon
+            }
+            madeTitle
+            madeItems {
+              label
+              linkURL
+            }
+            translations {
+              using
+              newsletter
+              email
+              subscribe
+              copyright
+            }
+          }
+        }
+      }
+    }
+  }
+`;

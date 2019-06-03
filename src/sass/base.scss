@@ -2,6 +2,10 @@
   width: device-width;
 }
 
+html, body {
+  font-feature-settings: "ss02", "ss03";
+}
+
 html {
   font-family: $font-family;
   font-size:   100%;
@@ -457,7 +461,6 @@ footer {
 
 .post {
   margin-bottom: 4em;
-  font-family: "overpass";
   font-weight: 300;
 
   // note: only change margin for title,date if inside post block
