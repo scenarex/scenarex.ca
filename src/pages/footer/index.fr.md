@@ -12,15 +12,15 @@ contentItems:
     linkURL: /fr/contact
 socialTitle: Social
 socialItems:
-  - icon: fab 500px
-    label: Facebook
-    linkURL: 'https://www.facebook.com/scenarex/'
-  - icon: fab accessible-icon
-    label: Twitter
-    linkURL: 'https://twitter.com/Scenarex'
-  - icon: fab acquisitions-incorporated
-    label: Github
-    linkURL: 'https://github.com/Scenarex'
+  - label: Facebook
+    linkURL: https://www.facebook.com/scenarex/
+    icon: fab fa-facebook
+  - label: Twitter
+    linkURL: https://twitter.com/Scenarex
+    icon: fab fa-twitter
+  - label: Github
+    linkURL: https://github.com/Scenarex
+    icon: fab fa-github
 madeTitle: Fait avec
 madeItems:
   - label: Gatsby
@@ -40,4 +40,3 @@ translations:
   subscribe: S'abonnez
   using: en utilisant
 ---
-

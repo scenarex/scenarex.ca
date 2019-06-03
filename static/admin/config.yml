@@ -74,7 +74,7 @@ collections:
                 [
                   { label: "Label", name: "label", widget: "string" },
                   { label: "Link URL", name: "linkURL", widget: "string"},
-                  { label: "Icon", name: "icon", widget: "text", hint: "See https://fontawesome.com/icons?d=gallery&m=free"}
+                  { label: "Icon", name: "icon", widget: "string", hint: "See https://fontawesome.com/icons?d=gallery&m=free"}
                 ],
             }
           - { label: "Title of Third Column", name: "madeTitle", widget: "string" }
@@ -114,8 +114,7 @@ collections:
               fields:
                 [
                   { label: "Label", name: "label", widget: "string" },
-                  { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (e.g. /en/about)" },
-                  { label: "Icon", name: "icon", widget: "text", hint: "See https://fontawesome.com/icons?d=gallery&m=free"}
+                  { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (e.g. /en/about)" }
                 ],
             }
           - { label: "Title of Second Column", name: "socialTitle", widget: "string" }
@@ -127,6 +126,7 @@ collections:
                 [
                   { label: "Label", name: "label", widget: "string" },
                   { label: "Link URL", name: "linkURL", widget: "string" },
+                  { label: "Icon", name: "icon", widget: "string", hint: "See https://fontawesome.com/icons?d=gallery&m=free"}
                 ],
             }
           - { label: "Title of Third Column", name: "madeTitle", widget: "string" }
