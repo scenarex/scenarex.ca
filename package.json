@@ -48,5 +48,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  }
+  },
+  "browserslist": [
+  "> 1%",
+  "last 2 versions",
+  "not ie <= 8"
+  ]
 }

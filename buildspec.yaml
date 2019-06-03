@@ -3,6 +3,8 @@ phases:
     install:
       commands:
        - npm i npm@latest -g
+       - npm i gatsby-cli -g
+       - npm i gatsby -g
     pre_build:
       commands:
         - npm install
