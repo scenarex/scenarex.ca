@@ -45,7 +45,11 @@ export const FooterTemplate = ({ data, langKey }) => (
       </div>
       <div className="12u">
         <h3>{data.translations.newsletter}</h3>
-        <form action={"https://scenarex.us14.list-manage.com/subscribe/post?u=55adcdb3618aefdb354ae8f92&amp;id=b554781cb8&SIGNUP=SCENAREX-" +langKey} method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate row" target="_blank" noValidate>
+        <form action={langKey === "en" ?
+          "https://scenarex.us14.list-manage.com/subscribe/post?u=55adcdb3618aefdb354ae8f92&amp;id=b554781cb8&SIGNUP=SCENAREX-" +langKey
+          :
+          "https://scenarex.us14.list-manage.com/subscribe/post?u=55adcdb3618aefdb354ae8f92&amp;id=ec466ad45e&SIGNUP=SCENAREX-" +langKey
+          } method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate row" target="_blank" noValidate>
           <div className="mc-field-group 6u 12u(small)">
             <input type="email" defaultValue="" placeholder={data.translations.email} name="EMAIL" className="required email" id="mce-EMAIL"/>
           </div>

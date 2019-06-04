@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Helmet from 'react-helmet';
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import scenarex from '../../public/img/scenarex.png';
 
 class Layout extends React.Component {
   render() {
@@ -13,6 +14,8 @@ class Layout extends React.Component {
         <Helmet defaultTitle={title} titleTemplate={`%s | SCENAREXinc`}>
           <meta name="title" content={title} />
           <title>{title}</title>
+          <meta property="og:image" content={"https://www.scenarex.ca/img/logo-colour.png"} />
+          <meta property="og:title" content={title}/>
           <script defer src="https://kit.fontawesome.com/dbe50f6069.js"></script>
         </Helmet>
         <Header data={headerData} path={path} />
