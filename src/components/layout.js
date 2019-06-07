@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import Helmet from 'react-helmet';
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import scenarex from '../../public/img/scenarex.png';
 
 class Layout extends React.Component {
   render() {

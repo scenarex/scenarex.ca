@@ -4,9 +4,7 @@ import { FooterTemplate } from "../../components/Footer";
 
 const FooterPreview = ({ entry }) => {
   const data = entry.getIn(["data"]).toJS();
-  return (
-      <FooterTemplate data={data} langKey={data.language}/>
-  )
+  return <FooterTemplate data={data} langKey={data.language}/>  
 };
 
 FooterPreview.propTypes = {
