@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FooterTemplate } from "../../components/Footer";
+import { FooterTemplate } from "../../components/footer";
 
 const FooterPreview = ({ entry }) => {
   const data = entry.getIn(["data"]).toJS();
-  return <FooterTemplate data={data} langKey={data.language}/>  
+  return <FooterTemplate data={data} langKey={data.language}/>
 };
 
 FooterPreview.propTypes = {

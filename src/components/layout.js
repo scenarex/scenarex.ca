@@ -2,8 +2,8 @@ import "../sass/main.scss"
 import React from "react";
 import { graphql } from "gatsby";
 import Helmet from 'react-helmet';
-import { Header } from "./Header";
-import { Footer } from "./Footer";
+import { Header } from "./header";
+import { Footer } from "./footer";
 
 class Layout extends React.Component {
   render() {

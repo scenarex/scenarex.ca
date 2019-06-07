@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { HeaderTemplate } from "../../components/Header";
+import { HeaderTemplate } from "../../components/header";
 
 const HeaderPreview = ({ entry }) => {
   const data = entry.getIn(["data"]).toJS();
