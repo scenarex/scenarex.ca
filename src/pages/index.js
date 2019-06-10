@@ -20,8 +20,7 @@ class RedirectIndex extends React.PureComponent {
     // It's recommended to add your SEO solution in here for bots
     // eg. https://github.com/ahimsayogajp/ahimsayoga-gatsby/blob/master/src/pages/index.js#L22
     return (
-      <Layout title={"SCENAREXinc - A blockchain company"}>
-    </Layout>
+      <Layout title={"SCENAREXinc - A blockchain company"}/>
   );
   }
 }
