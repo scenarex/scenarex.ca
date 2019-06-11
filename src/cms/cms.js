@@ -8,6 +8,7 @@ import HomePagePreview from "./preview-templates/HomePagePreview";
 import NewsPostPreview from "./preview-templates/NewsPostPreview";
 import PressPreview from "./preview-templates/PressPreview";
 import PeoplePagePreview from "./preview-templates/PeoplePagePreview";
+import BlankPagePreview from "./preview-templates/BlankPagePreview";
 
 CMS.registerPreviewStyle("cms.css");
 CMS.registerPreviewStyle("../sass/main.scss");
@@ -40,3 +41,6 @@ CMS.registerPreviewTemplate("press-fr", PressPreview)
 
 CMS.registerPreviewTemplate("people-en", PeoplePagePreview)
 CMS.registerPreviewTemplate("people-fr", PeoplePagePreview)
+
+CMS.registerPreviewTemplate("blank-en", BlankPagePreview)
+CMS.registerPreviewTemplate("blank-fr", BlankPagePreview)

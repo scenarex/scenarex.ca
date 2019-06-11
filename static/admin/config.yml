@@ -595,3 +595,43 @@ collections:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Source", name: "source", widget: "string"}
       - { label: "External URL", name: "external_url", widget: "string"}
+  - label: "New (EN)"
+    name: "blank-en"
+    folder: "src/pages/new"
+    extension: "en.md"
+    format: "frontmatter"
+    create: true
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blank-page" }
+      - {
+        label: "MetaData",
+        name: "metadata",
+        widget: "object",
+        fields: [
+          {label: "Meta Title", name: "metaTitle", widget: "string", hint: "this is the variable that is displayed at the top in the tab section"},
+          {label: "Path", name: "path", widget: "string", hint: "this is the variable that is displayed in the URL after /en"},
+          {label: "Translation Reference", name: "ref", widget: "string", default: "/test", hint: "this is used for the routing, the english and french page need to have the same value" }
+        ],
+        }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Text", name: "text", widget: "markdown"}
+  - label: "New (FR)"
+    name: "blank-fr"
+    folder: "src/pages/new"
+    extension: "fr.md"
+    format: "frontmatter"
+    create: true
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blank-page" }
+      - {
+        label: "MetaData",
+        name: "metadata",
+        widget: "object",
+        fields: [
+          {label: "Meta Title", name: "metaTitle", widget: "string", hint: "this is the variable that is displayed at the top in the tab section"},
+          {label: "Path", name: "path", widget: "string", hint: "this is the variable that is displayed in the URL after /fr"},
+          {label: "Translation Reference", name: "ref", widget: "string", default: "/test", hint: "this is used for the routing, the english and french page need to have the same value" }
+        ],
+        }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Text", name: "text", widget: "markdown"}
