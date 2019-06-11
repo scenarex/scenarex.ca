@@ -6,7 +6,6 @@ backend:
   auth_endpoint: /dev/auth
 media_folder: "static/img"
 public_folder: "/img"
-publish_mode: editorial_workflow
 
 collections:
   - name: "Header"
