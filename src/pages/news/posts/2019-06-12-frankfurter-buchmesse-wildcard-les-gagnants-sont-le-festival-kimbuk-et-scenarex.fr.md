@@ -47,7 +47,7 @@ Depuis 1976, le salon du livre présente chaque année un pays invité d’honne
 
 <br/>
 
-****
+- - -
 
 **Contact média**
 
@@ -55,7 +55,7 @@ Depuis 1976, le salon du livre présente chaque année un pays invité d’honne
 
 **Scenarex**
 
-Christine Joly, chef de la commercialisation, tel +1 (438) 558-2885, christine@scenarex.ca
+Christine Joly, chef de la commercialisation, tel +1 (438) 558-2885, <mailto:christine@scenarex.ca>
 
 <br/>
 
@@ -67,4 +67,4 @@ Kathrin Grün, chef Relations Publiques & Communications, tel.: +49 (0) 69 2102-
 
 \> Information supplémentaire pour presse ><https://www.buchmesse.de/en/press/press-releases> (traduction libre)
 
-\> Photos pour usage média >https://www.buchmesse.de/en/press/press-material
+\> Photos pour usage média ><https://www.buchmesse.de/en/press/press-material>
