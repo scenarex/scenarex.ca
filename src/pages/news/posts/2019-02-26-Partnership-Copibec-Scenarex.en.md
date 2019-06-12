@@ -1,14 +1,12 @@
 ---
 templateKey: news-post
 metadata:
-  path: "/Copyright-partnership-copibec-scenarex"
-  date: "2019-02-26"
+  date: '2019-02-26'
   language: en
-title: "Copyright Mangement: partnership between Copibec and Scenarex"
-author: "Simon-Pierre Marion"
-
+  path: /Copyright-partnership-copibec-scenarex
+title: 'Copyright Management: partnership between Copibec and Scenarex'
+author: Simon-Pierre Marion
 ---
-
 <img src="/img/Communique_Scenarex_KC_1021x540.png" alt="Frédérique Couette et Simon-Pierre Marion">
 
 Montreal, February 26, 2019 – Copibec is leading the way by embracing blockchain technology through a partnership with Montreal start-up Scenarex, the leading developer of digital publishing solutions built on blockchain technology. The goal of this partnership is to deliver an automated copyright management platform for businesses that use copyright-protected content.
@@ -21,24 +19,24 @@ The platform will be developed by Scenarex, the creator of Bookchain® and the f
 
 “By joining forces with a dynamic, future-facing company such as Scenarex, we’re breaking into a promising market for copyright owners and collective licensing,” added Frédérique Couette.
 
--30-
+\-30-
 
-About Copibec
+**About Copibec**
 Copibec is a non-profit social enterprise that belongs to the author and publisher community. It offers convenient, customized solutions that meet the needs of users of copyright-protected content. It is the Quebec counterpart of Access Copyright (Canada except Quebec), the Copyright Clearance Center (U.S.) and the Centre Français d’exploitation du droit de Copie (France).
 
-About Scenarex
+**About Scenarex**
 Scenarex is a Montreal-based start-up founded in 2015. Using blockchain technology, its goal is to create flexible, user-friendly, non-restrictive solutions that will benefit the evolution and development of the publishing industry. With financial support from the National Research Council Canada (NRC) and the Canada Media Fund, Scenarex created Bookchain®, the world’s only digital publishing platform built on blockchain technology without any cryptocurrency.
 
-Source:
+**Source:**
 <br>Kevin Charron
-<br>Communications Coordinator
-<br><a hdate="mailto:k.charron@copibec.ca">k.charron@copibec.ca</a>
-<br>1 800 717-2022 ext. 249
-<br>[www.copibec.ca](https://www.copibec.ca)
+Communications Coordinator
+<a hdate="mailto:k.charron@copibec.ca">k.charron@copibec.ca</a>
+1 800 717-2022 ext. 249
+[www.copibec.ca](https://www.copibec.ca)
 <br>
 <br>Christine Joly
-<br>Chief Commercial Officer
-<br><a hdate="mailto:christine@scenarex.ca">christine@scenarex.ca</a>
-<br>438-558-2885
-<br>[www.scenarex.ca](http://www.scenarex.ca)
-<br>[www.bookchain.ca](https://www.bookchain.ca)
+Chief Commercial Officer
+<a hdate="mailto:christine@scenarex.ca">christine@scenarex.ca</a>
+438-558-2885
+[www.scenarex.ca](http://www.scenarex.ca)
+[www.bookchain.ca](https://www.bookchain.ca)
