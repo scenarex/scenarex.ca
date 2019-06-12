@@ -17,7 +17,7 @@ Frankfurt, 12 June 2019 – Seeking creatives for exhibition stand: In early Mar
 
 **Wildcard 2019 (international)**
 
-The winners of the Wildcard 2019 (international) are the Canadian founders of Scenarex. With bookchain, they offer a blockchain-technology-based solution for protecting the copyright and distribution of e-books.
+The winners of the Wildcard 2019 (international) are the Canadian founders of Scenarex. With Bookchain®, they offer a blockchain-technology-based solution for protecting the copyright and distribution of e-books.
 
 _“We are a small team from Montreal with big ideas and even bigger ambitions and we’re delighted to have been chosen as a Wildcard winner. We firmly believe in the power of blockchain to tackle some of the challenges in the industry! And participating at Frankfurter Buchmesse is the perfect opportunity for us to share our knowledge and make connections,”_ says Christine Joly, Chief Commercial Officer of Scenarex.
 
