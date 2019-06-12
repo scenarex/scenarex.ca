@@ -61,7 +61,9 @@ a {
 
   strong {
     color: inherit;
+    font-weight: bold;
   }
+
 
   &.green {
     color: $scenarex-green;
@@ -188,6 +190,10 @@ p {
 
 strong {
   color: $strong-color;
+  font-weight: bold;
+}
+em {
+  font-style: italic;
 }
 
 

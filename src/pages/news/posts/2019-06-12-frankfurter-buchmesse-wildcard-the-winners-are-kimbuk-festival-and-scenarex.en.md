@@ -13,7 +13,6 @@ author: Frankfurter Buchmesse
 
 Frankfurt, 12 June 2019 – Seeking creatives for exhibition stand: In early March, Frankfurter Buchmesse (16-20 October 2019) launched the Wildcard campaign for the fifth time. Applicants with innovative product and marketing ideas could compete for a free 8-square-metre stand and win the Wildcard. A total of 377 innovative ideas for the publishing industry from 33 countries were submitted. The range of themes was vast: from a walk-through fairy-tale theme park and a tool for scientific peer reviews to a novel-based travel app.
 
-****
 
 **Wildcard 2019 (international)**
 
@@ -23,7 +22,6 @@ _“We are a small team from Montreal with big ideas and even bigger ambitions a
 
 Website: [www.scenarex.ca](www.scenarex.ca) / [www.bookchain.ca](www.bookchain.ca)
 
-****
 
 **Wildcard 2019 (national)**
 
@@ -41,9 +39,8 @@ Website: [kimbuk.de](kimbuk.de)
 
 Frankfurter Buchmesse is the international publishing industry’s biggest trade fair – with over 7,500 exhibitors from 109 countries, around 285,000 visitors, over 4,000 events and some 10,000 accredited journalists and bloggers in attendance. It also brings together key players from the fields of education, film, games, STM, academic publishing, and business information. Since 1976, the book fair has featured an annual Guest of Honour country, which showcases its book market, literature and culture to attendees in a variety of ways. Frankfurter Buchmesse organises the participation of German publishers at around 20 international book fairs and hosts trade events throughout the year in major international markets. Frankfurter Buchmesse is a subsidiary of the Börsenverein des Deutschen Buchhandels (German Publishers & Booksellers Association). https://www.buchmesse.de/en
 
-****
 
-**Contacts for the media:** 
+**Contacts for the media:**
 
 **Scenarex**
 
