@@ -31,6 +31,8 @@ The winners of the Wildcard 2019 (national) are the Berlin-based activists behin
 
 Website: [kimbuk.de](kimbuk.de)
 
+<br/>
+
 “I’m happy to have two winners that epitomise the themes of our times. KIMBUK fights for the representation of diverse identities, which should also be reflected in children’s books. And Scenarex’s bookchain proves that even the almost 600-year-old letterpress can be transferred into data blocks very profitably”, states Katja Böhne, Vice President Marketing & Communications at Frankfurter Buchmesse.
 
 <br/>
@@ -39,13 +41,17 @@ Website: [kimbuk.de](kimbuk.de)
 
 Frankfurter Buchmesse is the international publishing industry’s biggest trade fair – with over 7,500 exhibitors from 109 countries, around 285,000 visitors, over 4,000 events and some 10,000 accredited journalists and bloggers in attendance. It also brings together key players from the fields of education, film, games, STM, academic publishing, and business information. Since 1976, the book fair has featured an annual Guest of Honour country, which showcases its book market, literature and culture to attendees in a variety of ways. Frankfurter Buchmesse organises the participation of German publishers at around 20 international book fairs and hosts trade events throughout the year in major international markets. Frankfurter Buchmesse is a subsidiary of the Börsenverein des Deutschen Buchhandels (German Publishers & Booksellers Association). https://www.buchmesse.de/en
 
-****
+<br/>
 
-**Contacts for the media:**
+
+
+**Contacts for the media**
 
 **Scenarex**
 
 Christine Joly, Chief Commercial Officer, tel.: +1 (438) 558-2885, <mailto:christine@scenarex.ca>
+
+<br/>
 
 **Press & Corporate Communications Frankfurter Buchmesse**
 
