@@ -2,17 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 import { NewsPostTemplate } from "../../templates/news-post";
 import * as moment from 'moment';
-import paragraphs from "lines-to-paragraphs";
+import remark from 'remark';
+import recommended from 'remark-preset-lint-recommended';
+import remarkHtml from 'remark-html';
 
 const NewsPostPreview = ({ entry }) => {
   if (entry) {
     const data = entry.getIn(["data"]).toJS()
     let dateObj = moment(data.metadata.date, "YYYYMMDD")
     let date = dateObj.format("MMMM DD YYYY")
+    const text = remark()
+        .use(recommended)
+        .use(remarkHtml)
+        .processSync(data.body).toString();
     return (
         <NewsPostTemplate
           author = {data.author}
-          content = {data.body ? paragraphs(data.body) : ""}
+          content = {text ? text : ""}
           date={new Date(date)}
           lang={data.metadata.language}
           title={data.title}

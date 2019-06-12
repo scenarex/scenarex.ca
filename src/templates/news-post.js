@@ -12,6 +12,7 @@ export const NewsPostTemplate = ({
   lang,
   title
   }) => {
+    console.log(content)
   return (
     <article className='post'>
       <div className="row">
