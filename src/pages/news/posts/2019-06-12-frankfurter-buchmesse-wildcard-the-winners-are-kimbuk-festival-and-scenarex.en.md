@@ -7,6 +7,10 @@ metadata:
 title: 'Frankfurter Buchmesse Wildcard: The winners are KIMBUK Festival and Scenarex'
 author: Frankfurter Buchmesse
 ---
+<img src="/img/frankfurt-wildcard-scenarex-bookchain.png" alt="Scenarex wins Frankfurt Book Fair Wildcard">
+
+
+
 Frankfurt, 12 June 2019 – Seeking creatives for exhibition stand: In early March, Frankfurter Buchmesse (16-20 October 2019) launched the Wildcard campaign for the fifth time. Applicants with innovative product and marketing ideas could compete for a free 8-square-metre stand and win the Wildcard. A total of 377 innovative ideas for the publishing industry from 33 countries were submitted. The range of themes was vast: from a walk-through fairy-tale theme park and a tool for scientific peer reviews to a novel-based travel app.
 
 ****
@@ -41,7 +45,13 @@ Frankfurter Buchmesse is the international publishing industry’s biggest trade
 
 **Contacts for the media:** 
 
-Press & Corporate Communications Frankfurter Buchmesse
+**Scenarex**
+
+Christine Joly, Chief Commercial Officer, tel.: +1 (438) 558-2885
+
+
+
+**Press & Corporate Communications Frankfurter Buchmesse**
 
 Katja Böhne, Vice President Marketing & Communications, tel.: +49 (0) 69 2102-138, press@book-fair.com
 
