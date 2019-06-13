@@ -7,4 +7,4 @@ metadata:
 title: Scenarex finaliste aux OCTAS 2019 dans la catégorie Startup
 author: Scenarex
 ---
-jkfldsa
+<img src="/img/frankfurt-wildcard-scenarex-bookchain.png" alt="Scenarex wins Frankfurt Book Fair Wildcard">
