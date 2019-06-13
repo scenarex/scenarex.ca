@@ -519,7 +519,7 @@ collections:
         widget: "object",
         fields: [
             {label: "Path", name: "path", widget: "string"},
-            {label: "Date", name: date, widget: "date", dateFormat: "YYYY-MM-DD", "format": "YYYYMMDD"},
+            {label: "Date", name: date, widget: "date", dateFormat: "YYYY-MM-DD", "format": "YYYY-MM-DD"},
             {label: "Language", name: "language", widget: "hidden", default: "en" }
         ],
         }

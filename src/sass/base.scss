@@ -76,6 +76,7 @@ a {
   &:hover,
   &:focus {
     text-decoration: underline;
+    color: $scenarex-green;
   }
 
   &.more {

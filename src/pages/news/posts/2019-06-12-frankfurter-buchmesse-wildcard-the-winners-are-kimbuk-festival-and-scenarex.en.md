@@ -1,7 +1,7 @@
 ---
 templateKey: news-post
 metadata:
-  date: '20190612'
+  date: '2019-06-12'
   language: en
   path: /wildcard19_frankfurt-book-fair
 title: 'Frankfurter Buchmesse Wildcard: The winners are KIMBUK Festival and Scenarex'
@@ -43,7 +43,7 @@ Frankfurter Buchmesse is the international publishing industry’s biggest trade
 
 <br/>
 
-
+- - -
 
 **Contacts for the media**
 
