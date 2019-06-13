@@ -49,4 +49,4 @@ Christine Joly, chef de la commercialisation, tel. +1 (438) 558-2885, <mailto:ch
 
 <br>
 
-De gauche à droite sur la photo: Steve Breault, chef de la technologie, Scenarex; Simon-Pierre Marion, CEO, Scenarex; Christine Joly, chef de la commercialisation, Scenarex; Jean Lapointe, responsable du jury, OCTAS 2019
+De gauche à droite sur la photo: Steve Breault, chef de la technologie, Scenarex; Simon-Pierre Marion, CEO, Scenarex; Christine Joly, chef de la commercialisation, Scenarex; M. Jean Lapointe, responsable du jury, OCTAS 2019
