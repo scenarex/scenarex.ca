@@ -76,7 +76,6 @@ a {
   &:hover,
   &:focus {
     text-decoration: underline;
-    color: $scenarex-green;
   }
 
   &.more {
@@ -486,6 +485,13 @@ footer {
     list-style: initial;
     padding-left: $base;
   }
+  a {
+    text-decoration: underline;
+
+  &:hover {
+    color: $scenarex-green;
+  }
+}
 }
 
 .post-title a {

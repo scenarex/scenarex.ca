@@ -19,7 +19,7 @@ The winners of the Wildcard 2019 (international) are the Canadian founders of **
 
 “We are a small team from Montreal with big ideas and even bigger ambitions and we’re delighted to have been chosen as a Wildcard winner. We firmly believe in the power of blockchain to tackle some of the challenges in the industry! And participating at Frankfurter Buchmesse is the perfect opportunity for us to share our knowledge and make connections”, says Christine Joly, Chief Commercial Officer of Scenarex.
 
-Website: [www.scenarex.ca](www.scenarex.ca) / [www.bookchain.ca](www.bookchain.ca)
+Website: [www.scenarex.ca](https://www.scenarex.ca) / [www.bookchain.ca](https://www.bookchain.ca)
 
 <br/>
 
@@ -29,7 +29,7 @@ The winners of the Wildcard 2019 (national) are the Berlin-based activists behin
 
 “Thank you for the exceptional opportunity to call the attention of such a large fair audience to the issue of diversity and sensitivity to discrimination in children’s and young adult literature! We are delighted to make our expertise available and to present books that have been awarded the KIMI seal, and we want to start conversations with authors, illustrators, publishers and all interested parties and invite them to join us in exploring ways to bring diversity into children’s books”, states Margarete Goj, publicist for the KIMBUK Festival and KIMI seal.
 
-Website: [kimbuk.de](kimbuk.de)
+Website: [kimbuk.de](https://kimbuk.de/)
 
 <br/>
 

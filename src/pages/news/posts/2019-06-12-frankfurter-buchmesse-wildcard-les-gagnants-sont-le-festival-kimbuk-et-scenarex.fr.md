@@ -21,7 +21,7 @@ Le gagnant de la Wildcard 2019 (division internationale) est la jeune entreprise
 
 "Nous sommes une petite équipe de Montréal avec de grandes idées et des ambitions encore plus grandes; nous sommes enchantés d’avoir été choisis comme gagnants pour la Wildcard. Nous croyons fortement dans le pouvoir de la technologie _blockchain_ pour adresser certains enjeux et défis dans l’industrie de l’édition. Avoir la chance de participer au Frankfurter Buchmesse est l’occasion parfaite pour nous de partager nos connaissances et notre expertise et de connecter avec différents acteurs du milieu,” dit Christine Joly, chef de la commercialisation chez Scenarex.
 
-Site web: [www.scenarex.ca](www.scenarex.ca) / [www.bookchain.ca](www.bookchain.ca)
+Site web: [www.scenarex.ca](https://www.scenarex.ca) / [www.bookchain.ca](https://www.bookchain.ca)
 
 <br/>
 
@@ -31,7 +31,7 @@ Le gagnant de la Wildcard 2019 (division nationale) est l’équipe derrière le
 
 "Merci pour l’opportunité exceptionnelle d’attirer l’attention d’un si grand public sur les questions de diversité et de sensibilité à la discrimination dans la littérature pour enfants et jeunes adultes! Nous sommes ravis de pouvoir partager notre expertise et de présenter les livres ayant obtenu le sceau KIMI. Nous souhaitons engager des discussions avec des auteurs, illustrateurs, éditeurs et tous acteurs intéressés en les invitant à se joindre à nous pour explorer les différents moyens d’intégrer la diversité dans les livres pour enfants,” déclare Margarete Goj, publiciste pour le festival KIMBUK et le sceau KIMI.
 
-Site web: [www.kimbuk.de](www.kimbuk.de)
+Site web: [www.kimbuk.de](https://kimbuk.de/)
 
 <br/>
 
