@@ -11,9 +11,9 @@ author: Scenarex
 
 
 
-Montreal, 5 juin 2019 — C’est avec une immense fierté que nous eu le plaisir d'apprendre notre nomination comme finaliste au concours #OCTAS19.
+Montreal, 5 juin 2019 — C’est avec une immense fierté que nous eu le plaisir d'apprendre notre nomination comme finaliste au concours #OCTAS19, organisé par le [Réseau Action TI](https://www.actionti.com/).
 
-Notre CEO, Simon-Pierre Marion, explique l’importance de ce concours :
+Le fondateur et CEO, Simon-Pierre Marion, explique l’importance de ce concours :
 
 «Le concours des OCTAS est un prestigieux événement annuel dans le domaine des technologies de l’information au Québec. Organisé depuis plus de 30 ans par le Réseau ACTION TI, il est le symbole des efforts déployés par les organisations québécoises dans le développement de projet TI et numérique. Ce concours rend hommage aux organisations et leurs individus qui ont apporté une contribution exceptionnelle à l’essor des TI.»
 
@@ -21,17 +21,15 @@ Notre CEO, Simon-Pierre Marion, explique l’importance de ce concours :
 
 Scenarex est en lice dans la catégorie _Startup_ pour son projet Bookchain®. M. Marion nous rappelle que ce n’est pas le fruit du hasard :
 
-«Bookchain est le résultat de notre détermination et de notre persévérance dans le développement d’un produit de grande qualité, afin d’aider les auteurs en auto-édition et les éditeurs indépendants à publier leurs livres numériques et à bénéficier de tous les avantages qu’apporte la technologie de chaîne de blocs (_blockchain_).»
+«Bookchain® est le résultat de notre détermination et de notre persévérance dans le développement d’un produit de grande qualité, afin d’aider les auteurs en auto-édition et les éditeurs indépendants à publier leurs livres numériques et à bénéficier de tous les avantages qu’apporte la technologie de chaîne de blocs (_blockchain_).»
 
 <br>
 
-Toute l'équipe de Scenarex tient à remercier les différentes organisations ayant cru au projet en investissant dans son développement et sa commercialisation. M. Marion enchaine :
-
-<br>
+Toute l'équipe de Scenarex tient à remercier les différentes organisations ayant cru au projet en investissant dans son développement et sa commercialisation. M. Marion enchaîne :
 
 «Bookchain® n’aurait pas été possible sans l’appui de nos précieux collaborateurs, le Fonds des médias du Canada (CMF-FMC) et Copibec, qui nous ont aidés financièrement tout au long de notre aventure.»
 
-Visitez les sites web suivant pour plus de détails:
+Visitez les sites web suivants pour plus de détails:
 
 [www.bookchain.ca](https://www.bookchain.ca/fr/)
 
@@ -50,3 +48,7 @@ En plus du CMF-FMC et de Copibec, rappelons que Scenarex a également reçu des 
 **Contact média**
 
 Christine Joly, chef de la commercialisation, tel. +1 (438) 558-2885, <mailto:christine@scenarex.ca>
+
+<br>
+
+De gauche à droite sur la photo: Steve Breault, chef de la technologie, Scenarex; Simon-Pierre Marion, CEO, Scenarex; Christine Joly, chef de la commercialisation, Scenarex; Jean Lapointe, responsable du jury, OCTAS 2019
