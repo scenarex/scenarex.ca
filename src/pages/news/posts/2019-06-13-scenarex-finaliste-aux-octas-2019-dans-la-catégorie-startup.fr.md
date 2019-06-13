@@ -11,7 +11,7 @@ author: Scenarex
 
 
 
-Montreal, 5 juin 2019 — C’est avec une immense fierté que nous eu le plaisir d'apprendre notre nomination comme finaliste au concours #OCTAS19, organisé par le [Réseau Action TI](https://www.actionti.com/).
+Montréal, 5 juin 2019 — C’est avec une immense fierté que nous eu le plaisir d'apprendre notre nomination comme finaliste au concours #OCTAS19, organisé par le [Réseau Action TI](https://www.actionti.com/).
 
 Le fondateur et CEO, Simon-Pierre Marion, explique l’importance de ce concours :
 
