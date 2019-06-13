@@ -7,4 +7,46 @@ metadata:
 title: Scenarex finaliste aux OCTAS 2019 dans la catégorie Startup
 author: Scenarex
 ---
-<img src="/img/frankfurt-wildcard-scenarex-bookchain.png" alt="Scenarex wins Frankfurt Book Fair Wildcard">
+<img src="/img/octas19.jpg" alt="Scenarex finaliste OCTAS 2019">
+
+
+
+Montreal, 5 juin 2019 — C’est avec une immense fierté que nous eu le plaisir d'apprendre notre nomination comme finaliste au concours #OCTAS19.
+
+Notre CEO, Simon-Pierre Marion, explique l’importance de ce concours :
+
+«Le concours des OCTAS est un prestigieux événement annuel dans le domaine des technologies de l’information au Québec. Organisé depuis plus de 30 ans par le Réseau ACTION TI, il est le symbole des efforts déployés par les organisations québécoises dans le développement de projet TI et numérique. Ce concours rend hommage aux organisations et leurs individus qui ont apporté une contribution exceptionnelle à l’essor des TI.»
+
+<br>
+
+Scenarex est en lice dans la catégorie _Startup_ pour son projet Bookchain®. M. Marion nous rappelle que ce n’est pas le fruit du hasard :
+
+«Bookchain est le résultat de notre détermination et de notre persévérance dans le développement d’un produit de grande qualité, afin d’aider les auteurs en auto-édition et les éditeurs indépendants à publier leurs livres numériques et à bénéficier de tous les avantages qu’apporte la technologie de chaîne de blocs (_blockchain_).»
+
+<br>
+
+Toute l'équipe de Scenarex tient à remercier les différentes organisations ayant cru au projet en investissant dans son développement et sa commercialisation. M. Marion enchaine :
+
+<br>
+
+«Bookchain® n’aurait pas été possible sans l’appui de nos précieux collaborateurs, le Fonds des médias du Canada (CMF-FMC) et Copibec, qui nous ont aidés financièrement tout au long de notre aventure.»
+
+Visitez les sites web suivant pour plus de détails:
+
+[www.bookchain.ca](https://www.bookchain.ca/fr/)
+
+[www.scenarex.ca](https://www.scenarex.ca/fr)
+
+[Octas 2019 (Concours)](https://www.actionti.com/octas19/)
+
+[Octas 2019 (Grande soirée de remise de prix)](https://www.actionti.com/calendrier/grande-soiree-des-octas-2019/)
+
+<br>
+
+En plus du CMF-FMC et de Copibec, rappelons que Scenarex a également reçu des aides financières du Conseil national de recherches Canada (CNRC) et du Ministère de l'Économie et Innovation du gouvernement du Québec. 
+
+<br>
+
+**Contact média**
+
+Christine Joly, chef de la commercialisation, tel. +1 (438) 558-2885, <mailto:christine@scenarex.ca>
