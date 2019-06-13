@@ -27,8 +27,20 @@ Scenarex is nominated in the _Startup_ category for their Bookchain® project. M
 
 The whole Scenarex team wishes to thank the organizations that believed in the project and invested for its development and marketing. M. Marion continues:
 
-"Bookchain would not have been possible without the support of our precious collaborators, the Fonds des médias du Canada (CMF-FMC) and Copibec, who helped us financially throughout our adventure."
+"Bookchain® would not have been possible without the support of our precious collaborators, the Fonds des médias du Canada (CMF-FMC) and Copibec, who helped us financially throughout our adventure."
 
 <br>
 
-In addition to the CMF-FMC and Copibec, please note that Scenarex also received grants from the National Research Council of Canada (NRC) and the Ministère de l'Économie et de l'Innovation du Québec.
+In addition to the CMF-FMC and Copibec, please note that Scenarex also received financial support from the National Research Council of Canada (NRC) and the Ministère de l'Économie et de l'Innovation du Québec.
+
+<br>
+
+<br>
+
+**Media Contact**
+
+Christine Joly, Chief Commercial Officer, tel. +1 (438) 558-2885, <mailto:christine@scenarex.ca>
+
+<br>
+
+From left to right on the picture: Steve Breault, Chief Technology Officer, Scenarex; Simon-Pierre Marion, CEO, Scenarex; Christine Joly, Chief Commercial Officer, Scenarex; M. Jean Lapointe, Head of jury, OCTAS 2019
