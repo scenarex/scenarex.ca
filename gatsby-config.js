@@ -81,5 +81,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-remove-serviceworker`
   ],
 }
