@@ -4,7 +4,7 @@ metadata:
   date: '2019-06-05'
   language: en
   path: /octas2019
-title: Scenare finalist at the OCTAS 2019
+title: Scenarex finalist at the OCTAS 2019
 author: Scenarex
 ---
 <img src="/img/octas19.jpg" alt="Scenarex finalist OCTAS 2019">
