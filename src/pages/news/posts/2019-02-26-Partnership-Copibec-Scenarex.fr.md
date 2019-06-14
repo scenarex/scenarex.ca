@@ -1,9 +1,9 @@
 ---
 templateKey: news-post
 metadata:
-  path: "/Gestion-des-droits-auteur-partenariat-entre-Copibec-et-Scenarex"
   date: "2019-02-26"
   language: fr
+  path: "/Gestion-des-droits-auteur-partenariat-entre-Copibec-et-Scenarex"
 title:  "Gestion des droits d'auteur: partenariat entre Copibec et Scenarex"
 author: "Simon-Pierre Marion"
 

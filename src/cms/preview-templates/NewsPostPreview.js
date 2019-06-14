@@ -11,6 +11,7 @@ const NewsPostPreview = ({ entry }) => {
     const data = entry.getIn(["data"]).toJS()
     let dateObj = moment(data.metadata.date, "YYYYMMDD")
     let date = dateObj.format("MMMM DD YYYY")
+    console.log(data)
     const text = remark()
         .use(recommended)
         .use(remarkHtml)
