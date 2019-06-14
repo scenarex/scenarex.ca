@@ -25,21 +25,13 @@ Scenarex est en lice dans la catégorie _Startup_ pour son projet Bookchain®. M
 
 Toute l'équipe de Scenarex tient à remercier les différentes organisations ayant cru au projet en investissant dans son développement et sa commercialisation. M. Marion enchaîne :
 
-«Bookchain® n’aurait pas été possible sans l’appui de nos précieux collaborateurs, le Fonds des médias du Canada (CMF-FMC) et Copibec, qui nous ont aidés financièrement tout au long de notre aventure.»
-
-Visitez les sites web suivants pour plus de détails:
-
-[www.bookchain.ca](https://www.bookchain.ca/fr/)
-
-[www.scenarex.ca](https://www.scenarex.ca/fr)
-
-[Octas 2019 (Concours)](https://www.actionti.com/octas19/)
-
-[Octas 2019 (Grande soirée de remise de prix)](https://www.actionti.com/calendrier/grande-soiree-des-octas-2019/)
+«Bookchain® n’aurait pas été possible sans l’appui de nos précieux collaborateurs, le [Fonds des médias du Canada](https://www.cmf-fmc.ca/fr-ca/about-us) (CMF-FMC) et [Copibec](https://www.copibec.ca/), qui nous ont supportés financièrement tout au long de notre aventure.»
 
 <br>
 
-En plus du CMF-FMC et de Copibec, rappelons que Scenarex a également reçu des aides financières du Conseil national de recherches Canada (CNRC) et du Ministère de l'Économie et Innovation du gouvernement du Québec. 
+En plus du CMF-FMC et de Copibec, rappelons que Scenarex a également reçu des aides financières du [Conseil national de recherches Canada](https://nrc.canada.ca/fr) (CNRC) et du [Ministère de l'Économie et Innovation du gouvernement](https://www.economie.gouv.qc.ca/accueil/) — Québec. 
+
+<br>
 
 <br>
 
