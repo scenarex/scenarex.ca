@@ -80,7 +80,6 @@ module.exports = {
         prefixDefault: true,
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],
 }
