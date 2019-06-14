@@ -21,7 +21,7 @@ export const NewsPostTemplate = ({
         </div>
         <div className="9u 12u(small)">
           <h1 className='post-title'>{title}</h1>
-          <p dangerouslySetInnerHTML={{ __html: (content ? content : "") }}/>
+          <div dangerouslySetInnerHTML={{ __html: (content) }}/>
         </div>
       </div>
     </article>
@@ -35,6 +35,7 @@ NewsPostTemplate.propTypes = {
 }
 
 const NewsPost = ({ data }) => {
+  console.log(data)
   const { markdownRemark: page, headerData, footerData } = data;
   const {
     fields: {langKey},
