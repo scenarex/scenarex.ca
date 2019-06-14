@@ -29,7 +29,7 @@ Toute l'équipe de Scenarex tient à remercier les différentes organisations ay
 
 <br>
 
-En plus du CMF-FMC et de Copibec, rappelons que Scenarex a également reçu des aides financières du [Conseil national de recherches Canada](https://nrc.canada.ca/fr) (CNRC) et du [Ministère de l'Économie et Innovation du gouvernement](https://www.economie.gouv.qc.ca/accueil/) — Québec. 
+En plus du CMF-FMC et de Copibec, rappelons que Scenarex a également reçu des aides financières du [Conseil national de recherches Canada](https://nrc.canada.ca/fr) (CNRC) et du [Ministère de l'Économie et Innovation](https://www.economie.gouv.qc.ca/accueil/) — Québec. 
 
 <br>
 
