@@ -15,7 +15,7 @@ This new platform will meet a key need for Copibec’s clients who are committed
 
 “Since the Internet era began, creators have been searching for ways to prevent their content from being shared illegally online. Blockchain technology is a promising step forward,” explained Frédérique Couette, Copibec’s Executive Director. “It will allow copyright owners to measure how their content is being used and then be paid fairly for that use.”
 
-The platform will be developed by Scenarex, the creator of [Bookchain® ](https://www.bookchain.ca/en/)and the first company in the world to develop a digital publishing solution based on blockchain technology that is cryptocurrency-free for its users. “Our innovation without using cryptocurrency offers a stable, secure solution,” said Simon-Pierre Marion, Scenarex founder and CEO. “It protects users and creators from cryptocurrency fluctuations and also makes the project accessible to the general public.”
+The platform will be developed by Scenarex, the creator of [Bookchain](https://www.bookchain.ca/en/)® and the first company in the world to develop a digital publishing solution based on blockchain technology that is cryptocurrency-free for its users. “Our innovation without using cryptocurrency offers a stable, secure solution,” said Simon-Pierre Marion, Scenarex founder and CEO. “It protects users and creators from cryptocurrency fluctuations and also makes the project accessible to the general public.”
 
 “By joining forces with a dynamic, future-facing company such as Scenarex, we’re breaking into a promising market for copyright owners and collective licensing,” added Frédérique Couette.
 
