@@ -17,7 +17,7 @@ Le fondateur et CEO, Simon-Pierre Marion, explique l’importance de ce concours
 
 <br>
 
-Scenarex est en lice dans la catégorie _Startup_ pour son projet Bookchain®. M. Marion nous rappelle que ce n’est pas le fruit du hasard :
+Scenarex est en lice dans la catégorie _Startup_ pour son projet [Bookchain®](https://www.bookchain.ca/fr/). M. Marion nous rappelle que ce n’est pas le fruit du hasard :
 
 «Bookchain® est le résultat de notre détermination et de notre persévérance dans le développement d’un produit de grande qualité, afin d’aider les auteurs en auto-édition et les éditeurs indépendants à publier leurs livres numériques et à bénéficier de tous les avantages qu’apporte la technologie de chaîne de blocs (_blockchain_).»
 
@@ -29,7 +29,7 @@ Toute l'équipe de Scenarex tient à remercier les différentes organisations ay
 
 <br>
 
-En plus du CMF-FMC et de Copibec, rappelons que Scenarex a également reçu des aides financières du [Conseil national de recherches Canada](https://nrc.canada.ca/fr) (CNRC) et du [Ministère de l'Économie et Innovation](https://www.economie.gouv.qc.ca/accueil/) — Québec. 
+En plus du CMF-FMC et de Copibec, rappelons que Scenarex a également reçu des aides financières du [Conseil national de recherches Canada](https://nrc.canada.ca/fr) (CNRC) et du [Ministère de l'Économie et Innovation](https://www.economie.gouv.qc.ca/accueil/) — Québec.
 
 <br>
 

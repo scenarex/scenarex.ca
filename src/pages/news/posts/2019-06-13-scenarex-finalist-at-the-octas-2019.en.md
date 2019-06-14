@@ -19,9 +19,9 @@ Our founder and CEO, Simon-Pierre Marion, explains the significance of this cont
 
 <br>
 
-Scenarex is nominated in the _Startup_ category for their Bookchain® project. Mr. Marion reminds us that this is not a coincidence:
+Scenarex is nominated in the _Startup_ category for their [Bookchain®](https://www.bookchain.ca/en/) project. Mr. Marion reminds us that this is not a coincidence:
 
-"[Bookchain®](https://www.bookchain.ca/en/) is the result of our determination and perseverance in the development of a high-quality product, in order to help self-publishing authors and independent publishers to publish their digital books and to benefit from blockchain technology."
+"Bookchain® is the result of our determination and perseverance in the development of a high-quality product, in order to help self-publishing authors and independent publishers to publish their digital books and to benefit from blockchain technology."
 
 <br>
 
