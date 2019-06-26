@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "gatsby";
-import routes from "../libs/routes.json";
+import routes from "../utils/routes.json";
 
 class LanguageSwitcher extends React.Component {
   translatedLink(lang) {
@@ -8,7 +8,7 @@ class LanguageSwitcher extends React.Component {
       return routes[this.props.path][lang]
     }
     else {
-      return `/${lang}${this.props.path}`
+      return `/${lang}/${this.props.path}`
     }
   }
   render() {

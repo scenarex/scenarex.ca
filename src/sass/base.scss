@@ -165,9 +165,37 @@ h4, h5, h6 {
   margin-top: 1rem;
   font-size: 1rem;
 }
+.mt h2 {
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
 
+.biggest h2 {
+  font-size: $title1;
+  font-weight: 800;
+  letter-spacing: -1.25px;
+  margin: $title2 0;
+  color: #007F8D;
+
+  @include breakpoint(small) {
+    font-size: $title2;
+    margin-top: 0;
+  }
+}
+.big h2 {
+  font-size: $title2;
+  font-weight: 800;
+  letter-spacing: -1.25px;
+  margin: $title2 0;
+  color: #007F8D;
+}
 /////////////
 // Body text
+.smaller p {
+
+  font-size: $smaller;
+  margin-top: 4em;
+}
 
 p {
   margin-top: 0;

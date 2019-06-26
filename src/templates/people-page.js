@@ -1,20 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import { RichText } from 'prismic-reactjs';
 
 export const PeoplePageTemplate = props => {
-  const { page } = props;
   return (
     <div className="row">
       <div className="row">
         <div className="6u 12u(small)">
-          <img src={page.frontmatter.img} alt=""/>
-          <a href={`mailto:${page.frontmatter.email}`}><i className="fas fa-envelope"></i> {page.frontmatter.email}</a>
+          <img src={props.page.img.url} alt=""/>
+          <a href={`mailto:${props.page.email[0].text}`}><i className="fas fa-envelope"></i> {props.page.email[0].text}</a>
         </div>
         <div className="6u 12u(small)">
-          <h2 className="big">{page.frontmatter.name}</h2>
-          <p>{page.frontmatter.description}</p>
+          <h2 className="big">{RichText.render(props.page.name)}</h2>
+          {RichText.render(props.page.description)}
         </div>
       </div>
     </div>
@@ -22,49 +21,35 @@ export const PeoplePageTemplate = props => {
 }
 
 const PeoplePage = ({ data }) => {
-  const { markdownRemark: page, headerData, footerData } = data;
-  const {
-    fields: { langKey },
-    frontmatter: {metadata: { ref }}
-  } = page;
+  let page = data.prismic.allMembers.edges[0].node;
   return (
-    <Layout path={ref} title={page.frontmatter.name} headerData={headerData} footerData={footerData}>
-      <PeoplePageTemplate page={{ ...page, langKey}} />
+    <Layout title={page.name[0].text} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
+      <PeoplePageTemplate page={page} />
     </Layout>
   );
 };
 
-PeoplePage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
 
 export default PeoplePage
-
-export const pageQuery = graphql`
-  query PageByID($langKey: String!, $id: String!) {
-    markdownRemark(
-      id : {eq: $id }
-      fields: { langKey: { eq: $langKey } }
-    ) {
-      fields {
-        langKey
-        slug
-      }
-      frontmatter {
-        templateKey
-        metadata {
-          ref
-          language
-        }
+export const peopleQuery = graphql`
+query peopleQuery($langKey: String, $uid: String) {
+prismic {
+  allMembers(lang: $langKey, uid: $uid) {
+    edges {
+      node {
         name
-        email
         description
         img
+        email
+        _meta {
+          uid
+          lang
+
+          }
+        }
       }
+    }
   }
   ...LayoutFragment
-}`
+}
+`

@@ -1,0 +1,44 @@
+{
+  "news": {
+    "en" : "News", "fr" : "Nouvelles"
+  },
+  "press": {
+    "en" : "Press", "fr" : "Presse"
+  },
+  "by" : {
+    "en" : "by", "fr" : "par"
+  },
+  "address" : {
+    "en" : "Address", "fr" : "Addresse"
+  },
+  "email" : {
+    "en" : "Email", "fr" : "Courriel"
+  },
+  "phone" : {
+    "en" : "Phone", "fr" : "Téléphone"
+  },
+  "main_text" : {
+    "en" : "Discover our Bookchain® Solution", "fr" : "Découvrez notre Solution Bookchain®"
+  },
+  "copyright" : {
+    "en" : "This work is licensed under a ", "fr" : "Cette œuvre est mise à disposition selon les termes de la"
+  },
+  "newsletter" : {
+    "en" : "Sign up for our newsletter" , "fr" : "Abonnez-vous à notre infolettre"
+  },
+  "subscribe": {
+    "en" : "Subscribe", "fr" : "S'abonnez"
+  },
+  "using" : {
+    "en" : "using", "fr" : "en utilisant"
+  },
+  "team" : {
+    "en" : "Team", "fr" : "Équipe"
+  },
+  "learn" : {
+    "en" : "Check out the team", "fr" : "Découvrez l'équipe"
+  },
+  "footer_text" : {
+    "en" : "Made with", "fr" : "Fait avec"
+  }
+}

@@ -1,11 +1,36 @@
+require('dotenv').config({
+  path: `.env`,
+})
+const prismicHtmlSerializer = require('./src/prismic/htmlSerializer')
+const prismicLinkResolver = require('./src/prismic/linkResolver')
 module.exports = {
   siteMetadata: {
-    title: `Scenarex Website`,
-    author: `Scenarex Inc.`,
-    description: `Public facing website for Scenarex Inc.`,
-    siteUrl: `https://scenarex.ca`,
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
   },
   plugins: [
+      {
+      resolve: 'gatsby-source-prismic-graphql',
+      options: {
+        repositoryName: 'scenarex',
+        accessToken : `${process.env.API_KEY}`,
+        // PrismJS highlighting for labels and slices
+        htmlSerializer: () => prismicHtmlSerializer,
+        linkResolver: () => prismicLinkResolver,
+        previews: true,
+        path: "/preview",
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["src/sass/main.scss", "src/sass/skel.scss"],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
     resolve: `gatsby-plugin-favicon`,
      options: {
@@ -39,48 +64,8 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        includePaths: ["src/sass/main.scss", "src/sass/skel.scss"],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-        enableIdentityWidget: true,
-        publicPath: `admin`,
-        htmlTitle: `Content Manager`,
-        modulePath: `${__dirname}/src/cms/cms.js`,
-        }
-    },
-    {
-       resolve: "gatsby-source-filesystem",
-       options: {
-         path: `${__dirname}/src/pages`,
-         name: "pages",
-       },
-     },
-     {
-        resolve: "gatsby-source-filesystem",
-        options: {
-          path: `${__dirname}/src/pages/about`,
-          name: "blank-pages",
-        },
-      },
-    `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-i18n",
-      options: {
-        langKeyForNull: `en`,
-        langKeyDefault: `en`,
-        useLangKeyLayout: false,
-        prefixDefault: true,
-      },
-    },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-remove-serviceworker`
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }

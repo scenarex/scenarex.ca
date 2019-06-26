@@ -2,26 +2,27 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import translations from "../libs/news-translations.json";
-import * as moment from 'moment';
+import { RichText } from 'prismic-reactjs';
+import translations from "../utils/translations.json";
 
-export const NewsPostTemplate = ({
-  author,
-  content,
-  date,
-  lang,
-  title
-  }) => {
-    console.log(content)
+export const NewsPostTemplate = props => {
+  console.log(props);
+  let date = new Date(props.page.post_date);
+  console.log(date)
   return (
     <article className='post'>
       <div className="row">
         <div className="3u 12u(small)">
-          <div className="post-date">{date.toLocaleDateString(lang, {year: 'numeric', month: 'long', day: 'numeric'})}<br/>{translations["by"][lang]} {author}</div>
+          <div className="post-date">{date.toLocaleDateString(props.page._meta.lang, {year: 'numeric', month: 'long', day: 'numeric'})}<br/>{translations["by"][props.page._meta.lang]} {RichText.render(props.page.post_author)}</div>
         </div>
         <div className="9u 12u(small)">
-          <h1 className='post-title'>{title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: (content) }}/>
+          {RichText.render(props.page.post_title)}
+          {props.page.post_image ?
+            <img src={props.page.post_image.url} alt={props.page.post_image.alt}/>
+            :
+            ""
+          }
+          {RichText.render(props.page.post_body)}
         </div>
       </div>
     </article>
@@ -35,60 +36,35 @@ NewsPostTemplate.propTypes = {
 }
 
 const NewsPost = ({ data }) => {
-  console.log(data)
-  const { markdownRemark: page, headerData, footerData } = data;
-  const {
-    fields: {langKey},
-    frontmatter: {title, author, metadata: {date}},
-    html
-  } = page;
-  let dateObj = moment(date, "YYYYMMDD")
-  let formattedDate = dateObj.format("MMMM DD YYYY")
+  let page = data.prismic.allNewss.edges[0].node;
   return (
-  <Layout path={date} title={title} headerData={headerData} footerData={footerData}>
-    <NewsPostTemplate
-      author={author}
-      content={html}
-      date={new Date(formattedDate)}
-      lang={langKey}
-      title={title}
-    />
+  <Layout title={page.post_title[0].text} path={page.post_date} headerData={data.headerData} footerData={data.footerData}>
+    <NewsPostTemplate page={page} />
   </Layout>
   )
 }
 
-NewsPost.propTypes = {
-  data: PropTypes.shape({
-    html: PropTypes.string,
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
 
 export default NewsPost
-
-export const pageQuery = graphql`
-  query BlogPostTemplate($langKey: String!, $id: String!) {
-    markdownRemark(
-      id : { eq: $id }
-      fields: { langKey: { eq: $langKey } }
-    ) {
-      fields {
-        slug
-        langKey
-      }
-      id
-      html
-      frontmatter {
-        metadata {
-          date
-          path
+export const newsquery = graphql`
+query newsQuery($langKey: String, $uid: String)
+{
+  prismic {
+    allNewss(lang: $langKey, uid: $uid) {
+      edges {
+        node {
+          _meta {
+            uid
+            lang
+          }
+          post_author
+          post_body
+          post_date
+          post_image
+          post_title
         }
-        title
-        author
       }
     }
-    ...LayoutFragment
   }
-`
+  ...LayoutFragment
+}`
