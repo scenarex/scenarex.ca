@@ -20,11 +20,11 @@ const AboutPage = ({ data }) => {
   <Layout title={page.title[0].text} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
     <main>
       <div className="row">
-        <div className="6u 12u(small) biggest">
-          <h2 className="biggest">{RichText.render(page.title)}</h2>
-          <a href="#team" className="more">{translations["learn"][lang]}<br/><i className="fas fa-arrow-down fa-2x"></i></a>
+        <div className="md:w-6/12 w-full biggest">
+          {RichText.render(page.title)}
+          <a href="#team" className="opacity-100 outline-none absolute text-center text-sm uppercase font-normal z-10 md:block hidden">{translations["learn"][lang]}<br/><i className="fas fa-arrow-down fa-2x"></i></a>
         </div>
-        <div className="6u 12u(small)">
+        <div className="md:w-6/12 w-full">
           {RichText.render(page.text)}
         </div>
       </div>
@@ -32,15 +32,15 @@ const AboutPage = ({ data }) => {
       <div className="upper-border">
         <h2 className="big mtd" id="team">{translations["team"][lang]}</h2>
         {memberChunks.map ( (row,i) =>
-          <div className="row 32%" key={i}>
+          <div className="row" key={i}>
             {row.map ((person, j) =>
-              <div className="4u -1u 12u(small))" key={j}>
+              <div className="md:w-4/12 w-full pl-8" key={j} >
                 <Link to={`/${lang}/${person.link._meta.uid}`}>
                   <img className="grey" src={person.person.url} alt={person.name[0].text}/>
                 </Link>
                 {RichText.render(person.name)}
                 <p>{person.title1[0].text}<br/>
-                <a href={`mailto:${person.email[0].text}`} className="green">{person.email[0].text}</a>
+                <a href={`mailto:${person.email[0].text}`} className="text-scenarexGreen">{person.email[0].text}</a>
                 </p>
               </div>
             )}
@@ -52,9 +52,6 @@ const AboutPage = ({ data }) => {
   </Layout>
   )
 }
-AboutPage.query = aboutQuery;
-
-export default AboutPage
 
 export const aboutQuery = graphql `
 query aboutQuery($langKey: String){
@@ -95,3 +92,7 @@ prismic {
   ...LayoutFragment
 }
 `
+
+AboutPage.query = aboutQuery;
+
+export default AboutPage

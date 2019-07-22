@@ -1,16 +1,15 @@
-import "../sass/main.scss"
+import "../styles/style.css"
 import React from "react";
-import { graphql, StaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import Helmet from 'react-helmet';
 import { Header } from "./header";
 import { Footer } from "./footer";
 
 class Layout extends React.Component {
   render() {
-    console.log(this.props)
     const { headerData, footerData, children, path, title } = this.props;
     return (
-      <div className="container">
+      <div className="container mx-auto">
         <Helmet defaultTitle={title} titleTemplate={`%s | SCENAREXinc`}>
           <meta name="title" content={title} />
           <title>{title}</title>

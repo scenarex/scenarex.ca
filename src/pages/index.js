@@ -5,7 +5,7 @@ import { RichText } from 'prismic-reactjs'
 
 
 const IndexPage = ({ data }) => {
-  console.log(data);
+  console.log("data");
   let page = data.prismic.allHomes.edges[0].node;
   let tools;
   let partners;
@@ -26,9 +26,9 @@ const IndexPage = ({ data }) => {
       <section className="masthead upper-border">
         <div className="big">{RichText.render(page.partnerstitle)}</div>
         {partners.fields.length > 0 &&
-        <div className="row flex 50%">
+        <div className="row flex-item ml-4 mb-4">
           {(partners.fields).map((partner,i) =>
-            <div className="25u 12u$(small) flex" key={i}>
+            <div className="flex-item pl-2 p-0" key={i}>
               <a href={partner ? partner.link.url : ""}>
                 <img className="grey" src={partner.img.url} style={{maxHeight: "60px"}} alt=""/>
               </a>
@@ -41,9 +41,9 @@ const IndexPage = ({ data }) => {
       <section className="masthead upper-border">
         <div className="big">{RichText.render(page.toolstitle)}</div>
         {tools.fields.length > 0 &&
-        <div className="row inline flex">
+        <div className="row flex-item">
           {(tools.fields).map((tool,i) =>
-            <div className="3u 12u$(small) flex" key={i}>
+            <div className="md:w-3/12 w-full ml-0 pl-6 block md:flex-item" key={i}>
               <span className="fa-layers fa-fw fa-8x">
                 <i className="fa fa-circle icon-background"></i>
                 <i className={tool.icon[0].text} data-fa-transform="shrink-6"></i>
@@ -59,11 +59,6 @@ const IndexPage = ({ data }) => {
   </Layout>
   )
 }
-
-
-IndexPage.query = homeQuery;
-
-export default IndexPage
 
 export const homeQuery = graphql`
 query homeQuery($langKey: String) {
@@ -111,3 +106,8 @@ prismic {
   ...LayoutFragment
 }
 `
+
+
+IndexPage.query = homeQuery;
+
+export default IndexPage

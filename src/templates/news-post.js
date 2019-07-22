@@ -12,10 +12,10 @@ export const NewsPostTemplate = props => {
   return (
     <article className='post'>
       <div className="row">
-        <div className="3u 12u(small)">
+        <div className="md:w-3/12 w-full ml-0">
           <div className="post-date">{date.toLocaleDateString(props.page._meta.lang, {year: 'numeric', month: 'long', day: 'numeric'})}<br/>{translations["by"][props.page._meta.lang]} {RichText.render(props.page.post_author)}</div>
         </div>
-        <div className="9u 12u(small)">
+        <div className="md:w-9/12 w-full">
           {RichText.render(props.page.post_title)}
           {props.page.post_image ?
             <img src={props.page.post_image.url} alt={props.page.post_image.alt}/>

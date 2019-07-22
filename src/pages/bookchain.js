@@ -10,7 +10,7 @@ const BookchainPage = ({ data }) => {
   <Layout title={"Bookchain"} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
     <main className="bookchain">
       <div className="row">
-        <div className="6u 12u(small)">
+        <div className="md:w-6/12 w-full">
           <center><img src={page.logo.url} alt={page.logo.alt} width="350"/></center>
           {RichText.render(page.subheader)}
           {page.timeline.length > 0 &&
@@ -27,10 +27,10 @@ const BookchainPage = ({ data }) => {
               )}
             </div>
           }
-          <div className="smaller">{RichText.render(page.bookchain_subtext)}</div>
+          <div className="text-sm pt-10">{RichText.render(page.bookchain_subtext)}</div>
         </div>
-        <div className="6u 12u(small)">
-          <div className="12u mt">
+        <div className="md:w-6/12 w-full">
+          <div className="w-full mt-12 mb-6">
             {RichText.render(page.sidebar_text)}
           </div>
         </div>
@@ -38,15 +38,15 @@ const BookchainPage = ({ data }) => {
       {page.bookchain_reasons.length > 0 &&
         <div className="row upper-border mtd">
           {page.bookchain_reasons.map((reason, i) =>
-            <div className="3u 12u(small)" key={i}>
-              <h2><i className={reason.reasons_icon}></i> {reason.reasons_title}</h2>
-              <div className="smaller">{RichText.render(reason.reasons_text)}</div>
+            <div className="lg:w-3/12 w-full ml-0" key={i}>
+              <h2 className="xl:text-2xl md:text-xl text-2xl"><i className={reason.reasons_icon}></i> {reason.reasons_title}</h2>
+              <div className="text-sm lg:pt-10 pt-4 lg:pb-0 pb-6">{RichText.render(reason.reasons_text)}</div>
             </div>
           )}
         </div>
       }
       <div className="row upper-border mtd">
-        <div className="12u smaller">
+        <div className="w-full text-sm pt-10">
           {RichText.render(page.bookchainsolutions_text)}
         </div>
       </div>
@@ -61,10 +61,6 @@ function makeDate (date, lang) {
   formattedDate.setUTCMonth(month +1);
   return formattedDate.toLocaleDateString(lang, {year: 'numeric', month: 'short'});
 };
-BookchainPage.query = bookchainQuery;
-
-
-export default BookchainPage
 
 
 export const bookchainQuery = graphql `
@@ -99,3 +95,7 @@ query bookchainQuery($langKey: String)
   ...LayoutFragment
 }
 `
+
+BookchainPage.query = bookchainQuery;
+
+export default BookchainPage

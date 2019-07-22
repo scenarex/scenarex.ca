@@ -6,6 +6,9 @@ const { getRootQuery } = require('gatsby-source-graphql-universal/getRootQuery')
 
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
+  if (page.path === "/preview") {
+    return;
+  }
 
   return new Promise(resolve => {
     deletePage(page)

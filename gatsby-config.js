@@ -19,16 +19,11 @@ module.exports = {
         htmlSerializer: () => prismicHtmlSerializer,
         linkResolver: () => prismicLinkResolver,
         previews: true,
-        path: "/preview",
+        path: "/preview"
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        includePaths: ["src/sass/main.scss", "src/sass/skel.scss"],
-      },
-    },
+    `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

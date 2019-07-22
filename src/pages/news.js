@@ -37,10 +37,6 @@ const NewsPage = ({ data }) => {
   )
 }
 
-NewsPage.query = newsPageQuery;
-
-export default NewsPage
-
 export const newsPageQuery = graphql`
 query newsPageQuery($langKey: String) {
   pressPosts : prismic {
@@ -80,3 +76,7 @@ query newsPageQuery($langKey: String) {
   ...LayoutFragment
 }
 `
+
+NewsPage.query = newsPageQuery;
+
+export default NewsPage

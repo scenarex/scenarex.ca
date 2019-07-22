@@ -10,26 +10,26 @@ const ContactPage = ({ data }) => {
   return (
   <Layout title={"Contact"} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
     <main>
-      <h2 className="biggest">{(page.title[0].text)}</h2>
+      <h2 className="sm:text-6xl text-4xl biggest">{(page.title[0].text)}</h2>
       <div className="row">
-        <div className="6u 12u(small)">
+        <div className="md:w-6/12 w-full">
           <a target="_blank" rel="noopener noreferrer" href={page.map_link.url} className="image fit">
             <img src={page.map.url} alt="Map" />
           </a>
         </div>
-        <div className="6u 12u(small)">
+        <div className="md:w-6/12 w-full address">
           <h3><i className="fas fa-map-marker-alt"></i> {translations["address"][lang]}</h3>
           {RichText.render(page.address)}
         </div>
       </div>
       <div className="row">
-        <div className="4u 12u(small)">
+        <div className="md:w-4/12 w-full">
           <h3><i className="fas fa-envelope"></i> {translations["email"][lang]}</h3>
-          <a href={`mailto:${page.email[0].text}`} className="green">{page.email[0].text}</a>
+          <a href={`mailto:${page.email[0].text}`} className="text-bookchainGreen">{page.email[0].text}</a>
         </div>
-        <div className="4u 12u(small)">
+        <div className="md:w-4/12 w-full)">
           <h3><i className="fas fa-mobile-alt"></i> {translations["phone"][lang]}</h3>
-          <a href={`tel:${page.phone[0].text}`} className="green">{page.phone[0].text}</a>
+          <a href={`tel:${page.phone[0].text}`} className="text-bookchainGreen">{page.phone[0].text}</a>
         </div>
       </div>
     </main>
@@ -37,10 +37,6 @@ const ContactPage = ({ data }) => {
   )
 }
 
-
-export default ContactPage
-
-ContactPage.query = contactQuery;
 
 export const contactQuery = graphql `
 query contactQuery($langKey: String){
@@ -73,3 +69,6 @@ query contactQuery($langKey: String){
   ...LayoutFragment
 }
 `
+export default ContactPage
+
+ContactPage.query = contactQuery;
