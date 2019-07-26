@@ -5,38 +5,10 @@ import Helmet from 'react-helmet';
 import { Header } from "./header";
 import { Footer } from "./footer";
 
-class Layout extends React.Component {
-  render() {
-    const { headerData, footerData, children, path, title } = this.props;
-    return (
-      <div className="container mx-auto">
-        <Helmet defaultTitle={title} titleTemplate={`%s | SCENAREXinc`}>
-          <meta name="title" content={title} />
-          <title>{title}</title>
-          <meta property="og:image" content={"https://www.scenarex.ca/img/logo-colour.png"} />
-          <meta property="og:title" content={title}/>
-          <script defer src="https://kit.fontawesome.com/dbe50f6069.js"></script>
-          <script>
-            {`window.prismic = {
-              endpoint: 'https://scenarex.cdn.prismic.io/api/v2'
-            };`}
-          </script>
-          <script type="text/javascript" src="https://static.cdn.prismic.io/prismic.min.js"></script>
-        </Helmet>
-        <Header headerData={headerData} path={path}/>
-        <main>{children}</main>
-        <Footer footerData={footerData}/>
-      </div>
-    )
-  }
-}
-
-export default Layout
-
 export const query = graphql`
   fragment LayoutFragment on Query{
     headerData: prismic {
-      allHeaders (lang: $langKey) {
+      allHeaders (lang: $lang) {
       edges {
         node {
           _meta {
@@ -60,7 +32,7 @@ export const query = graphql`
     }
   }
   footerData: prismic {
-    allFos (lang: $langKey) {
+    allFos (lang: $lang) {
     edges {
       node {
         _meta {
@@ -103,3 +75,35 @@ export const query = graphql`
 }
 }
 `
+
+class Layout extends React.Component {
+  render() {
+    console.log(this.props)
+    const { headerData, footerData, children, path, title } = this.props;
+    return (
+      <div className="container mx-auto">
+        <Helmet defaultTitle={title} titleTemplate={`%s | SCENAREXinc`}>
+          <meta name="title" content={title} />
+          <title>{title}</title>
+          <meta property="og:image" content={"https://www.scenarex.ca/img/logo-colour.png"} />
+          <meta property="og:title" content={title}/>
+          <script defer src="https://kit.fontawesome.com/dbe50f6069.js"></script>
+          <script>
+            {`window.prismic = {
+              endpoint: 'https://scenarex.cdn.prismic.io/api/v2'
+            };`}
+          </script>
+          <script type="text/javascript" src="https://static.cdn.prismic.io/prismic.min.js"></script>
+        </Helmet>
+        <Header headerData={headerData} path={path}/>
+        <main>{children}</main>
+        <Footer footerData={footerData} path={path}/>
+      </div>
+    )
+  }
+}
+
+
+Layout.query = query;
+
+export default Layout

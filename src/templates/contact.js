@@ -5,8 +5,10 @@ import { RichText } from 'prismic-reactjs';
 import translations from "../utils/translations.json";
 
 const ContactPage = ({ data }) => {
-  const page = data.prismic.allContacts.edges[0].node;
-  const lang = (page._meta.lang.split("-") )[0];
+  const doc = data.prismic.allContacts.edges.slice(0,1).pop();
+  if(!doc) return null;
+  const page = doc.node;
+  const lang = page._meta.lang;
   return (
   <Layout title={"Contact"} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
     <main>
@@ -39,9 +41,9 @@ const ContactPage = ({ data }) => {
 
 
 export const contactQuery = graphql `
-query contactQuery($langKey: String){
+query contactQuery($lang: String, $id: String){
   prismic {
-    allContacts(lang: $langKey) {
+    allContacts(lang: $lang, id: $id) {
       edges {
         node {
           _meta {

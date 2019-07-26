@@ -6,7 +6,9 @@ import translations from "../utils/translations.json";
 
 
 const AboutPage = ({ data }) => {
-  const page = data.prismic.allAbouts.edges[0].node;
+  const doc = data.prismic.allAbouts.edges.slice(0,1).pop();
+  if(!doc) return null;
+  const page = doc.node;
   let members = page.body[0].fields;
   var i,j,chunk = 3;
   let memberChunks = [members/3]
@@ -15,7 +17,7 @@ const AboutPage = ({ data }) => {
       memberChunks[k] = members.slice(i,i+chunk);
       k++
   }
-  const lang = (page._meta.lang.split("-") )[0];
+  const lang = page._meta.lang;
   return (
   <Layout title={page.title[0].text} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
     <main>
@@ -54,35 +56,35 @@ const AboutPage = ({ data }) => {
 }
 
 export const aboutQuery = graphql `
-query aboutQuery($langKey: String){
+query aboutQuery($id: String, $lang: String){
 prismic {
-  allAbouts(lang: $langKey) {
+  allAbouts(id: $id, lang: $lang) {
     edges {
       node {
-        title
         _meta {
+          id
           uid
           lang
           }
+        title
         text
         body {
-          __typename
-          ... on PRISMIC_AboutBodyTeam {
-            fields {
-              name
-              title1
-              email
-              person
-              link {
-                ... on PRISMIC__Document {
-                  _meta {
-                    uid
-                    lang
+            ... on PRISMIC_AboutBodyTeam {
+              type
+              label
+              fields {
+                email
+                link {
+                  ... on PRISMIC__Document {
+                    _meta {
+                      uid
+                    }
                   }
                 }
-                }
+                name
+                person
+                title1
               }
-
             }
           }
         }
@@ -95,4 +97,4 @@ prismic {
 
 AboutPage.query = aboutQuery;
 
-export default AboutPage
+export default AboutPage;

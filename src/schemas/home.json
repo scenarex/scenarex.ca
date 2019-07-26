@@ -1,0 +1,109 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "ref"
+      }
+    },
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "title"
+      }
+    },
+    "text" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "label" : "text"
+      }
+    },
+    "partnerstitle" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "label" : "partnersTitle"
+      }
+    },
+    "toolstitle" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading2",
+        "label" : "toolsTitle"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "partners" : {
+            "type" : "Slice",
+            "fieldset" : "partners",
+            "description" : "partners",
+            "icon" : "alarm_on",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "img" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "img"
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "allowTargetBlank" : true,
+                  "label" : "link"
+                }
+              }
+            }
+          },
+          "tools" : {
+            "type" : "Slice",
+            "fieldset" : "tools",
+            "description" : "tools",
+            "icon" : "filter_vintage",
+            "display" : "list",
+            "non-repeat" : { },
+            "repeat" : {
+              "name" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Name"
+                }
+              },
+              "text1" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "text"
+                }
+              },
+              "icon" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "icon"
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "allowTargetBlank" : true,
+                  "label" : "link"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

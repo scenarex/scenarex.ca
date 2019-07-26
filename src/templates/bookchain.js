@@ -4,7 +4,9 @@ import Layout from "../components/layout";
 import { RichText } from 'prismic-reactjs';
 
 const BookchainPage = ({ data }) => {
-  const page = data.prismic.allBookchains.edges[0].node;
+  const doc = data.prismic.allBookchains.edges.slice(0,1).pop();
+  if(!doc) return null;
+  const page = doc.node;
   const lang = page._meta.lang;
   return (
   <Layout title={"Bookchain"} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
@@ -64,10 +66,10 @@ function makeDate (date, lang) {
 
 
 export const bookchainQuery = graphql `
-query bookchainQuery($langKey: String)
+query bookchainQuery($id: String, $lang: String)
 {
   prismic {
-    allBookchains(lang: $langKey) {
+    allBookchains(id: $id, lang: $lang) {
       edges {
         node {
           _meta {

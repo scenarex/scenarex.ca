@@ -1,8 +1,6 @@
 require('dotenv').config({
   path: `.env`,
 })
-const prismicHtmlSerializer = require('./src/prismic/htmlSerializer')
-const prismicLinkResolver = require('./src/prismic/linkResolver')
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -10,26 +8,67 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-      {
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
       resolve: 'gatsby-source-prismic-graphql',
       options: {
-        repositoryName: 'scenarex',
+        repositoryName: 'scenarex', // required
         accessToken : `${process.env.API_KEY}`,
-        // PrismJS highlighting for labels and slices
-        htmlSerializer: () => prismicHtmlSerializer,
-        linkResolver: () => prismicLinkResolver,
-        previews: true,
-        path: "/preview"
-      },
+        defaultLang: 'en-ca', // optional, but recommended
+        langs: ['en-ca', 'fr-ca'],
+        path: '/preview', // optional, default: /preview
+        previews: true, // optional, default: false
+        pages: [{ // optional
+          type: 'Member', // TypeName from prismic
+          match: '/:lang/:uid', // pages will be generated under this pattern (optional)
+          path: '/member', // placeholder page for unpublished documents
+          component: require.resolve('./src/templates/member.js'),
+        },
+        { // optional
+          type: 'Home', // TypeName from prismic
+          match: '/:lang', // pages will be generated under this pattern (optional)
+          path: '/home', // placeholder page for unpublished documents
+          component: require.resolve('./src/templates/home.js'),
+        },
+        { // optional
+          type: 'About', // TypeName from prismic
+          match: '/:lang/:uid', // pages will be generated under this pattern (optional)
+          path: '/about', // placeholder page for unpublished documents
+          component: require.resolve('./src/templates/about.js'),
+        },
+        { // optional
+          type: 'Bookchain', // TypeName from prismic
+          match: '/:lang/:uid', // pages will be generated under this pattern (optional)
+          path: '/bookchain', // placeholder page for unpublished documents
+          component: require.resolve('./src/templates/bookchain.js'),
+        },
+        { // optional
+          type: 'Contact', // TypeName from prismic
+          match: '/:lang/:uid', // pages will be generated under this pattern (optional)
+          path: '/contact', // placeholder page for unpublished documents
+          component: require.resolve('./src/templates/contact.js'),
+        },
+        { // optional
+          type: 'News', // TypeName from prismic
+          match: '/:lang/:uid', // pages will be generated under this pattern (optional)
+          path: '/news-post', // placeholder page for unpublished documents
+          component: require.resolve('./src/templates/news-post.js'),
+        },
+      ],
+      }
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
     resolve: `gatsby-plugin-favicon`,
      options: {
-       logo: "./src/components/favicon.png",
+       logo: "./src/images/favicon.png",
 
        // WebApp Manifest Configuration
        appName: null, // Inferred with your package.json

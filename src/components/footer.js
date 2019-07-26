@@ -3,38 +3,41 @@ import { Link } from "gatsby";
 import translations from "../utils/translations.json";
 import routes from "../utils/routes.json";
 import { RichText } from 'prismic-reactjs';
+import { linkResolver } from "../prismic/linkResolver";
 
 const Footer = props => {
-  const page = props.footerData ? props.footerData.allFos.edges[0].node : null;
+  console.log(props)
+  const data = props.footerData ? props.footerData.allFos.edges[0].node : null;
   let lang;
-  if (page){
-  lang = (page._meta.lang.split("-") )[0];
+  if (data){
+  lang = data._meta.lang;
   }
+  console.log(data)
   return (
-    page ?
+    data ?
     <footer className="upper-border">
       <div className="row w-full">
         <div className="md:w-3/12 w-full">
           <h3>SCENAREXinc</h3>
         </div>
         <div className="md:w-3/12 w-full md:ml-0">
-          {RichText.render(page.column1_title)}
-          {page.column1_items &&
+          {RichText.render(data.column1_title)}
+          {data.column1_items &&
           <nav>
             <ul>
-              {page.column1_items.map(item =>
-                <li key={item.item_label}><Link to={item.item_url ? routes[item.item_url._meta.uid][lang] : routes["news"][lang]}>{item.item_label}</Link></li>
+              {data.column1_items.map(item =>
+                <li key={item.item_label}><Link to={item.item_url ? `/${lang}/${item.item_url._meta.uid}` : routes["news"][lang]}>{item.item_label}</Link></li>
               )}
             </ul>
           </nav>
           }
         </div>
         <div className="md:w-3/12 w-full ml-0">
-          {RichText.render(page.column2_title)}
-          {page.column2_items &&
+          {RichText.render(data.column2_title)}
+          {data.column2_items &&
           <nav>
             <ul>
-              {page.column2_items.map(item =>
+              {data.column2_items.map(item =>
                 <li key={item.item_label}><i className={item.item_icon}></i> <a href={item.item_url.url}>{item.item_label}</a></li>
               )}
             </ul>
@@ -44,9 +47,9 @@ const Footer = props => {
         <div className="md:w-3/12 w-full ml-0">
           <nav>
             <h3>{translations["footer_text"][lang]}<i className="fas fa-heart" style={{color: "#E15554"}}></i>{translations["using"][lang]}</h3>
-            {page.column3_items &&
+            {data.column3_items &&
               <ul>
-              {page.column3_items.map(item =>
+              {data.column3_items.map(item =>
                 <li key={item.item_label}><a href={item.item_url.url}>{item.item_label}</a></li>
               )}
               </ul>

@@ -6,9 +6,7 @@ import { RichText } from 'prismic-reactjs';
 import translations from "../utils/translations.json";
 
 export const NewsPostTemplate = props => {
-  console.log(props);
   let date = new Date(props.page.post_date);
-  console.log(date)
   return (
     <article className='post'>
       <div className="row">
@@ -36,7 +34,9 @@ NewsPostTemplate.propTypes = {
 }
 
 const NewsPost = ({ data }) => {
-  let page = data.prismic.allNewss.edges[0].node;
+  const doc = data.prismic.allNewss.edges.slice(0,1).pop();
+  if(!doc) return null;
+  let page = doc.node;
   return (
   <Layout title={page.post_title[0].text} path={page.post_date} headerData={data.headerData} footerData={data.footerData}>
     <NewsPostTemplate page={page} />
@@ -44,13 +44,11 @@ const NewsPost = ({ data }) => {
   )
 }
 
-
-export default NewsPost
 export const newsquery = graphql`
-query newsQuery($langKey: String, $uid: String)
+query newsQuery($lang: String, $id: String)
 {
   prismic {
-    allNewss(lang: $langKey, uid: $uid) {
+    allNewss(lang: $lang, id: $id) {
       edges {
         node {
           _meta {
@@ -67,4 +65,9 @@ query newsQuery($langKey: String, $uid: String)
     }
   }
   ...LayoutFragment
-}`
+}
+`
+
+NewsPost.query = newsquery;
+
+export default NewsPost

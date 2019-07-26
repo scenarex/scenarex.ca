@@ -1,87 +1,81 @@
 {
   "about": {
-    "en" : "/en/about", "fr" : "/fr/apropos"
+    "en-ca" : "/en-ca/about", "fr-ca" : "/fr-ca/about"
   },
   "agathe": {
-    "en" : "/en/agathe", "fr" : "/fr/agathe"
+    "en-ca" : "/en-ca/agathe", "fr-ca" : "/fr-ca/agathe"
   },
   "bookchain": {
-    "en" : "/en/bookchain", "fr": "/fr/bookchain"
+    "en-ca" : "/en-ca/bookchain", "fr-ca": "/fr-ca/bookchain"
   },
   "christine": {
-    "en" : "/en/christine", "fr" : "/fr/christine"
+    "en-ca" : "/en-ca/christine", "fr-ca" : "/fr-ca/christine"
   },
   "contact": {
-    "en" : "/en/contact", "fr" : "/fr/contact"
+    "en-ca" : "/en-ca/contact", "fr-ca" : "/fr-ca/contact"
   },
   "humberto": {
-    "en" : "/en/humberto", "fr" : "/fr/humberto"
+    "en-ca" : "/en-ca/humberto", "fr-ca" : "/fr-ca/humberto"
   },
   "mackenzie": {
-    "en" : "/en/mackenzie", "fr" : "/fr/mackenzie"
+    "en-ca" : "/en-ca/mackenzie", "fr-ca" : "/fr-ca/mackenzie"
   },
   "news": {
-    "en" : "/en/news", "fr" : "/fr/nouvelles"
+    "en-ca" : "/en-ca/news", "fr-ca" : "/fr-ca/nouvelles"
   },
   "simon-pierre": {
-    "en" : "/en/simon-pierre", "fr" : "/fr/simon-pierre"
+    "en-ca" : "/en-ca/simon-pierre", "fr-ca" : "/fr-ca/simon-pierre"
   },
   "steve": {
-    "en" : "/en/steve", "fr" : "/fr/steve"
+    "en-ca" : "/en-ca/steve", "fr-ca" : "/fr-ca/steve"
   },
   "404": {
-    "en" : "404", "fr": "404"
+    "en-ca" : "404", "fr-ca": "404"
   },
   "404.html": {
-    "en" : "404.html", "fr": "404.html"
+    "en-ca" : "404.html", "fr-ca": "404.html"
   },
   "index": {
-    "en" : "/en", "fr" : "/fr"
+    "en-ca" : "/en-ca", "fr-ca" : "/fr-ca"
   },
   "": {
-    "en" : "/en", "fr" : "/fr"
-  },
-  "preview": {
-    "en" : "/en/preview", "fr" : "/fr/preview"
+    "en-ca" : "/en-ca", "fr-ca" : "/fr-ca"
   },
   "2017-01-24" : {
-    "en" : "/en/scenarex-makes-the-my-entreprise-contest-finals", "fr" : "/fr/scenarex-passe-en-finale-du-concours-mon-entreprise"
+    "en-ca" : "/en-ca/scenarex-makes-the-my-entreprise-contest-finals", "fr-ca" : "/fr-ca/scenarex-passe-en-finale-du-concours-mon-entreprise"
   },
   "2017-09-19" : {
-    "en" : "/en/scenarex-at-the-show-tendance-entreprendre-of-choq.ca", "fr" : "/fr/scenarex-a-lemission--tendance-entreprendre--sur-les-ondes-de-choq.ca"
+    "en-ca" : "/en-ca/scenarex-at-the-show-tendance-entreprendre-of-choq.ca", "fr-ca" : "/fr-ca/scenarex-a-lemission--tendance-entreprendre--sur-les-ondes-de-choq.ca"
   },
   "2017-10-19" : {
-    "en" : "/en/Scenarex-is-selected-to-be-part-of-the-first-startup-group-of-BCF-Imagine", "fr" : "/fr/Selection-de-scenarex-a-la-premiere-cohorte-de-BCF-Imagine"
+    "en-ca" : "/en-ca/Scenarex-is-selected-to-be-part-of-the-first-startup-group-of-BCF-Imagine", "fr-ca" : "/fr-ca/Selection-de-scenarex-a-la-premiere-cohorte-de-BCF-Imagine"
   },
   "2017-12-03" : {
-    "en" : "/en/Scenarex-was-immortalized-by-the-artist-Jasmin-Guerard-Alie-from-La-Centrale-des-artistes", "fr" : "/fr/Scenarex-a-ete-immortalise-par-artiste-Jasmin-Guerard-Alie-de-la-centrale-des-artistes"
+    "en-ca" : "/en-ca/scenarex-was-immortalized-by-the-artist-Jasmin-Guerard-Alie-fr-caom-La-Centrale-des-artistes", "fr-ca" : "/fr-ca/scenarex-a-ete-immortalise-par-artiste-Jasmin-Guerard-Alie-de-la-centrale-des-artistes"
   },
   "2018-01-22" : {
-    "en" : "/en/major-investment-by-cmf-in-the-development-of-the-bookchain-solution-of-scenarex", "fr" : "/fr/important-financement-du-fmc-pour-la-production-de-la-solution-bookchain-de-scenarex"
+    "en-ca" : "/en-ca/major-investment-by-cmf-in-the-development-of-the-bookchain-solution-of-scenarex", "fr-ca" : "/fr-ca/important-financement-du-fmc-pour-la-production-de-la-solution-bookchain-de-scenarex"
   },
   "2018-02-26" : {
-    "en" : "/en/appointment-of-steve-breault-as-the-director-of-technology", "fr" : "/fr/nomination-de-steve-breault-au-poste-de-directeur-de-la-technologie"
+    "en-ca" : "/en-ca/appointment-of-steve-breault-as-the-director-of-technology", "fr-ca" : "/fr-ca/nomination-de-steve-breault-au-poste-de-directeur-de-la-technologie"
   },
   "2018-03-09" : {
-    "en" : "/en/scenarex-gets-financial-support-from-the-ministry-of-economie-science-et-innovation", "fr" : "/fr/scenarex-recoit-laide-financiere-du-ministere-economie-science-et-innovation-du-quebec"
+    "en-ca" : "/en-ca/scenarex-gets-financial-support-fr-caom-the-ministry-of-economie-science-et-innovation", "fr-ca" : "/fr-ca/scenarex-recoit-laide-financiere-du-ministere-economie-science-et-innovation-du-quebec"
   },
   "2018-04-02" : {
-    "en" : "/en/appointment-of-christine-joly-to-the-position-of-strategic-director", "fr" : "/fr/nomination-de-christine-joly-au-poste-de-directrice-strategique"
+    "en-ca" : "/en-ca/appointment-of-christine-joly-to-the-position-of-strategic-director", "fr-ca" : "/fr-ca/nomination-de-christine-joly-au-poste-de-directrice-strategique"
   },
   "2018-08-15" : {
-    "en" : "/en/canada-media-fund-invests-in-scenarex-marketing-phase", "fr" : "/fr/fonds-des-medias-du-canada-finance-la-phase-de-commercialisation-de-scenarex"
+    "en-ca" : "/en-ca/canada-media-fund-invests-in-scenarex-marketing-phase", "fr-ca" : "/fr-ca/fonds-des-medias-du-canada-finance-la-phase-de-commercialisation-de-scenarex"
   },
   "2019-02-26" : {
-    "en" : "/en/copyright-management-partnership-between-copibec-and-scenarex", "fr" : "/fr/gestion-des-droits-dauteur-partenariat-entre-copibec-et-scenarex"
+    "en-ca" : "/en-ca/copyright-management-partnership-between-copibec-and-scenarex", "fr-ca" : "/fr-ca/gestion-des-droits-dauteur-partenariat-entre-copibec-et-scenarex"
   },
   "2019-06-12" : {
-    "en" : "/en/frankfurter-buchmesse-wildcard-the-winners-are-kimbuk-festival-and-scenarex", "fr" : "/fr/frankfurter-buchmesse-wildcard-les-gagnants-sont-le-festival-kimbuk-et-scenarex"
+    "en-ca" : "/en-ca/frankfurter-buchmesse-wildcard-the-winners-are-kimbuk-festival-and-scenarex", "fr-ca" : "/fr-ca/frankfurter-buchmesse-wildcard-les-gagnants-sont-le-festival-kimbuk-et-scenarex"
   },
   "2019-06-05" : {
-    "en" : "/en/scenarex-finalist-at-the-octas-2019", "fr" : "/fr/scenarex-finaliste-aux-octas-2019-dans-la-categorie-startup"
-  },
-  "test" : {
-    "en" : "test", "fr" : "test"
+    "en-ca" : "/en-ca/scenarex-finalist-at-the-octas-2019", "fr-ca" : "/fr-ca/scenarex-finaliste-aux-octas-2019-dans-la-categorie-startup"
   }
 
 }

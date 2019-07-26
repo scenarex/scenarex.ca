@@ -12,11 +12,12 @@ class LanguageSwitcher extends React.Component {
     }
   }
   render() {
+    console.log(this.props)
     return (
       <div>
-        <Link to={this.translatedLink("en")} className={this.props.lang === "en" ? "activeLang" : "lang"}>en</Link>
+        <Link to={this.translatedLink("en-ca")} className={this.props.lang === "en-ca" ? "activeLang" : "lang"}>en</Link>
         &nbsp;
-        <Link to={this.translatedLink("fr")} className={this.props.lang === "fr" ? "activeLang" : "lang"}>fr</Link>
+        <Link to={this.translatedLink("fr-ca")} className={this.props.lang === "fr-ca" ? "activeLang" : "lang"}>fr</Link>
       </div>
     )
   }

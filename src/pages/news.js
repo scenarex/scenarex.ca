@@ -7,7 +7,7 @@ import translations from "../utils/translations.json";
 const NewsPage = ({ data }) => {
   const externalLinks = data.pressPosts.allPresss;
   const newsPosts = data.newsPosts.allNewss;
-  const lang = (newsPosts.edges[0].node._meta.lang.split("-") )[0];
+  const lang = newsPosts.edges[0].node._meta.lang;
   return (
   <Layout title={"News"} path={"news"} headerData={data.headerData} footerData={data.footerData}>
     <main>
@@ -38,9 +38,9 @@ const NewsPage = ({ data }) => {
 }
 
 export const newsPageQuery = graphql`
-query newsPageQuery($langKey: String) {
+query newsPageQuery($lang: String) {
   pressPosts : prismic {
-    allPresss (lang: $langKey, sortBy: press_date_DESC){
+    allPresss (lang: $lang, sortBy: press_date_DESC){
       edges {
         node {
           _meta {
@@ -60,7 +60,7 @@ query newsPageQuery($langKey: String) {
     }
   }
   newsPosts : prismic {
-    allNewss (lang: $langKey, sortBy: post_date_DESC) {
+    allNewss (lang: $lang, sortBy: post_date_DESC) {
       edges {
         node {
           _meta {

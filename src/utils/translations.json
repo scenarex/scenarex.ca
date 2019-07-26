@@ -1,44 +1,44 @@
 {
   "news": {
-    "en" : "News", "fr" : "Nouvelles"
+    "en-ca" : "News", "fr-ca" : "Nouvelles"
   },
   "press": {
-    "en" : "Press", "fr" : "Presse"
+    "en-ca" : "Press", "fr-ca" : "Presse"
   },
   "by" : {
-    "en" : "by", "fr" : "par"
+    "en-ca" : "by", "fr-ca" : "par"
   },
   "address" : {
-    "en" : "Address", "fr" : "Addresse"
+    "en-ca" : "Address", "fr-ca" : "Addresse"
   },
   "email" : {
-    "en" : "Email", "fr" : "Courriel"
+    "en-ca" : "Email", "fr-ca" : "Courriel"
   },
   "phone" : {
-    "en" : "Phone", "fr" : "Téléphone"
+    "en-ca" : "Phone", "fr-ca" : "Téléphone"
   },
   "main_text" : {
-    "en" : "Discover our Bookchain® Solution", "fr" : "Découvrez notre Solution Bookchain®"
+    "en-ca" : "Discover our Bookchain® Solution", "fr-ca" : "Découvrez notre Solution Bookchain®"
   },
   "copyright" : {
-    "en" : "This work is licensed under a ", "fr" : "Cette œuvre est mise à disposition selon les termes de la"
+    "en-ca" : "This work is licensed under a ", "fr-ca" : "Cette œuvre est mise à disposition selon les termes de la"
   },
   "newsletter" : {
-    "en" : "Sign up for our newsletter" , "fr" : "Abonnez-vous à notre infolettre"
+    "en-ca" : "Sign up for our newsletter" , "fr-ca" : "Abonnez-vous à notre infolettre"
   },
   "subscribe": {
-    "en" : "Subscribe", "fr" : "S'abonnez"
+    "en-ca" : "Subscribe", "fr-ca" : "S'abonnez"
   },
   "using" : {
-    "en" : "using", "fr" : "en utilisant"
+    "en-ca" : "using", "fr-ca" : "en utilisant"
   },
   "team" : {
-    "en" : "Team", "fr" : "Équipe"
+    "en-ca" : "Team", "fr-ca" : "Équipe"
   },
   "learn" : {
-    "en" : "Check out the team", "fr" : "Découvrez l'équipe"
+    "en-ca" : "Check out the team", "fr-ca" : "Découvrez l'équipe"
   },
   "footer_text" : {
-    "en" : "Made with", "fr" : "Fait avec"
+    "en-ca" : "Made with", "fr-ca" : "Fait avec"
   }
 }
