@@ -1,5 +1,4 @@
 
-const routes = require('../utils/routes.json')
 
 const linkResolver = doc => {
   if (doc.type === "member") {

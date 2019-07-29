@@ -40,5 +40,8 @@
   },
   "footer_text" : {
     "en" : "Made with", "fr" : "Fait avec"
+  },
+  "privacy" : {
+    "en" : "Privacy Policy", "fr" : "Politique de confidentialité"
   }
 }

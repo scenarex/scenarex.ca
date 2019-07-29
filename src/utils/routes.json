@@ -41,8 +41,8 @@
   "": {
     "en" : "/en", "fr" : "/fr"
   },
-  "preview": {
-    "en" : "/en/preview", "fr" : "/fr/preview"
+  "privacy": {
+    "en" : "/en/privacy", "fr" : "/fr/politiquedeconfidentialite"
   },
   "2017-01-24" : {
     "en" : "/en/scenarex-makes-the-my-entreprise-contest-finals", "fr" : "/fr/scenarex-passe-en-finale-du-concours-mon-entreprise"

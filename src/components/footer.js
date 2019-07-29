@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import translations from "../utils/translations.json";
 import routes from "../utils/routes.json";
 import { RichText } from 'prismic-reactjs';
-import { linkResolver } from "../prismic/linkResolver";
 
 const Footer = props => {
   const data = props.footerData ? props.footerData.allFos.edges[0].node : null;
@@ -24,7 +23,7 @@ const Footer = props => {
           <nav>
             <ul>
               {data.column1_items.map(item =>
-                <li key={item.item_label}><Link to={item.item_url ? `/${lang}/${item.item_url._meta.uid}` : routes["news"][lang]}>{item.item_label}</Link></li>
+                <li key={item.item_label}><Link to={item.item_url ? routes[item.item_url._meta.uid][lang] : routes["news"][lang]}>{item.item_label}</Link></li>
               )}
             </ul>
           </nav>
@@ -72,7 +71,8 @@ const Footer = props => {
             <div className="clear md:w-3/12 w-full ml-0"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"><i className="fas fa-info-circle"></i>&nbsp;{translations["subscribe"][lang]}</button></div>
           </form>
         </div>
-        <div className="w-full copyright">
+        <br/>
+        <div className="w-full copyright pt-6">
           <i className="fab fa-creative-commons"></i> <i className="fab fa-creative-commons-by"></i> <i className="fab fa-creative-commons-sa"></i>
           <small>{translations["copyright"][lang]}<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"> Creative Commons Attribution-ShareAlike 4.0 International License</a>.</small>
         </div>

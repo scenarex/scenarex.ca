@@ -48,12 +48,25 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
   const newsTemplate = require.resolve('./src/templates/news-post.js')
   const peopleTemplate = require.resolve('./src/templates/member.js')
-
+  const legalTemplate = require.resolve("./src/templates/legal-page.js")
 
   return graphql(`
     query {
       members : prismic {
         allMembers {
+          edges {
+            node {
+              _meta {
+                id
+                uid
+                lang
+              }
+            }
+          }
+        }
+      }
+      legalPages : prismic {
+        allLegalpages {
           edges {
             node {
               _meta {
@@ -99,9 +112,11 @@ exports.createPages = ({ actions, graphql }) => {
     const externalLinks = result.data.members.allMembers;
     const newsPosts2019 = result.data.newsPosts2019.allNewss;
     const newsPostsOld = result.data.newsPostsOld.allNewss;
+    const legalPages = result.data.legalPages.allLegalpages;
     const rootQuery1 = getRootQuery(newsTemplate);
     const rootQuery2 = getRootQuery(peopleTemplate);
     let lang;
+    let localizedPath;
     externalLinks.edges.forEach(edge => {
     lang = edge.node._meta.lang === "en-ca" ? "en" : "fr"
       createPage({
@@ -110,6 +125,21 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           id: edge.node._meta.id,
           rootQuery: rootQuery2,
+          uid: edge.node._meta.uid,
+          lang: edge.node._meta.lang
+        },
+      })
+    })
+    legalPages.edges.forEach(edge => {
+      console.log(edge.node._meta)
+      lang = edge.node._meta.lang === "en-ca" ? "en" : "fr"
+      localizedPath = routes[edge.node._meta.uid][lang]
+      console.log(localizedPath)
+      createPage({
+        path: localizedPath,
+        component: legalTemplate,
+        context: {
+          id: edge.node._meta.id,
           uid: edge.node._meta.uid,
           lang: edge.node._meta.lang
         },
