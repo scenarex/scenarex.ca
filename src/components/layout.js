@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { Header } from "./header";
 import { Footer } from "./footer";
 
-export const query = graphql`
+export const layoutFragment = graphql`
   fragment LayoutFragment on Query{
     headerData: prismic {
       allHeaders (lang: $lang) {
@@ -103,7 +103,6 @@ class Layout extends React.Component {
   }
 }
 
-
-Layout.query = query;
+Layout.fragments = layoutFragment;
 
 export default Layout

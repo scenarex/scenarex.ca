@@ -6,6 +6,7 @@ import { linkResolver } from "../prismic/linkResolver";
 
 
 const IndexPage = ({ data }) => {
+    console.log(data);
   const doc = data.prismic.allHomes.edges.slice(0,1).pop();
   if(!doc) return null;
   let page = doc.node;
