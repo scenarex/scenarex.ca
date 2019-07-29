@@ -131,10 +131,8 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
     legalPages.edges.forEach(edge => {
-      console.log(edge.node._meta)
       lang = edge.node._meta.lang === "en-ca" ? "en" : "fr"
       localizedPath = routes[edge.node._meta.uid][lang]
-      console.log(localizedPath)
       createPage({
         path: localizedPath,
         component: legalTemplate,
