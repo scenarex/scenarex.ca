@@ -6,13 +6,11 @@ import { RichText } from 'prismic-reactjs';
 import { linkResolver } from "../prismic/linkResolver";
 
 const Footer = props => {
-  console.log(props)
   const data = props.footerData ? props.footerData.allFos.edges[0].node : null;
   let lang;
   if (data){
-  lang = data._meta.lang;
+    lang =(data._meta.lang.split("-"))[0];
   }
-  console.log(data)
   return (
     data ?
     <footer className="upper-border">

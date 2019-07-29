@@ -44,6 +44,7 @@ export const MemberTemplate = props => {
 }
 
 const MemberPage = ({ data }) => {
+  console.log(data)
   const doc = data.prismic.allMembers.edges.slice(0,1).pop();
   if(!doc) return null;
   return (

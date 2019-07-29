@@ -17,7 +17,7 @@ const AboutPage = ({ data }) => {
       memberChunks[k] = members.slice(i,i+chunk);
       k++
   }
-  const lang = page._meta.lang;
+  const lang = (page._meta.lang.split("-") )[0];
   return (
   <Layout title={page.title[0].text} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
     <main>

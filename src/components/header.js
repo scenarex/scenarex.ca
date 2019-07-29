@@ -11,7 +11,7 @@ const Header = props => {
   let lang;
   let path;
   if (data){
-      lang = data._meta.lang;
+      lang = (data._meta.lang.split("-"))[0];
       path = props.path;
     }
     return (

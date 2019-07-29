@@ -7,7 +7,7 @@ import translations from "../utils/translations.json";
 const NewsPage = ({ data }) => {
   const externalLinks = data.pressPosts.allPresss;
   const newsPosts = data.newsPosts.allNewss;
-  const lang = newsPosts.edges[0].node._meta.lang;
+  const lang = (newsPosts.edges[0].node._meta.lang.split("-"))[0];
   return (
   <Layout title={"News"} path={"news"} headerData={data.headerData} footerData={data.footerData}>
     <main>

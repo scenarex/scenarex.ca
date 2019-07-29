@@ -8,7 +8,7 @@ const ContactPage = ({ data }) => {
   const doc = data.prismic.allContacts.edges.slice(0,1).pop();
   if(!doc) return null;
   const page = doc.node;
-  const lang = page._meta.lang;
+  const lang = (page._meta.lang.split("-") )[0];
   return (
   <Layout title={"Contact"} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
     <main>
