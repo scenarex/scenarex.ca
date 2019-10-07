@@ -26,9 +26,9 @@ const IndexPage = ({ data }) => {
       <section className="masthead upper-border">
         <div className="big">{RichText.render(page.partnerstitle)}</div>
         {partners.fields.length > 0 &&
-        <div className="row flex-item ml-4 mb-4">
+        <div className="row flex-item md:flex-row sm:flex-col md:items-stretch ">
           {(partners.fields).map((partner,i) =>
-            <div className="flex-item pl-2 p-0" key={i}>
+            <div className="flex-1 text-center" key={i}>
               <a href={partner ? partner.link.url : ""}>
                 <img className="grey" src={partner.img.url} style={{maxHeight: "60px"}} alt=""/>
               </a>
