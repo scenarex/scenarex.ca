@@ -8,17 +8,14 @@
   "bookchain": {
     "en" : "/en/bookchain", "fr": "/fr/bookchain"
   },
-  "christine": {
-    "en" : "/en/christine", "fr" : "/fr/christine"
-  },
   "contact": {
     "en" : "/en/contact", "fr" : "/fr/contact"
   },
+  "privacy": {
+    "en" : "/en/privacy", "fr" : "/fr/politique"
+  },
   "humberto": {
     "en" : "/en/humberto", "fr" : "/fr/humberto"
-  },
-  "mackenzie": {
-    "en" : "/en/mackenzie", "fr" : "/fr/mackenzie"
   },
   "news": {
     "en" : "/en/news", "fr" : "/fr/nouvelles"
@@ -79,6 +76,12 @@
   },
   "2019-06-05" : {
     "en" : "/en/scenarex-finalist-at-the-octas-2019", "fr" : "/fr/scenarex-finaliste-aux-octas-2019-dans-la-categorie-startup"
+  },
+  "2019-07-26" : {
+    "en" : "/en/partnership-between-chanticleer-and-scenarex", "fr" : "/fr/association-entre-chanticleer-et-scenarex"
+  },
+  "2019-09-11" : {
+    "en" : "/en/bookchain-wins-the-2019-award-for-best-publishing-technology", "fr" : "/fr/bookchain-gagnant-du-prix-en-2019-pour-la-meilleure-technologie-de-publication-numerique"
   },
   "test" : {
     "en" : "test", "fr" : "test"
