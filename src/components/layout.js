@@ -7,7 +7,7 @@ import { Footer } from "./footer";
 
 class Layout extends React.Component {
   render() {
-    const { headerData, footerData, children, path, title } = this.props;
+    const { headerData, footerData, children, path, title, alternate } = this.props;
     return (
       <div className="container mx-auto">
         <Helmet defaultTitle={title} titleTemplate={`%s | SCENAREXinc`}>
@@ -23,7 +23,7 @@ class Layout extends React.Component {
           </script>
           <script type="text/javascript" src="https://static.cdn.prismic.io/prismic.min.js"></script>
         </Helmet>
-        <Header headerData={headerData} path={path}/>
+        <Header headerData={headerData} path={path} alternate={alternate} />
         <main>{children}</main>
         <Footer footerData={footerData}/>
       </div>
@@ -37,24 +37,42 @@ export const query = graphql`
   fragment LayoutFragment on Query{
     headerData: prismic {
       allHeaders (lang: $langKey) {
-      edges {
+        edges {
         node {
+          logo
           _meta {
             lang
           }
-          header_logo
-          menu_items {
-            ref
-            link_label
-            link_url {
-              ... on PRISMIC__Document {
+          navigation {
+            link {
+              _linkType
+              ... on PRISMIC_About {
+                title
                 _meta {
                   uid
-                  lang
+                }
+              }
+              ... on PRISMIC_Newsroom {
+                title
+                _meta {
+                  uid
+                }
+              }
+              ... on PRISMIC_Contact {
+                title
+                _meta {
+                  uid
+                }
+              }
+              ... on PRISMIC_Bookchain {
+                title
+                _meta {
+                  uid
                 }
               }
             }
           }
+          header_name
         }
       }
     }

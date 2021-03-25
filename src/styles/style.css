@@ -5,7 +5,7 @@ html, body {
   font-size: 19px;
   -ms-text-size-adjust: 100%;
   -webkit-ntext-size-adjust: 100%;
-  font-family: "HCo Gotham SSm";
+  font-family: "HCo Gotham Narrow SSm";
   font-feature-settings: "ss02", "ss03";
 }
 
@@ -62,6 +62,7 @@ a.more.menu {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "HCo Gotham SSm";
   @apply mb-2 font-bold leading-tight text-headingsColor;
   text-rendering: optimizeLegibility;
 }

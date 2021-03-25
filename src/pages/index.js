@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
     }
   }
   return (
-  <Layout title={page.title[0].text} path="/" headerData={data.headerData} footerData={data.footerData}>
+  <Layout title={page.title[0].text} path={page._meta.lang} alternate={page._meta.alternateLanguages[0].lang} headerData={data.headerData} footerData={data.footerData}>
     <main>
       <section className="masthead">
         {RichText.render(page.text)}
@@ -70,10 +70,12 @@ prismic {
         _meta {
           uid
           lang
+          alternateLanguages {
+            uid
+            lang
           }
+        }
         text
-        partnerstitle
-        toolstitle
         body {
           __typename
           ... on PRISMIC_HomeBodyTools {

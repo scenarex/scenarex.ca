@@ -7,7 +7,7 @@ const PrivacyPage = ({ data }) => {
   const page = data.prismic.allLegalpages.edges[0].node;
   const lang = page._meta.lang;
   return (
-  <Layout title={"Privacy"} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
+  <Layout title={"Privacy"} path={page._meta.uid} alternate={page._meta.alternateLanguages[0].uid} headerData={data.headerData} footerData={data.footerData}>
     <article className="privacy">
       <h2 className="sm:text-6xl text-4xl biggest">{page.title[0].text}</h2>
       {RichText.render(page.text)}
@@ -26,6 +26,9 @@ query privacyQuery($langKey: String)
           _meta {
             uid
             lang
+            alternateLanguages {
+              uid
+            }
           }
           text
           title

@@ -6,10 +6,6 @@ const { getRootQuery } = require('gatsby-source-graphql-universal/getRootQuery')
 
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
-  if (page.path === "/preview") {
-    return;
-  }
-
   return new Promise(resolve => {
     deletePage(page)
     Object.keys(locales).map(lang => {
@@ -46,95 +42,60 @@ exports.onCreatePage = ({ page, actions }) => {
   })
 }
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
-  const newsTemplate = require.resolve('./src/templates/news-post.js')
-  const peopleTemplate = require.resolve('./src/templates/people-page.js')
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions;
+  const newsTemplate = require.resolve('./src/templates/news-post.js');
+  const peopleTemplate = require.resolve('./src/templates/people-page.js');
 
+  let documents = [];
+  let proceed = true;
+  let endCursor = null;
 
-  return graphql(`
-    query {
-      members : prismic {
-        allMembers {
+  while (proceed) {
+    const result = await graphql(`
+    query($endCursor: String) {
+      prismic {
+        _allDocuments(first: 20, after: $endCursor ,type_in: ["member", "news"]) {
           edges {
             node {
               _meta {
-                uid
                 lang
+                uid
+                type
               }
             }
           }
-        }
-      }
-      newsPosts2019 : prismic {
-        allNewss(where:{post_date_after:"2019-01-01"}) {
-          edges {
-            node {
-              _meta {
-                uid
-                lang
-              }
-            }
+          pageInfo {
+            hasNextPage
+            endCursor
+            hasPreviousPage
+            startCursor
           }
-        }
-      }
-      newsPostsOld : prismic {
-        allNewss(where:{post_date_before:"2019-01-01"}) {
-          edges {
-            node {
-              _meta {
-                uid
-                lang
-              }
-            }
-          }
+          totalCount
         }
       }
     }
-  `).then (result => {
-    if (result.errors) {
-      throw result.errors
+    `, { endCursor });
+
+    documents = documents.concat(result.data.prismic._allDocuments.edges);
+
+    if (result.data.prismic._allDocuments.pageInfo.hasNextPage) {
+      endCursor = result.data.prismic._allDocuments.pageInfo.endCursor;
+    } else {
+      proceed = false;
     }
-    const externalLinks = result.data.members.allMembers;
-    const newsPosts2019 = result.data.newsPosts2019.allNewss;
-    const newsPostsOld = result.data.newsPostsOld.allNewss;
-    const rootQuery1 = getRootQuery(newsTemplate);
-    const rootQuery2 = getRootQuery(peopleTemplate);
-    let lang;
-    externalLinks.edges.forEach(edge => {
-    lang = edge.node._meta.lang === "en-ca" ? "en" : "fr"
-      createPage({
-        path: `/${lang}/${edge.node._meta.uid}`,
-        component: peopleTemplate,
-        context: {
-          rootQuery: rootQuery2,
-          uid: edge.node._meta.uid,
-          langKey: edge.node._meta.lang
-        },
-      })
+  }
+
+  let lang;
+  documents.forEach(edge => {
+  lang = edge.node._meta.lang === "en-ca" ? "en" : "fr"
+    createPage({
+      path: `/${lang}/${edge.node._meta.uid}`,
+      component: edge.node._meta.type === "member" ? peopleTemplate : newsTemplate,
+      context: {
+        uid: edge.node._meta.uid,
+        langKey: edge.node._meta.lang
+      },
     })
-    newsPosts2019.edges.forEach(edge => {
-      lang = edge.node._meta.lang === "en-ca" ? "en" : "fr"
-      createPage({
-        path: `/${lang}/${edge.node._meta.uid}`,
-        component: newsTemplate,
-        context: {
-          rootQuery: rootQuery1,
-          uid: edge.node._meta.uid,
-          langKey: edge.node._meta.lang
-        },
-      })
-    })
-    newsPostsOld.edges.forEach(edge => {
-      lang = edge.node._meta.lang === "en-ca" ? "en" : "fr"
-      createPage({
-        path: `/${lang}/${edge.node._meta.uid}`,
-        component: newsTemplate,
-        context: {
-          uid: edge.node._meta.uid,
-          langKey: edge.node._meta.lang
-        },
-      })
-    })
-  })
+  });
 }

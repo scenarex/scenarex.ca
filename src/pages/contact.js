@@ -8,7 +8,7 @@ const ContactPage = ({ data }) => {
   const page = data.prismic.allContacts.edges[0].node;
   const lang = (page._meta.lang.split("-") )[0];
   return (
-  <Layout title={"Contact"} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
+  <Layout title={"Contact"} path={page._meta.uid} alternate={page._meta.alternateLanguages[0].uid} headerData={data.headerData} footerData={data.footerData}>
     <main>
       <h2 className="sm:text-6xl text-4xl biggest">{(page.title[0].text)}</h2>
       <div className="row">
@@ -47,6 +47,9 @@ query contactQuery($langKey: String){
           _meta {
             lang
             uid
+            alternateLanguages {
+              uid
+            }
           }
           address
           email

@@ -1,6 +1,6 @@
 {
   "about": {
-    "en" : "/en/about", "fr" : "/fr/apropos"
+    "en" : "/en/about", "fr" : "/fr/a-propos"
   },
   "agathe": {
     "en" : "/en/agathe", "fr" : "/fr/agathe"
@@ -12,13 +12,13 @@
     "en" : "/en/contact", "fr" : "/fr/contact"
   },
   "privacy": {
-    "en" : "/en/privacy", "fr" : "/fr/politique"
+    "en" : "/en/privacy", "fr" : "/fr/confidentialite"
   },
   "humberto": {
     "en" : "/en/humberto", "fr" : "/fr/humberto"
   },
-  "news": {
-    "en" : "/en/news", "fr" : "/fr/nouvelles"
+  "newsroom": {
+    "en" : "/en/newsroom", "fr" : "/fr/salle-de-redaction"
   },
   "simon-pierre": {
     "en" : "/en/simon-pierre", "fr" : "/fr/simon-pierre"

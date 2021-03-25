@@ -8,7 +8,6 @@ import translations from "../utils/translations.json";
 export const NewsPostTemplate = props => {
   console.log(props);
   let date = new Date(props.page.post_date);
-  console.log(date)
   return (
     <article className='post'>
       <div className="row">
@@ -38,7 +37,7 @@ NewsPostTemplate.propTypes = {
 const NewsPost = ({ data }) => {
   let page = data.prismic.allNewss.edges[0].node;
   return (
-  <Layout title={page.post_title[0].text} path={page.post_date} headerData={data.headerData} footerData={data.footerData}>
+  <Layout title={page.post_title[0].text} path={page._meta.uid} alternate={page._meta.alternateLanguages[0].uid} headerData={data.headerData} footerData={data.footerData}>
     <NewsPostTemplate page={page} />
   </Layout>
   )
@@ -56,6 +55,9 @@ query newsQuery($langKey: String, $uid: String)
           _meta {
             uid
             lang
+            alternateLanguages {
+              uid
+            }
           }
           post_author
           post_body

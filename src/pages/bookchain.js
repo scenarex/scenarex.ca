@@ -7,7 +7,7 @@ const BookchainPage = ({ data }) => {
   const page = data.prismic.allBookchains.edges[0].node;
   const lang = page._meta.lang;
   return (
-  <Layout title={"Bookchain"} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
+  <Layout title={"Bookchain"} path={page._meta.uid} alternate={page._meta.alternateLanguages[0].uid} headerData={data.headerData} footerData={data.footerData}>
     <main className="bookchain">
       <div className="row">
         <div className="md:w-6/12 w-full">
@@ -73,6 +73,9 @@ query bookchainQuery($langKey: String)
           _meta {
             uid
             lang
+            alternateLanguages {
+              uid
+            }
           }
           subheader
           timeline {

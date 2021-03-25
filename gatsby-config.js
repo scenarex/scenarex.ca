@@ -18,8 +18,7 @@ module.exports = {
         // PrismJS highlighting for labels and slices
         htmlSerializer: () => prismicHtmlSerializer,
         linkResolver: () => prismicLinkResolver,
-        previews: true,
-        path: "/preview"
+        previews: false
       },
     },
     {

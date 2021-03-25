@@ -7,17 +7,26 @@ import translations from "../utils/translations.json";
 
 const AboutPage = ({ data }) => {
   const page = data.prismic.allAbouts.edges[0].node;
-  let members = page.body[0].fields;
+  let team = page.body[0].fields;
+  let committee = page.body[1].fields;
   var i,j,chunk = 4;
-  let memberChunks = [members/4]
+  let teamChunks = [team/4]
   let k=0;
-  for (i=0,j=members.length; i<j; i+=chunk) {
-      memberChunks[k] = members.slice(i,i+chunk);
+  for (i=0,j=team.length; i<j; i+=chunk) {
+      teamChunks[k] = team.slice(i,i+chunk);
       k++
   }
+  var m,n,chunk = 4;
+  let committeeChunks = [committee/4]
+  let l=0;
+  for (m=0,n=committee.length; m<n; m+=chunk) {
+      committeeChunks[l] = committee.slice(m,m+chunk);
+      l++
+  }
+
   const lang = (page._meta.lang.split("-") )[0];
   return (
-  <Layout title={page.title[0].text} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
+  <Layout title={page.title[0].text} path={page._meta.uid} alternate={page._meta.alternateLanguages[0].uid} headerData={data.headerData} footerData={data.footerData}>
     <main>
       <div className="row">
         <div className="md:w-6/12 w-full biggest">
@@ -28,10 +37,30 @@ const AboutPage = ({ data }) => {
           {RichText.render(page.text)}
         </div>
       </div>
-      {memberChunks &&
+      {teamChunks &&
       <div className="upper-border">
-        <h2 className="big mtd" id="team">{translations["team"][lang]}</h2>
-        {memberChunks.map ( (row,i) =>
+        <h2 className="big mtd" id="team">{page.body[0].primary.teamtitle[0].text}</h2>
+        {teamChunks.map ( (row,i) =>
+          <div className="row" key={i}>
+            {row.map ((person, j) =>
+              <div className="md:w-3/12 w-full pl-8" key={j} >
+                <Link to={`/${lang}/${person.link._meta.uid}`}>
+                  <img className="grey" src={person.person.url} alt={person.name[0].text}/>
+                </Link>
+                {RichText.render(person.name)}
+                <p>{person.title1[0].text}<br/>
+                <a href={`mailto:${person.email[0].text}`} className="text-scenarexGreen">{person.email[0].text}</a>
+                </p>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+      }
+      {committeeChunks &&
+      <div className="upper-border">
+        <h2 className="big mtd" id="team">{page.body[1].primary.teamtitle[0].text}</h2>
+        {committeeChunks.map ( (row,i) =>
           <div className="row" key={i}>
             {row.map ((person, j) =>
               <div className="md:w-3/12 w-full pl-8" key={j} >
@@ -63,18 +92,24 @@ prismic {
         _meta {
           uid
           lang
+          alternateLanguages {
+            uid
           }
+        }
         text
         body {
           __typename
           ... on PRISMIC_AboutBodyTeam {
+            primary {
+              teamtitle
+            }
             fields {
               name
               title1
               email
               person
               link {
-                ... on PRISMIC__Document {
+                ... on PRISMIC_Member {
                   _meta {
                     uid
                     lang

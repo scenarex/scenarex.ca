@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import translations from "../utils/translations.json";
-import routes from "../utils/routes.json";
 import { RichText } from 'prismic-reactjs';
 
 const Footer = props => {
@@ -23,7 +22,7 @@ const Footer = props => {
           <nav>
             <ul>
               {page.column1_items.map(item =>
-                <li key={item.item_label}><Link to={item.item_url ? routes[item.item_url._meta.uid][lang] : routes["news"][lang]}>{item.item_label}</Link></li>
+                <li key={item.item_label}><Link to={`/${lang}/${item.item_url._meta.uid}`}>{item.item_label}</Link></li>
               )}
             </ul>
           </nav>

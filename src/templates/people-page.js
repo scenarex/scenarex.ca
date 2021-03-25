@@ -24,7 +24,7 @@ const PeoplePage = ({ data }) => {
   console.log(data)
   let page = data.prismic.allMembers.edges[0].node;
   return (
-    <Layout title={page.name[0].text} path={page._meta.uid} headerData={data.headerData} footerData={data.footerData}>
+    <Layout title={page.name[0].text} path={page._meta.uid} alternate={page._meta.alternateLanguages[0].uid} headerData={data.headerData} footerData={data.footerData}>
       <PeoplePageTemplate page={page} />
     </Layout>
   );
@@ -45,7 +45,9 @@ prismic {
         _meta {
           uid
           lang
-
+          alternateLanguages {
+            uid
+          }
           }
         }
       }
