@@ -1,16 +1,17 @@
 @tailwind base;
 
-html, body {
+html,
+body {
   @apply text-bodyColor;
   font-size: 19px;
   -ms-text-size-adjust: 100%;
   -webkit-ntext-size-adjust: 100%;
-  font-family: "HCo Gotham Narrow SSm";
-  font-feature-settings: "ss02", "ss03";
+  font-family: 'HCo Gotham Narrow SSm';
+  font-feature-settings: 'ss02', 'ss03';
 }
 
 .content-none {
-  content: "";
+  content: '';
 }
 .box-borderBox {
   -moz-box-sizing: border-box;
@@ -23,12 +24,11 @@ html, body {
 
 @tailwind components;
 
-
 /* FONT */
 
 body {
   @apply text-bodyColor leading-normal bg-bodyBackgroundColor bg-no-repeat;
-  background-image: url("./bg.png");
+  background-image: url('./bg.png');
   background-position: right -50px top -50px;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 .upper-border:before {
   @apply bg-black w-full h-1 absolute top-0 left-0 content-none;
-  opacity: .06;
+  opacity: 0.06;
 }
 
 @keyframes slideInFromTop {
@@ -52,7 +52,8 @@ body {
 a {
   @apply no-underline text-bodyColor;
 }
-a:hover, a:focus {
+a:hover,
+a:focus {
   @apply underline;
 }
 a.more.menu {
@@ -61,8 +62,13 @@ a.more.menu {
   animation: 1s ease-out 0s 1 slideInFromTop;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "HCo Gotham SSm";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'HCo Gotham SSm';
   @apply mb-2 font-bold leading-tight text-headingsColor;
   text-rendering: optimizeLegibility;
 }
@@ -75,23 +81,28 @@ h2 {
   @apply mt-4 text-2xl;
 }
 
-.big, .big h2 {
+.big,
+.big h2 {
   @apply font-extrabold text-5xl tracking-tight mt-0 mb-16 mx-0 text-scenarexGreen;
 }
 
-.biggest, .biggest h2 {
+.biggest,
+.biggest h2 {
   @apply font-extrabold text-6xl tracking-tight my-16 mx-0 text-scenarexGreen;
 }
 
-h2 .mt, .mt h2 {
+h2 .mt,
+.mt h2 {
   @apply mt-12 mb-6;
 }
 
 h3 {
-  @apply mt-8 text-xl;
+  @apply mt-2 text-xl;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   @apply mt-6 text-base;
 }
 
@@ -106,7 +117,9 @@ em {
   @apply italic;
 }
 
-ul, ol, dl {
+ul,
+ol,
+dl {
   @apply mt-0 mb-4;
 }
 
@@ -144,8 +157,9 @@ table {
   @apply mb-4 w-full border-collapse border border-solid border-tableBorderColor;
 }
 
-td, th {
-  @apply py-1 px-2 border border-solid border-tableBorderColor;;
+td,
+th {
+  @apply py-1 px-2 border border-solid border-tableBorderColor;
 }
 
 tr:nth-child(odd) td,
@@ -154,7 +168,7 @@ tr:nth-child(odd) th {
 }
 
 button {
-  @apply bg-mastheadColor text-white rounded-sm border-none h-12 py-0 px-12 my-1 mx-0 text-center uppercase cursor-pointer btn-transition;
+  @apply text-white bg-mastheadColor rounded-sm border-none h-12 py-0 px-12 my-1 mx-0 text-center uppercase cursor-pointer btn-transition;
 }
 
 .success button {
@@ -169,7 +183,8 @@ button:hover {
   @apply bg-green-500;
 }
 
-input[type=text], input[type="email"] {
+input[type='text'],
+input[type='email'] {
   @apply bg-offWhite rounded-sm h-12  border-none py-0 px-1 my-1 mx-0 w-full;
 }
 
@@ -183,7 +198,7 @@ header nav {
 }
 
 header nav > ul {
-  @apply whitespace-no-wrap flex justify-between flex-col;
+  @apply whitespace-nowrap flex justify-between flex-col;
 }
 
 header nav > ul > li {
@@ -286,7 +301,7 @@ footer {
   @apply flex flex-wrap justify-center;
 }
 .features li {
-  @apply pt-4 pl-8 pb-8 pb-24 block ;
+  @apply pt-4 pl-8 pb-8 pb-24 block;
   border: 1px solid #515151;
 }
 .features li svg {
@@ -340,7 +355,7 @@ footer {
   @apply mt-0;
 }
 .timeline .entry .body:after {
-  clear:both;
+  clear: both;
 }
 
 .mtd {
@@ -359,7 +374,8 @@ footer {
   @apply float-left pl-8 box-borderBox;
 }
 
-.row:after, .row:before {
+.row:after,
+.row:before {
   @apply block h-0 content-none;
   clear: both;
 }
@@ -373,8 +389,10 @@ footer {
 }
 
 /*RESPONSIVE */
-@screen sm { /*min width: 480 */
-  .biggest, .biggest h2{
+@screen sm {
+  /*min width: 480 */
+  .biggest,
+  .biggest h2 {
     @apply text-6xl;
   }
   .news {
@@ -382,7 +400,8 @@ footer {
   }
 }
 
-@screen lg { /*min width: 980 */
+@screen lg {
+  /*min width: 980 */
   .big {
     @apply mt-16;
   }

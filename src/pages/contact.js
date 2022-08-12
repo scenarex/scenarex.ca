@@ -38,40 +38,40 @@ const ContactPage = ({ data }) => {
 }
 
 
-export const contactQuery = graphql `
-query contactQuery($langKey: String){
-  prismic {
-    allContacts(lang: $langKey) {
-      edges {
-        node {
-          _meta {
-            lang
-            uid
-            alternateLanguages {
-              uid
-            }
-          }
-          address
-          email
-          map {
-            ... on PRISMIC__ExternalLink {
-              url
-            }
-          }
-          map_link {
-            ... on PRISMIC__ExternalLink {
-              url
-            }
-          }
-          phone
-          title
-        }
-      }
-    }
-  }
-  ...LayoutFragment
-}
-`
+// export const contactQuery = graphql `
+// query contactQuery($langKey: String){
+//   prismic {
+//     allContacts(lang: $langKey) {
+//       edges {
+//         node {
+//           _meta {
+//             lang
+//             uid
+//             alternateLanguages {
+//               uid
+//             }
+//           }
+//           address
+//           email
+//           map {
+//             ... on PRISMIC__ExternalLink {
+//               url
+//             }
+//           }
+//           map_link {
+//             ... on PRISMIC__ExternalLink {
+//               url
+//             }
+//           }
+//           phone
+//           title
+//         }
+//       }
+//     }
+//   }
+//   ...LayoutFragment
+// }
+// `
 export default ContactPage
 
-ContactPage.query = contactQuery;
+// ContactPage.query = contactQuery;

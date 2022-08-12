@@ -63,42 +63,42 @@ function makeDate (date, lang) {
 };
 
 
-export const bookchainQuery = graphql `
-query bookchainQuery($langKey: String)
-{
-  prismic {
-    allBookchains(lang: $langKey) {
-      edges {
-        node {
-          _meta {
-            uid
-            lang
-            alternateLanguages {
-              uid
-            }
-          }
-          subheader
-          timeline {
-            timeline_date
-            timeline_text
-          }
-          bookchain_subtext
-          bookchain_reasons {
-            reasons_title
-            reasons_text
-            reasons_icon
-          }
-          sidebar_text
-          bookchainsolutions_text
-          logo
-        }
-      }
-    }
-  }
-  ...LayoutFragment
-}
-`
+// export const bookchainQuery = graphql `
+// query bookchainQuery($langKey: String)
+// {
+//   prismic {
+//     allBookchains(lang: $langKey) {
+//       edges {
+//         node {
+//           _meta {
+//             uid
+//             lang
+//             alternateLanguages {
+//               uid
+//             }
+//           }
+//           subheader
+//           timeline {
+//             timeline_date
+//             timeline_text
+//           }
+//           bookchain_subtext
+//           bookchain_reasons {
+//             reasons_title
+//             reasons_text
+//             reasons_icon
+//           }
+//           sidebar_text
+//           bookchainsolutions_text
+//           logo
+//         }
+//       }
+//     }
+//   }
+//   ...LayoutFragment
+// }
+// `
 
-BookchainPage.query = bookchainQuery;
+// BookchainPage.query = bookchainQuery;
 
 export default BookchainPage

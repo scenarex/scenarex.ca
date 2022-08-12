@@ -1,10 +1,22 @@
-
 const routes = require('../utils/routes.json')
 
-const linkResolver = doc => {
-const route = `${doc.lang}/${routes[doc.uid]}`;
-console.log(route)
-return `${doc.lang}/${routes[doc.uid]}`
-}
+exports.linkResolver = doc => {
+  console.log('jalya>>>>>>>', doc)
+  // URL for a category type
+  if (doc.type === 'category') {
+    return `/category/${doc.uid}`
+  }
 
-module.exports = linkResolver
+  // URL for a product type
+  if (doc.type === 'product') {
+    return `/product/${doc.uid}`
+  }
+
+  // URL for a page type
+  if (doc.type === 'page') {
+    return `/${doc.uid}`
+  }
+
+  // Backup for all other types
+  return '/'
+}
