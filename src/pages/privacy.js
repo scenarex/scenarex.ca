@@ -4,48 +4,51 @@ import Layout from '../components/layout'
 import { RichText } from 'prismic-reactjs'
 
 const PrivacyPage = ({ data }) => {
-  const page = data.prismic.allLegalpages.edges[0].node
-  const lang = page._meta.lang
+  const page = data.allPrismicLegalpage.edges[0].node
+  const lang = page.data.lang
   return (
     <Layout
-      title={'Privacy'}
-      path={page._meta.uid}
-      alternate={page._meta.alternateLanguages[0].uid}
+      title={page.data.title.text}
+      path={page.data.uid}
+      alternate={page.alternate_languages[0].uid}
       headerData={data.headerData}
       footerData={data.footerData}
     >
       <article className="privacy">
-        <h2 className="sm:text-6xl text-4xl biggest">{page.title[0].text}</h2>
-        {RichText.render(page.text)}
+        <h2 className="sm:text-6xl text-4xl biggest">{page.data.title.text}</h2>
+        {RichText.render(page.data.text.richText)}
       </article>
     </Layout>
   )
 }
 
-// export const privacyQuery = graphql `
-// query privacyQuery($langKey: String)
-// {
-//   prismic {
-//     allLegalpages(lang: $langKey) {
-//       edges {
-//         node {
-//           _meta {
-//             uid
-//             lang
-//             alternateLanguages {
-//               uid
-//             }
-//           }
-//           text
-//           title
-//         }
-//       }
-//     }
-//   }
-//   ...LayoutFragment
-// }
-// `
+export const privacyQuery = graphql`
+  query privacyQuery($langKey: String) {
+    allPrismicLegalpage(filter: { lang: { eq: $langKey } }) {
+      edges {
+        node {
+          uid
+          lang
+          data {
+            title {
+              richText
+              text
+            }
+            text {
+              text
+              richText
+            }
+          }
+          alternate_languages {
+            uid
+          }
+        }
+      }
+    }
+    ...LayoutFragment
+  }
+`
 
-// PrivacyPage.query = privacyQuery
+PrivacyPage.query = privacyQuery
 
- export default PrivacyPage
+export default PrivacyPage

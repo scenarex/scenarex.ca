@@ -9,7 +9,6 @@ const Footer = props => {
   if (page) {
     lang = props.footerData.lang.split('-')[0]
   }
-  console.log('footer>>>>', page)
   return page ? (
     <footer className="upper-border">
       <div className="row w-full">

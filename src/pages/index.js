@@ -4,9 +4,7 @@ import Layout from '../components/layout'
 import { RichText } from 'prismic-reactjs'
 
 const IndexPage = ({ data }) => {
-  console.log('padamil111>>>', data)
   let page = data.prismicHome
-  console.log('padamil222>>>', page)
   let tools
   let partners
   for (let i = 0; i < page.data.body.length; i++) {
@@ -16,15 +14,6 @@ const IndexPage = ({ data }) => {
       tools = page.data.body[i]
     }
   }
-  console.log(
-    'homeeeeee>>>>>>>',
-    page.alternate_languages[0].lang,
-    'partners jak>>>>',
-    partners,
-    '---',
-    'tools>>>',
-    tools
-  )
   return (
     <Layout
       title={page.data.title.text}
@@ -39,7 +28,7 @@ const IndexPage = ({ data }) => {
         </section>
         <section className="masthead upper-border">
           <div className="big">
-            {RichText.render(page.data.body[0].primary.partners_title.richText)}
+            {RichText.render(page.data.body[1].primary.partners_title.richText)}
           </div>
           {partners.items.length > 0 && (
             <div className="row flex-item md:flex-row sm:flex-col md:items-stretch ">
@@ -61,7 +50,7 @@ const IndexPage = ({ data }) => {
 
         <section className="masthead upper-border">
           <div className="big">
-            {RichText.render(page.data.body[1].primary.tools_title.richText)}
+            {RichText.render(page.data.body[0].primary.tools_title.richText)}
           </div>
           {tools.items.length > 0 && (
             <div className="row flex-item">
@@ -92,55 +81,6 @@ const IndexPage = ({ data }) => {
     </Layout>
   )
 }
-
-// export const homeQuery = graphql`
-//   query homeQuery($langKey: String) {
-//     prismic {
-//       allHomes(lang: $langKey) {
-//         edges {
-//           node {
-//             title
-//             _meta {
-//               uid
-//               lang
-//               alternateLanguages {
-//                 uid
-//                 lang
-//               }
-//             }
-//             text
-//             body {
-//               __typename
-//               ... on PRISMIC_HomeBodyTools {
-//                 fields {
-//                   name
-//                   icon
-//                   text1
-//                   link {
-//                     ... on PRISMIC__ExternalLink {
-//                       url
-//                     }
-//                   }
-//                 }
-//               }
-//               ... on PRISMIC_HomeBodyPartners {
-//                 fields {
-//                   link {
-//                     ... on PRISMIC__ExternalLink {
-//                       url
-//                     }
-//                   }
-//                   img
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//     ...LayoutFragment
-//   }
-// `
 
 export const homeQuery = graphql`
   query homeQuery($langKey: String) {

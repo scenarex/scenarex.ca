@@ -6,34 +6,34 @@ import { RichText } from 'prismic-reactjs'
 import translations from '../utils/translations.json'
 
 export const NewsPostTemplate = props => {
-  console.log('NewsPostTemplate>>>>>>', props)
   let date = new Date(props.page.post_date)
+  console.log("3333>>>",props.page.data.post_date)
   return (
     <article className="post">
       <div className="row">
         <div className="md:w-3/12 w-full ml-0">
           <div className="post-date">
-            {date.toLocaleDateString(props.page._meta.lang, {
+            {date.toLocaleDateString(props.page.data.post_date, {
               year: 'numeric',
               month: 'long',
               day: 'numeric',
             })}
             <br />
-            {translations['by'][props.page._meta.lang]}{' '}
-            {RichText.render(props.page.post_author)}
+            {translations['by'][props.page.lang]}{' '}
+            {RichText.render(props.page.data.post_author.richText)}
           </div>
         </div>
         <div className="md:w-9/12 w-full">
-          {RichText.render(props.page.post_title)}
-          {props.page.post_image ? (
+          {RichText.render(props.page.data.post_title.richText)}
+          {props.page.data.post_image ? (
             <img
-              src={props.page.post_image.url}
-              alt={props.page.post_image.alt}
+              src={props.page.data.post_image.url}
+              alt={props.page.data.post_image.alt}
             />
           ) : (
             ''
           )}
-          {RichText.render(props.page.post_body)}
+          {RichText.render(props.page.data.post_body.richText)}
         </div>
       </div>
     </article>
@@ -47,73 +47,55 @@ NewsPostTemplate.propTypes = {
 }
 
 const NewsPost = ({ data }) => {
-  let page = data.prismic.allNewss.edges[0].node
+  let page = data.allPrismicNews.edges[0].node
+
   return (
-    <h1>hihihihihi</h1>
-    // <Layout
-    //   title={page.post_title[0].text}
-    //   path={page._meta.uid}
-    //   alternate={page._meta.alternateLanguages[0].uid}
-    //   headerData={data.headerData}
-    //   footerData={data.footerData}
-    // >
-    //   <NewsPostTemplate page={page} />
-    // </Layout>
+    <Layout
+      title={page.data.post_title.text}
+      path={page.uid}
+      alternate={page.alternate_languages[0].uid}
+      headerData={data.headerData}
+      footerData={data.footerData}
+    >
+      <NewsPostTemplate page={page} />
+    </Layout>
   )
 }
 
 export default NewsPost
-// export const newsquery = graphql`
-// query newsQuery($langKey: String, $uid: String)
-// {
-//   prismic {
-//     allNewss(lang: $langKey, uid: $uid) {
-//       edges {
-//         node {
-//           _meta {
-//             uid
-//             lang
-//             alternateLanguages {
-//               uid
-//             }
-//           }
-//           post_author
-//           post_body
-//           post_date
-//           post_image
-//           post_title
-//         }
-//       }
-//     }
-//   }
-//   ...LayoutFragment
-// }`
-
-// export const newsquery = graphql`
-//   query newsQuery($langKey: String, $uid: String) {
-//     prismicNews(lang: { eq: $langKey }, uid: { eq: $uid }) {
-//       uid
-//       lang
-//       alternate_languages {
-//         uid
-//       }
-//       data {
-//         post_author {
-//           text
-//         }
-//         post_body {
-//           text
-//         }
-//         post_image {
-//           alt
-//           url
-//           copyright
-//         }
-//         post_title {
-//           text
-//         }
-//       }
-//     }
-//     ...LayoutFragment
-//   }
-// `
+export const newsquery = graphql`
+  query newsQuery($langKey: String, $uid: String) {
+    allPrismicNews(filter: { lang: { eq: $langKey }, uid: { eq: $uid } }) {
+      edges {
+        node {
+          uid
+          lang
+          data {
+            post_author {
+              richText
+              text
+            }
+            post_body {
+              richText
+              text
+            }
+            post_date
+            post_image {
+              url
+              copyright
+              alt
+            }
+            post_title {
+              richText
+              text
+            }
+          }
+          alternate_languages {
+            uid
+          }
+        }
+      }
+    }
+    ...LayoutFragment
+  }
+`

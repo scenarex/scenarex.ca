@@ -5,7 +5,6 @@ import LanguageSwitcher from './Language'
 
 const Header = props => {
   const data = props.headerData ? props.headerData.data : null
-  console.log(props)
   let lang
   let path
   let alternate
@@ -14,7 +13,6 @@ const Header = props => {
     path = props.path
     alternate = props.alternate
   }
-  console.log('props>>>>>>>', data, '----', props.headerData.lang, '----path', path)
   return data ? (
     <header className="masthead">
       <h1 className="masthead-title">
@@ -25,12 +23,6 @@ const Header = props => {
       <nav>
         <ul>
           {data.navigation.map(menuItem => {
-            console.log(
-              'menuItem>>>>>',
-              menuItem.link.document.uid,
-              '---',
-              lang
-            )
             return menuItem.link.document.uid === 'bookchain' ? (
               <li key={menuItem.link.document.uid}>
                 <Link

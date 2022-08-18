@@ -1,16 +1,6 @@
 require('dotenv').config({
   path: `.env`,
 })
-//const prismicHtmlSerializer = require('./src/prismic/htmlSerializer')
-//const prismicLinkResolver = require('./src/prismic/linkResolver')
-console.log(
-  '----lalalalala',
-  process.env.PRISMIC_ACCESS_TOKEN,
-  '----',
-  process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
-  '--- couper'
-  //doc => prismicLinkResolver(doc)
-)
 
 module.exports = {
   siteMetadata: {
