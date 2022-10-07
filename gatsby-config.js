@@ -1,8 +1,7 @@
-require('dotenv').config({
-  path: `.env`,
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
 })
-const prismicHtmlSerializer = require('./src/prismic/htmlSerializer')
-const prismicLinkResolver = require('./src/prismic/linkResolver')
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -10,60 +9,43 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-      {
-      resolve: 'gatsby-source-prismic-graphql',
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: 'scenarex',
-        accessToken : `${process.env.API_KEY}`,
-        // PrismJS highlighting for labels and slices
-        htmlSerializer: () => prismicHtmlSerializer,
-        linkResolver: () => prismicLinkResolver,
-        previews: false
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+        accessToken: process.env.GATSBY_PRISMIC_ACCESS_TOKEN,
+        customTypesApiToken: process.env.GATSBY_PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        // htmlSerializer: () => prismicHtmlSerializer,
+        linkResolver: require('./src/prismic/linkResolver').linkResolver
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
         path: `${__dirname}/src/pages/`,
-      }
+      },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-    resolve: `gatsby-plugin-favicon`,
-     options: {
-       logo: "./src/components/favicon.png",
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: './src/components/favicon.png',
 
-       // WebApp Manifest Configuration
-       appName: null, // Inferred with your package.json
-       appDescription: null,
-       developerName: null,
-       developerURL: null,
-       dir: 'auto',
-       lang: 'en',
-       background: '#fff',
-       theme_color: '#fff',
-       display: 'standalone',
-       orientation: 'any',
-       start_url: '/?homescreen=1',
-       version: '1.0',
-
-       icons: {
-         android: true,
-         appleIcon: true,
-         appleStartup: true,
-         coast: false,
-         favicons: true,
-         firefox: true,
-         opengraph: false,
-         twitter: false,
-         yandex: false,
-         windows: false
-        }
-      }
+        // WebApp Manifest Configuration
+        name: 'Scenarex', // Inferred with your package.json
+        dir: 'auto',
+        lang: 'en',
+        background_color: '#fff',
+        theme_color: '#fff',
+        display: 'standalone',
+        orientation: 'any',
+        start_url: '/'
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

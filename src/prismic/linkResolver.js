@@ -1,10 +1,13 @@
+exports.linkResolver = (doc) => {
+  if (["en", "fr"].includes(doc.lang)) {
+    switch (doc.type) {
+      case "home": {
+        return doc.lang === "en" ? "/" : `/${doc.lang}`;
+      }
 
-const routes = require('../utils/routes.json')
-
-const linkResolver = doc => {
-const route = `${doc.lang}/${routes[doc.uid]}`;
-console.log(route)
-return `${doc.lang}/${routes[doc.uid]}`
-}
-
-module.exports = linkResolver
+      default: {
+        return `/${doc.lang}/${doc.uid}`;
+      }
+    }
+  }
+};

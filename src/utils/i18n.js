@@ -1,13 +1,13 @@
 module.exports = {
-  'en-ca': {
+  'en': {
     default: true,
     path: 'en',
-    locale: 'en-ca',
+    locale: 'en',
     siteLanguage: 'en'
   },
-  'fr-ca': {
+  'fr': {
     path: 'fr',
-    locale: 'fr-ca',
+    locale: 'fr',
     siteLanguage: 'fr',
   },
 }
