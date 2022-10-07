@@ -1,5 +1,5 @@
-require('dotenv').config({
-  path: `.env`,
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
@@ -14,10 +14,10 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
-        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        accessToken: process.env.GATSBY_PRISMIC_ACCESS_TOKEN,
+        customTypesApiToken: process.env.GATSBY_PRISMIC_CUSTOM_TYPES_API_TOKEN,
         // htmlSerializer: () => prismicHtmlSerializer,
-        linkResolver: require('./src/prismic/linkResolver').linkResolver,
+        linkResolver: require('./src/prismic/linkResolver').linkResolver
       },
     },
 
@@ -28,7 +28,6 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -38,18 +37,14 @@ module.exports = {
         icon: './src/components/favicon.png',
 
         // WebApp Manifest Configuration
-        appName: null, // Inferred with your package.json
-        appDescription: null,
-        developerName: null,
-        developerURL: null,
+        name: 'Scenarex', // Inferred with your package.json
         dir: 'auto',
         lang: 'en',
         background_color: '#fff',
         theme_color: '#fff',
         display: 'standalone',
         orientation: 'any',
-        start_url: '/?homescreen=1',
-        version: '1.0',
+        start_url: '/'
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

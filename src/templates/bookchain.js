@@ -1,18 +1,24 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import { RichText } from 'prismic-reactjs'
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import { RichText } from "prismic-reactjs";
+
+export function Head({data}) {
+  return (
+    <title>Bookchain® - SCENAREXinc</title>
+  )
+}
 
 const BookchainPage = ({ data }) => {
-  const page = data.prismicBookchain.data
-  const lang = data.prismicBookchain.lang.split('-')[0]
+  const page = data.prismicBookchain.data;
+  const lang = data.prismicBookchain.lang.split("-")[0];
   return (
     <Layout
-      title={'Bookchain'}
+      title={"Bookchain"}
       path={data.prismicBookchain.uid}
-      alternate={data.prismicBookchain.alternate_languages[0].uid}
-      headerData={data.headerData}
-      footerData={data.footerData}
+      alternate={data.prismicBookchain.alternate_languages}
+      headerData={data.prismicHeader}
+      footerData={data.prismicFooter}
     >
       <main className="bookchain">
         <div className="row">
@@ -22,27 +28,21 @@ const BookchainPage = ({ data }) => {
             </center>
             {RichText.render(page.subheader.richText)}
             {page.timeline.length > 0 && (
-              <div className="timeline">
-                {page.timeline.map(time => (
-                  <div className="entry" key={time.timeline_date}>
-                    <div className="time">
-                      <h5>{makeDate(time.timeline_date, lang)}</h5>
+              <div className="">
+                {page.timeline.map((time) => (
+                  <div className="grid gap-4 grid-cols-3 divide-x-4 divide-bodyColor" key={time.timeline_date}>
+                    <div className="relative pr-16 before:absolute before:w-4 before:bg-white before:h-4 before:rounded-full before:border-4 before:border-bodyColor before:-right-[30px] before:top-0">
+                      <h5 className="mt-0">{makeDate(time.timeline_date, lang)}</h5>
                     </div>
-                    <div className="body">
-                      {RichText.render(time.timeline_text.richText)}
-                    </div>
+                    <div className="pl-16 col-span-2">{RichText.render(time.timeline_text.richText)}</div>
                   </div>
                 ))}
               </div>
             )}
-            <div className="text-sm pt-10">
-              {RichText.render(page.bookchain_subtext.richText)}
-            </div>
+            <div className="text-sm pt-10">{RichText.render(page.bookchain_subtext.richText)}</div>
           </div>
           <div className="md:w-6/12 w-full">
-            <div className="w-full mt-12 mb-6">
-              {RichText.render(page.sidebar_text.richText)}
-            </div>
+            <div className="w-full mt-12 mb-6">{RichText.render(page.sidebar_text.richText)}</div>
           </div>
         </div>
         {page.bookchain_reasons.length > 0 && (
@@ -52,40 +52,37 @@ const BookchainPage = ({ data }) => {
                 <h2 className="xl:text-2xl md:text-xl text-2xl">
                   <i className={reason.reasons_icon}></i> {reason.reasons_title}
                 </h2>
-                <div className="text-sm lg:pt-10 pt-4 lg:pb-0 pb-6">
-                  {RichText.render(reason.reasons_text.richText)}
-                </div>
+                <div className="text-sm lg:pt-10 pt-4 lg:pb-0 pb-6">{RichText.render(reason.reasons_text.richText)}</div>
               </div>
             ))}
           </div>
         )}
         <div className="row upper-border mtd">
-          <div className="w-full text-sm pt-10">
-            {RichText.render(page.bookchainsolutions_text.richText)}
-          </div>
+          <div className="w-full text-sm pt-10">{RichText.render(page.bookchainsolutions_text.richText)}</div>
         </div>
       </main>
     </Layout>
-  )
-}
+  );
+};
 
 function makeDate(date, lang) {
-  let formattedDate = new Date(date)
-  let month = formattedDate.getUTCMonth()
-  formattedDate.setUTCMonth(month + 1)
+  let formattedDate = new Date(date);
+  let month = formattedDate.getUTCMonth();
+  formattedDate.setUTCMonth(month + 1);
   return formattedDate.toLocaleDateString(lang, {
-    year: 'numeric',
-    month: 'short',
-  })
+    year: "numeric",
+    month: "short"
+  });
 }
 
 export const bookchainQuery = graphql`
-  query bookchainQuery($langKey: String) {
-    prismicBookchain(lang: { eq: $langKey }) {
+  query bookchainQuery($lang: String) {
+    prismicBookchain(lang: { eq: $lang }) {
       lang
       uid
       alternate_languages {
         uid
+        lang
       }
       data {
         subheader {
@@ -129,8 +126,8 @@ export const bookchainQuery = graphql`
     }
     ...LayoutFragment
   }
-`
+`;
 
-BookchainPage.query = bookchainQuery
+BookchainPage.query = bookchainQuery;
 
-export default BookchainPage
+export default BookchainPage;

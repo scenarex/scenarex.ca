@@ -1,18 +1,39 @@
-import React from 'react';
-import {Link} from "gatsby";
+import React from "react";
+import { Link } from "gatsby";
 
-class LanguageSwitcher extends React.Component {
-  render() {
-    const current = ["en-ca", "fr-ca"].includes(this.props.path) ? "" : this.props.path;
-    const alternate = ["en-ca", "fr-ca"].includes(this.props.alternate) ? "" : this.props.alternate;
-    return (
-      <div>
-        <Link to={this.props.lang === "en" ? `/en/${current}` : `/en/${alternate}`} className={this.props.lang === "en" ? "activeLang" : "lang"}>en</Link>
-        &nbsp;
-        <Link to={this.props.lang === "fr" ? `/fr/${current}` : `/fr/${alternate}`} className={this.props.lang === "fr" ? "activeLang" : "lang"}>fr</Link>
-      </div>
-    )
+export default function LanguageSwitcher(props) {
+  console.log(props);
+  const currentLanguage = props.lang;
+  let alternateLanguage = "";
+  switch(currentLanguage) {
+    case "en":
+      alternateLanguage = "fr";
+      break;
+    case "fr":
+      alternateLanguage = "en";
+      break;
+    default:
+      break;
   }
-}
 
-export default LanguageSwitcher;
+  const currentPath = props.path;
+  const alternatePath = props.alternate.find(({ lang }) => lang === alternateLanguage);
+
+  return (
+    <div>
+      <Link
+        to={currentLanguage === "en" ? `${currentPath}` : `/en/${alternatePath.uid === "index" ? "" : alternatePath.uid}`}
+        className={currentLanguage === "en" ? "activeLang" : "lang"}
+      >
+        en
+      </Link>
+      &nbsp;
+      <Link
+        to={currentLanguage === "fr" ? `${currentPath}` : `/fr/${alternatePath.uid === "index" ? "" : alternatePath.uid}`}
+        className={currentLanguage === "fr" ? "activeLang" : "lang"}
+      >
+        fr
+      </Link>
+    </div>
+  );
+}

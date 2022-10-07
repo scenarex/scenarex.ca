@@ -33,14 +33,6 @@
     background-position: right -50px top -50px;
   }
 
-  .upper-border {
-    @apply relative;
-  }
-  .upper-border:before {
-    @apply bg-black w-full h-1 absolute top-0 left-0 content-none;
-    opacity: 0.06;
-  }
-
   @keyframes slideInFromTop {
     0% {
       transform: translateY(-100%);
@@ -186,7 +178,7 @@
 
   input[type='text'],
   input[type='email'] {
-    @apply bg-offWhite rounded-sm h-12  border-none py-0 px-1 my-1 mx-0 w-full;
+    @apply bg-offWhite rounded-sm h-12  border-none py-0 px-4 my-1 mx-0 w-full;
   }
 
   header {
@@ -245,7 +237,7 @@
   }
 
   .icon-background {
-    @apply text-white border-6 border-solid border-mastheadColor rounded-full;
+    @apply text-white border-6 border-solid border-bodyColor rounded-full;
   }
 
   footer {
@@ -257,11 +249,11 @@
   }
 
   .copyright footer a {
-    @applu text-bodyColor;
+    @apply text-bodyColor;
   }
 
   .copyright footer a:hover {
-    @applu text-scenarexGreen;
+    @apply text-scenarexGreen;
   }
 
   .news {
@@ -314,49 +306,10 @@
   .center-text {
     @apply text-center;
   }
-  .timeline {
-    @apply relative w-full box-borderBox;
-  }
 
-  .timeline * {
-    @apply box-borderBox;
-  }
-  .timeline:before {
-    @apply absolute h-full w-1 bg-bodyColor content-none;
-    left: calc(30% + 2px);
-  }
-  .timeline:after {
-    @apply table content-none;
-    clear: both;
-  }
-  .timeline .entry {
-    @apply mt-16;
-  }
-  .timeline .entry:after {
-    @apply table content-none;
-    clear: both;
-  }
-  .timeline .entry .time {
-    @apply text-right float-left pr-16 relative;
-    width: 30%;
-  }
-  .timeline .entry .time h5 {
-    @apply mt-0;
-  }
-  .timeline .entry .time:before {
+  .time::before {
     @apply absolute bg-bodyBackgroundColor top-0 z-50 w-4 h-4 border-4 border-solid border-bodyColor rounded-full content-none;
     right: -14px;
-  }
-
-  .timeline .entry .body {
-    @apply float-right text-sm pl-16 -mt-2 w-2/3;
-  }
-
-  .timeline .entry .body h3 {
-    @apply mt-0;
-  }
-  .timeline .entry .body:after {
-    clear: both;
   }
 
   .mtd {
