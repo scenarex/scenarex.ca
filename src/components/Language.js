@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 
 export default function LanguageSwitcher(props) {
-  console.log(props);
   const currentLanguage = props.lang;
   let alternateLanguage = "";
   switch(currentLanguage) {
@@ -22,7 +21,7 @@ export default function LanguageSwitcher(props) {
   return (
     <div>
       <Link
-        to={currentLanguage === "en" ? `${currentPath}` : `/en/${alternatePath.uid === "index" ? "" : alternatePath.uid}`}
+        to={currentLanguage === "en" ? `${currentPath}` : `${alternatePath.uid === "index" ? "/" : '/en/'+alternatePath.uid}`}
         className={currentLanguage === "en" ? "activeLang" : "lang"}
       >
         en
