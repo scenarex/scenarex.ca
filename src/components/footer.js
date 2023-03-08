@@ -22,7 +22,12 @@ const Footer = (props) => {
               <ul>
                 {page.column1_items.map((item) => (
                   <li key={item.item_label}>
+                    {item.item_url.link_type === 'Document' &&
                     <Link to={`/${lang}/${item.item_url.uid}`}>{item.item_label}</Link>
+                    }
+                    {item.item_url.link_type === 'Web' &&
+                    <a href={item.item_url.url}>{item.item_label}</a>
+                    }
                   </li>
                 ))}
               </ul>

@@ -78,6 +78,8 @@ export const query = graphql`
           item_url {
             uid
             lang
+            link_type
+            url
           }
           item_label
         }
