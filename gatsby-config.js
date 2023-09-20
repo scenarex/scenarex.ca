@@ -62,7 +62,6 @@ module.exports = {
           head: false,
           respectDNT: true,
           exclude: ["/preview/**", "/do-not-track/me/too/"],
-          origin: "www.scenarex.ca",
           delayOnRouteUpdate: 0,
         },
       },
