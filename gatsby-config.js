@@ -48,19 +48,23 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-MLCY0NDQ65",
-        head: true,
-        anonymize: true,
-        respectDNT: true,
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
-        pageTransitionDelay: 0,
-        defer: false,
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "scenarex.ca",
-        enableWebVitalsTracking: true,
+        trackingIds: [
+          "G-MLCY0NDQ65"
+        ],
+        gtagConfig: {
+          optimize_id: "OG-MLCY0NDQ65",
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          origin: "www.scenarex.ca",
+          delayOnRouteUpdate: 0,
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
