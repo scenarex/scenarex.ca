@@ -66,39 +66,6 @@ const Footer = (props) => {
             )}
           </nav>
         </div>
-        <div className="w-full">
-          <h4>{translations["newsletter"][lang]}</h4>
-          <form
-            action={
-              lang === "en"
-                ? "https://scenarex.us14.list-manage.com/subscribe/post?u=55adcdb3618aefdb354ae8f92&amp;id=b554781cb8&SIGNUP=SCENAREX-" + lang
-                : "https://scenarex.us14.list-manage.com/subscribe/post?u=55adcdb3618aefdb354ae8f92&amp;id=ec466ad45e&SIGNUP=SCENAREX-" + lang
-            }
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
-            className="validate row"
-            target="_blank"
-            noValidate
-          >
-            <div className="mc-field-group md:w-6/12 w-full">
-              <input type="email" defaultValue="" placeholder={translations["email"][lang]} name="EMAIL" className="required email" id="mce-EMAIL" />
-            </div>
-            <div id="mce-responses" className="clear">
-              <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
-              <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
-            </div>
-            <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
-              <input type="text" name="b_55adcdb3618aefdb354ae8f92_b554781cb8" tabIndex="-1" defaultValue="" />
-            </div>
-            <div className="clear md:w-3/12 w-full ml-0">
-              <button className="button bg-mastheadColor" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-                <i className="fas fa-info-circle"></i>&nbsp;
-                {translations["subscribe"][lang]}
-              </button>
-            </div>
-          </form>
-        </div>
         <div className="w-full copyright py-8 flex justify-center items-center">
           <div className="mr-1">
             <i className="fab fa-creative-commons"></i>&nbsp;
@@ -107,7 +74,7 @@ const Footer = (props) => {
           </div>
           <div>
             <small>
-              {translations["copyright"][lang]}
+              {translations["copyright"][lang]}&nbsp;
               <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
                 Creative Commons Attribution-ShareAlike 4.0 International License
               </a>
