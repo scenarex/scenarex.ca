@@ -53,16 +53,8 @@ module.exports = {
         trackingIds: [
           "G-MLCY0NDQ65"
         ],
-        gtagConfig: {
-          optimize_id: "G-MLCY0NDQ65",
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
         pluginConfig: {
-          head: false,
-          respectDNT: true,
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
-          delayOnRouteUpdate: 0,
+          head: true
         },
       },
     },
