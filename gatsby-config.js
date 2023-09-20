@@ -54,7 +54,7 @@ module.exports = {
           "G-MLCY0NDQ65"
         ],
         gtagConfig: {
-          optimize_id: "OG-MLCY0NDQ65",
+          optimize_id: "G-MLCY0NDQ65",
           anonymize_ip: true,
           cookie_expires: 0,
         },
