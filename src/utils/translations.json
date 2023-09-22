@@ -40,5 +40,25 @@
   },
   "footer_text" : {
     "en" : "Made with", "fr" : "Fait avec"
+  },
+  "consent_1" : {
+    "en": "We use cookies and other technologies to enhance your browsing experience and personalize our website. By clicking “Accept”, you consent to the use of ALL cookies. By clicking “Decline”, only essential cookies and technologies will be active.",
+    "fr": "Nous utilisons des fichiers témoins et d'autres technologies pour améliorer votre expérience de navigation et personnaliser notre site. En cliquant sur « Accepter », vous consentez à l'utilisation de TOUS les témoins. En cliquant sur « Refuser », seuls les témoins et technologies essentielles seront actives."
+  },
+  "consent_2" : {
+    "en": "To learn more, please refer to our",
+    "fr": "Pour en savoir plus, consultez notre"
+  },
+  "policy" : {
+    "en": "Privacy Policy",
+    "fr": "Politique de confidentialité"
+  },
+  "accept": {
+    "en": "Accept",
+    "fr": "Accepter"
+  },
+  "refuse": {
+    "en": "Decline",
+    "fr": "Refuser"
   }
 }

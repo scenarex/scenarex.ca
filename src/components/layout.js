@@ -7,12 +7,14 @@ import ConsentPopup from "./optout";
 const Layout = (props) => {
   const { headerData, footerData, children, path, alternate } = props;
   return (
+    <>
     <div className="container mx-auto">
       <Header headerData={headerData} path={path} alternate={alternate} />
       {children}
       <Footer footerData={footerData} />
-      <ConsentPopup />
     </div>
+    <ConsentPopup lang={headerData.lang} />
+    </>
   );
 };
 

@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "gatsby";
+import translations from "../utils/translations.json";
+import routes from "../utils/routes.json";
 
-function ConsentPopup() {
-  const [showPopup, setShowPopup] = useState(true);
+function ConsentPopup(lang) {
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     const consent = document.cookie.split("; ").find((row) => row.startsWith("consent="));
-    if (consent) {
-      setShowPopup(false);
+    if (!consent) {
+      setShowPopup(true);
     }
   });
 
@@ -24,16 +27,13 @@ function ConsentPopup() {
 
   return (
     showPopup && (
-      <div className="bottom-0 fixed border-t w-full bg-white">
-        <div className="gdpr-popup-content">
-          <h2>GDPR and Law 25 Consent</h2>
-          <p>
-            We use cookies and collect data to enhance your experience on our website.
-            By clicking "Accept," you consent to our use of cookies and data collection.
-          </p>
-          <div className="gdpr-popup-actions">
-            <button onClick={handleReject}>Decline</button>
-            <button onClick={handleAccept}>Accept</button>
+      <div className="bottom-0 fixed border-t w-full bg-white p-4 shadow-md text-sm">
+        <div className="gdpr-popup-content container mx-auto">
+          <p>{translations.consent_1[lang.lang]}</p>
+          <p>{translations.consent_2[lang.lang]} <Link className="text-scenarexGreen" to={routes.privacy[lang.lang]}>{translations.policy[lang.lang]}</Link>.</p>
+          <div className="gdpr-popup-actions grid grid-cols-2 gap-4 w-1/2">
+            <button onClick={handleReject}>{translations.refuse[lang.lang]}</button>
+            <button onClick={handleAccept}>{translations.accept[lang.lang]}</button>
           </div>
         </div>
       </div>
