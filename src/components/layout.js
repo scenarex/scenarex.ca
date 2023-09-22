@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Header } from "./header";
 import { Footer } from "./footer";
+import ConsentPopup from "./optout";
 
 const Layout = (props) => {
   const { headerData, footerData, children, path, alternate } = props;
@@ -10,6 +11,7 @@ const Layout = (props) => {
       <Header headerData={headerData} path={path} alternate={alternate} />
       {children}
       <Footer footerData={footerData} />
+      <ConsentPopup />
     </div>
   );
 };
