@@ -53,8 +53,12 @@ module.exports = {
         trackingIds: [
           "G-MLCY0NDQ65"
         ],
+        gtagConfig: {
+          anonymize_ip: true
+        },
         pluginConfig: {
-          head: true
+          head: true,
+          respectDNT: true
         },
       },
     },
