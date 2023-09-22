@@ -38,7 +38,7 @@ const ConsentPopup = (props) => {
         <div className="gdpr-popup-content container mx-auto">
           <p>{translations.consent_1[lang]}</p>
           <p>{translations.consent_2[lang]} <Link className="text-scenarexGreen" to={routes.privacy[lang]}>{translations.policy[lang]}</Link>.</p>
-          <div className="gdpr-popup-actions grid grid-cols-2 gap-4 w-1/2">
+          <div className="gdpr-popup-actions grid grid-cols-2 gap-4 w-1/3">
             <button onClick={handleReject}>{translations.refuse[lang]}</button>
             <button onClick={handleAccept}>{translations.accept[lang]}</button>
           </div>

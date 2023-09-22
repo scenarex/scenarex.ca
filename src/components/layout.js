@@ -13,7 +13,7 @@ const Layout = (props) => {
       {children}
       <Footer footerData={footerData} />
     </div>
-    <ConsentPopup lang={headerData} />
+    <ConsentPopup headerData={headerData} />
     </>
   );
 };
