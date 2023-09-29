@@ -18,7 +18,7 @@ const ProtectionPage = ({ data }) => {
       headerData={data.prismicHeader}
       footerData={data.prismicFooter}
     >
-      <article className="privacy">
+      <article className="protection">
         <h2 className="sm:text-6xl text-4xl biggest">{page.data.title.text}</h2>
         {RichText.render(page.data.text.richText)}
       </article>
