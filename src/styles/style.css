@@ -302,7 +302,7 @@
     @apply flex flex-wrap justify-center;
   }
   .features li {
-    @apply pt-4 pl-8 pb-8 pb-24 block;
+    @apply pt-4 pl-8 pb-24 block;
     border: 1px solid #515151;
   }
   .features li svg {
