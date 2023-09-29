@@ -290,6 +290,14 @@
     @apply text-postDateColor;
   }
 
+  article a {
+    @apply underline;
+  }
+
+  article a:hover {
+    @apply text-scenarexGreen;
+  }
+
   .features {
     @apply flex flex-wrap justify-center;
   }

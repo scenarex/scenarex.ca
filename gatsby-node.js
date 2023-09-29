@@ -158,6 +158,13 @@ exports.createPages = async ({ graphql, actions }) => {
           uid
         }
       }
+      allPrismicProtection(filter: {lang: {in: ["en","fr"]}}) {
+        nodes {
+          id
+          lang
+          uid
+        }
+      }
     }
   `)
   
@@ -242,6 +249,17 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/${page.lang}/${page.uid}`,
       component: path.resolve(__dirname, 'src/templates/privacy.js'),
+      context: {
+        id: page.id,
+        lang: page.lang,
+      },
+    })
+  })
+
+  queryData.data.allPrismicProtection.nodes.forEach((page) => {
+    createPage({
+      path: `/${page.lang}/${page.uid}`,
+      component: path.resolve(__dirname, 'src/templates/protection.js'),
       context: {
         id: page.id,
         lang: page.lang,
