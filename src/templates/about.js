@@ -11,7 +11,6 @@ export function Head({data}) {
 }
 
 const AboutPage = ({ data }) => {
-  console.log(data);
   const page = data.prismicAbout.data;
   let team = page.body[0].items;
   let committee = page.body[1].items;
@@ -72,7 +71,7 @@ const AboutPage = ({ data }) => {
                   <Link to={`/${lang}/${person.link.document.uid}`}>
                     <img className="grey" src={person.person.url} alt={person.name.text} />
                   </Link>
-                  {RichText.render(person.name)}
+                  {RichText.render(person.name.richText)}
                   <p>
                     {person.title1.text}
                     <br />
