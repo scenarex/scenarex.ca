@@ -18,7 +18,7 @@ const ConsentPopup = (props) => {
     if (!consent) {
       setShowPopup(true);
     }
-  });
+  },[]);
 
   const handleReject = () => {
     document.cookie = 'consent=rejected; expires=365d; path=/';
